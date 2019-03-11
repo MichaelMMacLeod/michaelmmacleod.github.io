@@ -10,4 +10,5 @@ programming language research and design.
 @table-of-contents[]
 
 @include-section["contact.scrbl"]
+@include-section["projects.scrbl"]
 @include-section["source.scrbl"]
