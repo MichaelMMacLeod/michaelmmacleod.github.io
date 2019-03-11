@@ -1,9 +1,13 @@
 #lang scribble/manual
 
-@title{Michael's Site}
+@title{About Me}
 
-@author[@(author+email "Michael M. MacLeod" "mmmacleo@ucsd.edu")]
+My name is Michael MacLeod. I'm a Mathematics - Computer Science student at UCSD.
 
-@hyperlink["snake/index.html"]{Play snake in the browser}
+I'm interested in @bold{language oriented} and @bold{functional} programming, as well as 
+programming language research and design.
 
-@hyperlink["https://github.com/michaelmmacleod/michaelmmacleod.github.io"]{Site source code}
+@table-of-contents[]
+
+@include-section["contact.scrbl"]
+@include-section["source.scrbl"]
