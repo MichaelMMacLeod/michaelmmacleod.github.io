@@ -2,6 +2,8 @@
 
 @title{Projects}
 
+@hyperlink["https://github.com/michaelmmacleod/unified-for"]{Unified for Loops} --- Unifies Racket's iteration constructs.
+
 @hyperlink["https://github.com/michaelmmacleod/fractal"]{Fractal} --- interactive fractal viewer. Supports multi-core rendering on the cpu, with gpu support coming soon.
 
 @hyperlink["https://github.com/michaelmmacleod/lisp"]{Lisp} --- a toy lisp interpreter I created back in high school.
