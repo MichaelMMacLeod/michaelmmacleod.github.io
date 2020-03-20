@@ -3,7 +3,7 @@
 ◊(define (make-fancy-text id opacity)
    ◊div[#:class "fancy-text"
         #:id id
-        #:style "text-shadow: 0.5vw 0.5vw black; color: white; opacity: ◊|opacity|;"]{
+        #:style (format "text-shadow: 0.5vw 0.5vw black; color: white; opacity: ~a;" opacity)]{
      MICHAEL MACLEOD
    })
 
