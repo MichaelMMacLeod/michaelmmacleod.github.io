@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2020-07-02 Thu 10:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Chunk Editor</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">The Chunk Editor</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgd85daec">1. Introduction</a></li>
+<li><a href="#org23b50e3">2. Things to Try</a>
+<ul>
+<li><a href="#orgea7fd62">2.1. Create a simple chunk</a></li>
+<li><a href="#org06a2557">2.2. Create a multi-line chunk</a></li>
+<li><a href="#org4efe07f">2.3. Create new chunks with <code>Enter</code></a></li>
+<li><a href="#orgc371bd8">2.4. Move between chunks with the arrow keys</a></li>
+<li><a href="#org5f04165">2.5. Delete an empty chunk</a></li>
+<li><a href="#orgaf95ff6">2.6. Fix an error</a></li>
+</ul>
+</li>
+<li><a href="#org10df447">3. Things that don't entirely work yet</a>
+<ul>
+<li><a href="#org1c14365">3.1. Tables</a></li>
+<li><a href="#orge8169a1">3.2. Error messages</a></li>
+<li><a href="#org95fbdee">3.3. Right hand side value rendering</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd85daec" class="outline-2">
+<h2 id="orgd85daec"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Chunk editing is a new way to interact with Pyret programs. Statements are
+grouped into "chunks" that can be rearranged and linted independently. The
+right hand side displays bindings and test results from each chunk.
+</p>
+
+<p>
+<img src="overview.png" alt="overview.png" /> 
+Chunks on the left, values on the right. The user is dragging a chunk using
+the mouse.
+</p>
+</div>
+</div>
+<div id="outline-container-org23b50e3" class="outline-2">
+<h2 id="org23b50e3"><span class="section-number-2">2</span> Things to Try</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgea7fd62" class="outline-3">
+<h3 id="orgea7fd62"><span class="section-number-3">2.1</span> <a id="org2b8c595"></a>Create a simple chunk</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Identifiers and the values they are bound to are displayed on the right hand
+side of the page.
+</p>
+<ol class="org-ol">
+<li>Write <code>x = 404 * 5</code> in an empty chunk.</li>
+<li>Press <code>Enter</code> to update the right hand side.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="bind-id-to-val.png" alt="bind-id-to-val.png" /> 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org06a2557" class="outline-3">
+<h3 id="org06a2557"><span class="section-number-3">2.2</span> <a id="org8d9d6d1"></a>Create a multi-line chunk</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Chunks are not limited to one line of code. Pressing <code>Enter</code> will advance you
+to the next chunk only if the one you're editing is syntactically complete.
+</p>
+
+<ol class="org-ol">
+<li>Write <code>fun timesTwo(n :: Number) -&gt; Number:</code> in an empty chunk.</li>
+<li>Press <code>Enter</code> to move to the next line in the chunk.</li>
+<li>Write <code>n * 2</code> on the new line.</li>
+<li>Press <code>Enter</code>.</li>
+<li>Write <code>end</code> to complete the function definition.</li>
+<li>Press <code>Enter</code> to complete the chunk.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="multi-line-function.png" alt="multi-line-function.png" /> 
+</p>
+</div>
+
+<p>
+The chunk editor knows when you aren't finished with a statement. It will
+keep you in the same chunk until you complete it.
+</p>
+</div>
+</div>
+<div id="outline-container-org4efe07f" class="outline-3">
+<h3 id="org4efe07f"><span class="section-number-3">2.3</span> Create new chunks with <code>Enter</code></h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Pressing <code>Enter</code> does different things depending on where your cursor is. If
+the cursor is at the end of a valid statement, <code>Enter</code> will create a new
+chunk and focus it (see <a href="#org2b8c595">2.1</a>). If the cursor is in the middle of a
+statement, <code>Enter</code> will create a new line in the same chunk (see <a href="#org8d9d6d1">2.2</a>).
+</p>
+</div>
+</div>
+<div id="outline-container-orgc371bd8" class="outline-3">
+<h3 id="orgc371bd8"><span class="section-number-3">2.4</span> Move between chunks with the arrow keys</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+Pressing <code>Up Arrow</code> while at the top of a chunk makes the cursor focus
+the chunk above. Similarly, pressing <code>Down Arrow</code> while at the bottom focuses
+the chunk below. This won't create any new chunks if they don't exist yet.
+</p>
+</div>
+</div>
+<div id="outline-container-org5f04165" class="outline-3">
+<h3 id="org5f04165"><span class="section-number-3">2.5</span> Delete an empty chunk</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Using <code>Backspace</code> on an empty chunk will remove it, moving the cursor's focus
+into the chunk above.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf95ff6" class="outline-3">
+<h3 id="orgaf95ff6"><span class="section-number-3">2.6</span> Fix an error</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+Chunks with errors<sup><a id="fnr.1" class="footref" href="#fn.1">1</a></sup> are highlighted red. Pressing <code>Enter</code> will make them
+jiggle and won't allow you to move into the next chunk.
+</p>
+
+<ol class="org-ol">
+<li>Write <code>x = 12</code> in another chunk to introduce a re-declaration error.</li>
+<li>Press <code>Enter</code> to display the error.</li>
+<li>Change <code>x</code> to <code>y</code> to fix the error.</li>
+<li>Press <code>Enter</code> to complete the chunk.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="errors.png" alt="errors.png" /> 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org10df447" class="outline-2">
+<h2 id="org10df447"><span class="section-number-2">3</span> Things that don't entirely work yet</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1c14365" class="outline-3">
+<h3 id="org1c14365"><span class="section-number-3">3.1</span> <a id="orgc78bc7d"></a>Tables</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Most table syntax and functions work, but only with type-checking turned off
+(it's on by default).
+<img src="table.png" alt="table.png" /> 
+</p>
+</div>
+</div>
+<div id="outline-container-orge8169a1" class="outline-3">
+<h3 id="orge8169a1"><span class="section-number-3">3.2</span> Error messages<sup><a id="fnr.1.100" class="footref" href="#fn.1">1</a></sup></h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Errors aren't rendered very intelligently. They contain source location
+information embedded directly in the text. We're still trying to figure out
+the best way to render these.
+</p>
+</div>
+</div>
+<div id="outline-container-org95fbdee" class="outline-3">
+<h3 id="org95fbdee"><span class="section-number-3">3.3</span> Right hand side value rendering</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Everything can be displayed on the right hand side, but some of it doesn't
+look very pretty.
+</p>
+
+<p>
+The following list of items are rendered nicely:
+</p>
+<ul class="org-ul">
+<li>Images</li>
+<li>Tables (see <a href="#orgc78bc7d">3.1</a>)</li>
+<li>Small integers</li>
+<li>Strings</li>
+</ul>
+
+<p>
+The following list of items could be displayed better:
+</p>
+<ul class="org-ul">
+<li>Abstract data types</li>
+<li>Large integers / non-integer numbers</li>
+<li>Functions</li>
+<li>Test results</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" class="footnum" href="#fnr.1">1</a></sup> <div class="footpara"><p class="footpara">
+Only compile and lint errors are currently displayed next to the
+offending chunk(s). Runtime errors are displayed in a separate window.
+</p></div></div>
+
+
+</div>
+</div></div>
+</body>
+</html>
