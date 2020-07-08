@@ -6,16 +6,14 @@
   Chunk editing is a new way to interact with Pyret programs. Statements are
   grouped into "chunks" that can be rearranged and linted independently. The
   right hand side displays bindings and test results from each chunk.
-
-  [[file:overview.png]] 
-  Chunks on the left, values on the right. The user is dragging a chunk using
-  the mouse.
 * Things to Try
 ** <<simple>>Create a simple chunk
    Identifiers and the values they are bound to are displayed on the right hand
    side of the page.
-   1) Write ~x = 404 * 5~ in an empty chunk.
-   2) Press =Enter= to update the right hand side.
+   1) Write ~import global as G~[fn:1] in an empty chunk.
+   2) Press =Enter= to move into the next chunk.
+   3) Write ~x = 404 * 5~ in the new chunk.
+   4) Press =Enter= to update the right hand side.
 
    [[file:bind-id-to-val.png]] 
 ** <<multi-line>>Create a multi-line chunk
@@ -46,7 +44,7 @@
    Using =Backspace= on an empty chunk will remove it, moving the cursor's focus
    into the chunk above.
 ** Fix an error
-   Chunks with errors[fn:1] are highlighted red. Pressing =Enter= will make them
+   Chunks with errors[fn:2] are highlighted red. Pressing =Enter= will make them
    jiggle and won't allow you to move into the next chunk.
    
    1) Write ~x = 12~ in another chunk to introduce a re-declaration error.
@@ -55,12 +53,31 @@
    4) Press ~Enter~ to complete the chunk.
    
    [[file:errors.png]] 
+** Write a test
+   The result of a =check:= or =examples:= block is displayed inline with the
+   identifier-value bindings on the right hand side of the page.
+
+   1) Write ~check: 2 + 2 is 4 end~ in an empty chunk
+   2) Press =Enter= to run the test. The right hand side of the page should show
+      that the test succeeded.
+   3) Change the ~4~ to a ~5~ to make the test fail.
+   5) Press the run button. The right hand side should update to show that the
+      test failed.
+   
+      [[file:test-failed.png]] 
+** Build some flags
+   Now that you've got a better idea of how to use the chunk editor, try
+   using the image library[fn:3] (=import image as I=) to make the following flags.
+*** Flag of [[https:en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Construction_sheet_of_the_Japanese_flag_no_text.svg][Japan]]
+    [[file:japanese-flag.png]]
+*** Flag of [[https:en.wikipedia.org/wiki/Flag_of_Italy][Italy]]
+   [[file:italian-flag.png]] 
 * Things that don't entirely work yet
 ** <<type-check-off>>Tables
-   Most table syntax and functions work, but only with type-checking turned off
-   (it's on by default).
+   Tables are supported through the tables library (=import tables as T=), but
+   type-checking must be explicitly turned off.
    [[file:table.png]] 
-** Error messages[fn:1]
+** Error messages[fn:2]
    Errors aren't rendered very intelligently. They contain source location
    information embedded directly in the text. We're still trying to figure out
    the best way to render these.
@@ -79,6 +96,12 @@
    - Large integers / non-integer numbers
    - Functions
    - Test results
+
 * Footnotes
-[fn:1] Only compile and lint errors are currently displayed next to the
+
+[fn:1] We are planning to remove the need to manually write =import global as G=.
+
+[fn:2] Only compile and lint errors are currently displayed next to the
 offending chunk(s). Runtime errors are displayed in a separate window.
+
+[fn:3] The =image-structs= library is not yet available.
