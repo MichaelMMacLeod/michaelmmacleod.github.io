@@ -48,7 +48,8 @@
    jiggle and won't allow you to move into the next chunk.
    
    1) Write ~x = 12~ in another chunk to introduce a re-declaration error.
-   2) Press =Enter= to display the error.
+   2) Press =Enter= to display the error in one chunk.
+   3) Click on the ~x = 404 * 5~ chunk to see the error there instead.
    3) Change ~x~ to ~y~ to fix the error.
    4) Press ~Enter~ to complete the chunk.
    
@@ -96,6 +97,13 @@
    - Large integers / non-integer numbers
    - Functions
    - Test results
+* Feedback
+  Thanks for taking the time to check out the chunk editor! We'd appreciate it
+  if you could send us some feedback, either through the Google form below or at
+  <TODO: email address here>
+  #+BEGIN_EXPORT html
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQbtam74KFC5khvFMPKneyzqw7aTVZ_zIR-eJmTIT6jjCQJg/viewform?embedded=true" width="640" height="691" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  #+END_EXPORT
 
 * Footnotes
 
