@@ -3,11 +3,12 @@
 # #+OPTIONS: num:nil
 #+OPTIONS: html-postamble:nil
 * Introduction
-  Chunk editing is a new way to interact with (Pyret) programs. Statements are
-  grouped into "chunks" that can be rearranged and linted independently. The
-  right hand side displays results from each chunk.
+  Chunk editing is an experimental way to interact with (Pyret) programs.
+  Statements on the left hand side are grouped into "chunks" that can be
+  rearranged and linted independently. The right hand side displays results from
+  each chunk.
 
-  The chunk editor is hosted online [[https://michaelmmacleod.github.io/build/][here.]]
+  You can try it out [[https://michaelmmacleod.github.io/build/][here.]]
 
   We are looking for information on the editing experience. For example, did
   error messages show up in surprising or surprisingly useful ways? Are you
@@ -21,12 +22,12 @@
    Identifiers and the values they are bound to are displayed on the right hand
    side of the page.
    1) Write ~import global as G~ in an empty chunk. This is a temporary
-      necessity.
+      necessity of [[not-quite-yet][the new compiler backend]].
    2) Press =Enter= to move into the next chunk.
    3) Write ~x = 404 * 5~ in the new chunk.
    4) Press =Enter= to update the right hand side.
 
-   [[file:bind-id-to-val.png]] 
+   [[file:bind-id-to-val.png]]
 ** <<multi-line>>Create a multi-line chunk
    Chunks are not limited to one line of code. Pressing =Enter= will advance you
    to the next chunk only if the one you're editing is syntactically complete.
@@ -53,10 +54,11 @@
    the chunk below. This won't create any new chunks if they don't exist yet.
 ** Delete an empty chunk
    Using =Backspace= on an empty chunk will remove it, moving the cursor's focus
-   into the chunk above.
+   into the chunk above. =Delete= works similarly, moving the cursor's focus
+   into the chunk below.
 ** Fix an error
-   Chunks with errors[fn:2] are highlighted red. Pressing =Enter= will make them
-   jiggle and won't allow you to move into the next chunk.
+   Chunks with errors[fn:2] are highlighted red. Pressing =Enter= won't move
+   into the next chunk.
    
    1) Write ~x = 12~ in another chunk to introduce a re-declaration error.
    2) Press =Enter= to display the error in one chunk.
@@ -79,12 +81,13 @@
       [[file:test-failed.png]] 
 ** Build some flags
    Now that you've got a better idea of how to use the chunk editor, try
-   using the image library[fn:3] (=include image=) to make the following flags.
+   using the [[https://www.pyret.org/docs/latest/image.html][image library]] (=include image=) to make the following flags. The
+   image-structs library [[not-quite-yet][is not yet available]].
 *** Flag of [[https:en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Construction_sheet_of_the_Japanese_flag_no_text.svg][Japan]]
     [[file:japanese-flag.png]]
 *** Flag of [[https:en.wikipedia.org/wiki/Flag_of_Italy][Italy]]
    [[file:italian-flag.png]] 
-* Things that don't entirely work yet
+* <<not-quite-yet>>Things that don't entirely work yet
   There are actually two different things going on here. One is the new editor
   and interactions style, and another is a mostly-rewritten backend for the
   compiler. We're interested in feedback about the editing and interactions
@@ -103,8 +106,8 @@
   backend, like Tables and Reactors.
 * Feedback
   Thanks for taking the time to check out the chunk editor! We'd appreciate it
-  if you could send us some feedback, either through the Google form below or at
-  <TODO: email address here>
+  if you could send us some feedback, either through the Google form below or
+  [[mailto:joe.politz@gmail.com,michaelmmacleod@gmail.com][email us]] directly.
   #+BEGIN_EXPORT html
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQbtam74KFC5khvFMPKneyzqw7aTVZ_zIR-eJmTIT6jjCQJg/viewform?embedded=true" width="640" height="691" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   #+END_EXPORT
