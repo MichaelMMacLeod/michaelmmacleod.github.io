@@ -99,8 +99,7 @@
    - Test results
 * Feedback
   Thanks for taking the time to check out the chunk editor! We'd appreciate it
-  if you could send us some feedback, either through the Google form below or at
-  <TODO: email address here>
+  if you could send us some feedback.
   #+BEGIN_EXPORT html
   <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQbtam74KFC5khvFMPKneyzqw7aTVZ_zIR-eJmTIT6jjCQJg/viewform?embedded=true" width="640" height="691" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   #+END_EXPORT

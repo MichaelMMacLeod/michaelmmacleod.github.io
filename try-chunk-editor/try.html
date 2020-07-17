@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-07-10 Fri 10:46 -->
+<!-- 2020-07-17 Fri 14:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>The Chunk Editor</title>
@@ -246,37 +246,37 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8816a8b">1. Introduction</a></li>
-<li><a href="#orge75fbcf">2. Things to Try</a>
+<li><a href="#org84975ed">1. Introduction</a></li>
+<li><a href="#org8395857">2. Things to Try</a>
 <ul>
-<li><a href="#org69c7e7e">2.1. Create a simple chunk</a></li>
-<li><a href="#org5cc9842">2.2. Create a multi-line chunk</a></li>
-<li><a href="#org6cbac72">2.3. Create new chunks with <code>Enter</code></a></li>
-<li><a href="#orgb9b139e">2.4. Move between chunks with the arrow keys</a></li>
-<li><a href="#orgf394498">2.5. Delete an empty chunk</a></li>
-<li><a href="#org4e40a85">2.6. Fix an error</a></li>
-<li><a href="#org0189b22">2.7. Write a test</a></li>
-<li><a href="#orgaff9698">2.8. Build some flags</a>
+<li><a href="#org5e4c7a3">2.1. Create a simple chunk</a></li>
+<li><a href="#org9145043">2.2. Create a multi-line chunk</a></li>
+<li><a href="#org94904ca">2.3. Create new chunks with <code>Enter</code></a></li>
+<li><a href="#orgbd8cffc">2.4. Move between chunks with the arrow keys</a></li>
+<li><a href="#orgf305cd0">2.5. Delete an empty chunk</a></li>
+<li><a href="#orgb432047">2.6. Fix an error</a></li>
+<li><a href="#org410f309">2.7. Write a test</a></li>
+<li><a href="#orgbf3a306">2.8. Build some flags</a>
 <ul>
-<li><a href="#orgd1513e5">2.8.1. Flag of Japan</a></li>
-<li><a href="#orgb4cdc1b">2.8.2. Flag of Italy</a></li>
+<li><a href="#orgeba77c7">2.8.1. Flag of Japan</a></li>
+<li><a href="#org99e9dea">2.8.2. Flag of Italy</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org6b01629">3. Things that don't entirely work yet</a>
+<li><a href="#orgce5e738">3. Things that don't entirely work yet</a>
 <ul>
-<li><a href="#org6fd2d38">3.1. Tables</a></li>
-<li><a href="#orgda606c7">3.2. Error messages</a></li>
-<li><a href="#org855616e">3.3. Right hand side value rendering</a></li>
+<li><a href="#org4db8f3a">3.1. Tables</a></li>
+<li><a href="#orgcaf2753">3.2. Error messages</a></li>
+<li><a href="#org6bede1b">3.3. Right hand side value rendering</a></li>
 </ul>
 </li>
-<li><a href="#org8c7dd5a">4. Feedback</a></li>
+<li><a href="#org956c197">4. Feedback</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org8816a8b" class="outline-2">
-<h2 id="org8816a8b"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-org84975ed" class="outline-2">
+<h2 id="org84975ed"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Chunk editing is a new way to interact with Pyret programs. Statements are
@@ -285,12 +285,12 @@ right hand side displays bindings and test results from each chunk.
 </p>
 </div>
 </div>
-<div id="outline-container-orge75fbcf" class="outline-2">
-<h2 id="orge75fbcf"><span class="section-number-2">2</span> Things to Try</h2>
+<div id="outline-container-org8395857" class="outline-2">
+<h2 id="org8395857"><span class="section-number-2">2</span> Things to Try</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org69c7e7e" class="outline-3">
-<h3 id="org69c7e7e"><span class="section-number-3">2.1</span> <a id="org51a6fe6"></a>Create a simple chunk</h3>
+<div id="outline-container-org5e4c7a3" class="outline-3">
+<h3 id="org5e4c7a3"><span class="section-number-3">2.1</span> <a id="orgb7ce574"></a>Create a simple chunk</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Identifiers and the values they are bound to are displayed on the right hand
@@ -310,8 +310,8 @@ side of the page.
 </div>
 </div>
 </div>
-<div id="outline-container-org5cc9842" class="outline-3">
-<h3 id="org5cc9842"><span class="section-number-3">2.2</span> <a id="org117b16d"></a>Create a multi-line chunk</h3>
+<div id="outline-container-org9145043" class="outline-3">
+<h3 id="org9145043"><span class="section-number-3">2.2</span> <a id="orgb5404a1"></a>Create a multi-line chunk</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Chunks are not limited to one line of code. Pressing <code>Enter</code> will advance you
@@ -339,19 +339,19 @@ keep you in the same chunk until you complete it.
 </p>
 </div>
 </div>
-<div id="outline-container-org6cbac72" class="outline-3">
-<h3 id="org6cbac72"><span class="section-number-3">2.3</span> Create new chunks with <code>Enter</code></h3>
+<div id="outline-container-org94904ca" class="outline-3">
+<h3 id="org94904ca"><span class="section-number-3">2.3</span> Create new chunks with <code>Enter</code></h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Pressing <code>Enter</code> does different things depending on where your cursor is. If
 the cursor is at the end of a valid statement, <code>Enter</code> will create a new
-chunk and focus it (see <a href="#org51a6fe6">2.1</a>). If the cursor is in the middle of a
-statement, <code>Enter</code> will create a new line in the same chunk (see <a href="#org117b16d">2.2</a>).
+chunk and focus it (see <a href="#orgb7ce574">2.1</a>). If the cursor is in the middle of a
+statement, <code>Enter</code> will create a new line in the same chunk (see <a href="#orgb5404a1">2.2</a>).
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9b139e" class="outline-3">
-<h3 id="orgb9b139e"><span class="section-number-3">2.4</span> Move between chunks with the arrow keys</h3>
+<div id="outline-container-orgbd8cffc" class="outline-3">
+<h3 id="orgbd8cffc"><span class="section-number-3">2.4</span> Move between chunks with the arrow keys</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 Pressing <code>Up Arrow</code> while at the top of a chunk makes the cursor focus
@@ -360,8 +360,8 @@ the chunk below. This won't create any new chunks if they don't exist yet.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf394498" class="outline-3">
-<h3 id="orgf394498"><span class="section-number-3">2.5</span> Delete an empty chunk</h3>
+<div id="outline-container-orgf305cd0" class="outline-3">
+<h3 id="orgf305cd0"><span class="section-number-3">2.5</span> Delete an empty chunk</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Using <code>Backspace</code> on an empty chunk will remove it, moving the cursor's focus
@@ -369,8 +369,8 @@ into the chunk above.
 </p>
 </div>
 </div>
-<div id="outline-container-org4e40a85" class="outline-3">
-<h3 id="org4e40a85"><span class="section-number-3">2.6</span> Fix an error</h3>
+<div id="outline-container-orgb432047" class="outline-3">
+<h3 id="orgb432047"><span class="section-number-3">2.6</span> Fix an error</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 Chunks with errors<sup><a id="fnr.2" class="footref" href="#fn.2">2</a></sup> are highlighted red. Pressing <code>Enter</code> will make them
@@ -392,8 +392,8 @@ jiggle and won't allow you to move into the next chunk.
 </div>
 </div>
 </div>
-<div id="outline-container-org0189b22" class="outline-3">
-<h3 id="org0189b22"><span class="section-number-3">2.7</span> Write a test</h3>
+<div id="outline-container-org410f309" class="outline-3">
+<h3 id="org410f309"><span class="section-number-3">2.7</span> Write a test</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 The result of a <code>check:</code> or <code>examples:</code> block is displayed inline with the
@@ -418,16 +418,16 @@ test failed.
 </ol>
 </div>
 </div>
-<div id="outline-container-orgaff9698" class="outline-3">
-<h3 id="orgaff9698"><span class="section-number-3">2.8</span> Build some flags</h3>
+<div id="outline-container-orgbf3a306" class="outline-3">
+<h3 id="orgbf3a306"><span class="section-number-3">2.8</span> Build some flags</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Now that you've got a better idea of how to use the chunk editor, try
 using the image library<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></sup> (<code>import image as I</code>) to make the following flags.
 </p>
 </div>
-<div id="outline-container-orgd1513e5" class="outline-4">
-<h4 id="orgd1513e5"><span class="section-number-4">2.8.1</span> Flag of <a href="https:en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Construction_sheet_of_the_Japanese_flag_no_text.svg">Japan</a></h4>
+<div id="outline-container-orgeba77c7" class="outline-4">
+<h4 id="orgeba77c7"><span class="section-number-4">2.8.1</span> Flag of <a href="https:en.wikipedia.org/wiki/Flag_of_Japan#/media/File:Construction_sheet_of_the_Japanese_flag_no_text.svg">Japan</a></h4>
 <div class="outline-text-4" id="text-2-8-1">
 
 <div class="figure">
@@ -436,8 +436,8 @@ using the image library<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></su
 </div>
 </div>
 </div>
-<div id="outline-container-orgb4cdc1b" class="outline-4">
-<h4 id="orgb4cdc1b"><span class="section-number-4">2.8.2</span> Flag of <a href="https:en.wikipedia.org/wiki/Flag_of_Italy">Italy</a></h4>
+<div id="outline-container-org99e9dea" class="outline-4">
+<h4 id="org99e9dea"><span class="section-number-4">2.8.2</span> Flag of <a href="https:en.wikipedia.org/wiki/Flag_of_Italy">Italy</a></h4>
 <div class="outline-text-4" id="text-2-8-2">
 
 <div class="figure">
@@ -448,12 +448,12 @@ using the image library<sup><a id="fnr.3" class="footref" href="#fn.3">3</a></su
 </div>
 </div>
 </div>
-<div id="outline-container-org6b01629" class="outline-2">
-<h2 id="org6b01629"><span class="section-number-2">3</span> Things that don't entirely work yet</h2>
+<div id="outline-container-orgce5e738" class="outline-2">
+<h2 id="orgce5e738"><span class="section-number-2">3</span> Things that don't entirely work yet</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org6fd2d38" class="outline-3">
-<h3 id="org6fd2d38"><span class="section-number-3">3.1</span> <a id="org7d5a17a"></a>Tables</h3>
+<div id="outline-container-org4db8f3a" class="outline-3">
+<h3 id="org4db8f3a"><span class="section-number-3">3.1</span> <a id="orgdbeca8a"></a>Tables</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Tables are supported through the tables library (<code>import tables as T</code>), but
@@ -462,8 +462,8 @@ type-checking must be explicitly turned off.
 </p>
 </div>
 </div>
-<div id="outline-container-orgda606c7" class="outline-3">
-<h3 id="orgda606c7"><span class="section-number-3">3.2</span> Error messages<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup></h3>
+<div id="outline-container-orgcaf2753" class="outline-3">
+<h3 id="orgcaf2753"><span class="section-number-3">3.2</span> Error messages<sup><a id="fnr.2.100" class="footref" href="#fn.2">2</a></sup></h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Errors aren't rendered very intelligently. They contain source location
@@ -472,8 +472,8 @@ the best way to render these.
 </p>
 </div>
 </div>
-<div id="outline-container-org855616e" class="outline-3">
-<h3 id="org855616e"><span class="section-number-3">3.3</span> Right hand side value rendering</h3>
+<div id="outline-container-org6bede1b" class="outline-3">
+<h3 id="org6bede1b"><span class="section-number-3">3.3</span> Right hand side value rendering</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Everything can be displayed on the right hand side, but some of it doesn't
@@ -485,7 +485,7 @@ The following list of items are rendered nicely:
 </p>
 <ul class="org-ul">
 <li>Images</li>
-<li>Tables (see <a href="#org7d5a17a">3.1</a>)</li>
+<li>Tables (see <a href="#orgdbeca8a">3.1</a>)</li>
 <li>Small integers</li>
 <li>Strings</li>
 </ul>
@@ -502,13 +502,12 @@ The following list of items could be displayed better:
 </div>
 </div>
 </div>
-<div id="outline-container-org8c7dd5a" class="outline-2">
-<h2 id="org8c7dd5a"><span class="section-number-2">4</span> Feedback</h2>
+<div id="outline-container-org956c197" class="outline-2">
+<h2 id="org956c197"><span class="section-number-2">4</span> Feedback</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Thanks for taking the time to check out the chunk editor! We'd appreciate it
-if you could send us some feedback, either through the Google form below or at
-&lt;TODO: email address here&gt;
+if you could send us some feedback.
 </p>
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfQbtam74KFC5khvFMPKneyzqw7aTVZ_zIR-eJmTIT6jjCQJg/viewform?embedded=true" width="640" height="691" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 </div>
