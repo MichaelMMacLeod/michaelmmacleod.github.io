@@ -1,0 +1,46 @@
+var _runtime = require("./runtime.js");
+var _nothing = undefined;
+var $left9 = {"names":["v"]};
+var $right10 = {"names":["v"]};
+var Either1 = {"left":function left(v11) {
+var $constructorTMP12 = {"$brand":$left9,
+"$tag":0,
+"v":v11};
+return $constructorTMP12;
+},
+"right":function right(v14) {
+var $constructorTMP15 = {"$brand":$right10,
+"$tag":1,
+"v":v14};
+return $constructorTMP15;
+},
+"is-left":function left(val) {
+return val.$brand === $left9;
+},
+"is-right":function right(val) {
+return val.$brand === $right10;
+}};
+var is$Either6 = Either1["Either"];
+var is$left5 = Either1["is-left"];
+var left4 = Either1["left"];
+var is$right3 = Either1["is-right"];
+var right2 = Either1["right"];
+var $answer17 = _runtime["trace-value"](["dummy location"],_nothing);
+return module["exports"] = {"right":right2,
+"is-right":is$right3,
+"is-left":is$left5,
+"is-Either":is$Either6,
+"left":left4,
+"$answer":$answer17,
+"$checks":_runtime["$checkResults"](),
+"$traces":_runtime["$getTraces"](),
+"$locations":[{"name":"right",
+"srcloc":["builtin://either",13,2,217,13,17,232]},
+{"name":"is-right",
+"srcloc":["builtin://either",13,2,217,13,17,232]},
+{"name":"is-left",
+"srcloc":["builtin://either",12,2,200,12,16,214]},
+{"name":"is-Either",
+"srcloc":["builtin://either",11,0,179,14,3,236]},
+{"name":"left",
+"srcloc":["builtin://either",12,2,200,12,16,214]}]};
