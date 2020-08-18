@@ -8,6 +8,8 @@ var $UnknownBrand = { "names": ["reason", "value1", "value2"] };
 var $EqualTag = 0;
 var $NotEqualTag = 1;
 var $UnknownTag = 2;
+// This function is used by flat functions in image.arr.js, so it must also be flat.
+/* @stopify flat */
 function Equal() {
     return {
         "$brand": $EqualBrand,
@@ -15,6 +17,8 @@ function Equal() {
     };
 }
 exports.Equal = Equal;
+// This function is used by flat functions in image.arr.js, so it must also be flat.
+/* @stopify flat */
 function NotEqual(reason, value1, value2) {
     return {
         "$brand": $NotEqualBrand,

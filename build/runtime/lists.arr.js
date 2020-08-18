@@ -1,2295 +1,2295 @@
 var _runtime = require("./runtime.js");
 var _global = require("./global.arr.js");
 var _nothing = undefined;
-var G109 = require("./global.arr.js");
-_runtime["addModule"]("builtin://global",G109);
+var G587 = require("./global.arr.js");
+_runtime["addModule"]("builtin://global",G587);
 var O888 = require("./option.arr.js");
 _runtime["addModule"]("builtin://option",O888);
 var E889 = require("./either.arr.js");
 _runtime["addModule"]("builtin://either",E889);
-var equality523 = require("./equality.arr.js");
-_runtime["addModule"]("builtin://equality",equality523);
-var RA179 = require("./raw-array.arr.js");
-_runtime["addModule"]("builtin://raw-array",RA179);
-var raise4 = _runtime["getModuleValue"]("builtin://global","raise");
-var tostring5 = _runtime["getModuleValue"]("builtin://global","num-to-string");
-var none38 = _runtime["getModuleValue"]("builtin://option","none");
-var some44 = _runtime["getModuleValue"]("builtin://option","some");
-var nothing52 = _runtime["getModuleValue"]("builtin://global","nothing");
-var identical3532 = _runtime["getModuleValue"]("builtin://global","identical3");
-var equal$always3552 = _runtime["getModuleValue"]("builtin://global","equal-always3");
-var num$max806 = _runtime["getModuleValue"]("builtin://global","num-max");
-var num$ceiling807 = _runtime["getModuleValue"]("builtin://global","num-ceiling");
-var $empty376 = {"names":false};
-var $link377 = {"names":["first","rest"]};
-var $constructorTMP393 = {"$brand":$empty376,
+var equality105 = require("./equality.arr.js");
+_runtime["addModule"]("builtin://equality",equality105);
+var RA94 = require("./raw-array.arr.js");
+_runtime["addModule"]("builtin://raw-array",RA94);
+var raise7 = _runtime["getModuleValue"]("builtin://global","raise");
+var identical3114 = _runtime["getModuleValue"]("builtin://global","identical3");
+var equal$always3134 = _runtime["getModuleValue"]("builtin://global","equal-always3");
+var nothing210 = _runtime["getModuleValue"]("builtin://global","nothing");
+var num$max390 = _runtime["getModuleValue"]("builtin://global","num-max");
+var num$ceiling391 = _runtime["getModuleValue"]("builtin://global","num-ceiling");
+var tostring404 = _runtime["getModuleValue"]("builtin://global","num-to-string");
+var none518 = _runtime["getModuleValue"]("builtin://option","none");
+var some524 = _runtime["getModuleValue"]("builtin://option","some");
+var $empty850 = {"names":false};
+var $link851 = {"names":["first","rest"]};
+var $constructorTMP867 = {"$brand":$empty850,
 "$tag":0};
-function $binder_plus306(self303) {
-var $inner307 = function inner_plus(other304) {
-return self303["append"](other304);
+function $binder_plus780(self777) {
+var $inner781 = function inner_plus(other778) {
+return self777["append"](other778);
 };
-$inner307["$brand"] = "METHOD";
-$inner307["$binder"] = $binder_plus306;
-return $inner307;
+$inner781["$brand"] = "METHOD";
+$inner781["$binder"] = $binder_plus780;
+return $inner781;
 };
-$constructorTMP393["_plus"] = $binder_plus306($constructorTMP393);
-function $binderall238(self231) {
-var $inner239 = function innerall(f234) {
-var cases232 = self231;
-var $ans233 = undefined;
-switch(cases232.$tag) {
-case 0: $ans233 = true;
+$constructorTMP867["_plus"] = $binder_plus780($constructorTMP867);
+function $binderall712(self705) {
+var $inner713 = function innerall(f708) {
+var cases706 = self705;
+var $ans707 = undefined;
+switch(cases706.$tag) {
+case 0: $ans707 = true;
 break;
-case 1: var first235 = cases232["first"];
-var rest236 = cases232["rest"];
-$ans233 = f234(first235) && rest236["all"](f234);
+case 1: var first709 = cases706["first"];
+var rest710 = cases706["rest"];
+$ans707 = f708(first709) && rest710["all"](f708);
 break;
-default: $ans233 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases232);
+default: $ans707 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases706);
 }
-return $ans233;
+return $ans707;
 };
-$inner239["$brand"] = "METHOD";
-$inner239["$binder"] = $binderall238;
-return $inner239;
+$inner713["$brand"] = "METHOD";
+$inner713["$binder"] = $binderall712;
+return $inner713;
 };
-$constructorTMP393["all"] = $binderall238($constructorTMP393);
-function $binderany247(self240) {
-var $inner248 = function innerany(f243) {
-var cases241 = self240;
-var $ans242 = undefined;
-switch(cases241.$tag) {
-case 0: $ans242 = false;
+$constructorTMP867["all"] = $binderall712($constructorTMP867);
+function $binderany721(self714) {
+var $inner722 = function innerany(f717) {
+var cases715 = self714;
+var $ans716 = undefined;
+switch(cases715.$tag) {
+case 0: $ans716 = false;
 break;
-case 1: var first244 = cases241["first"];
-var rest245 = cases241["rest"];
-$ans242 = f243(first244) || rest245["any"](f243);
+case 1: var first718 = cases715["first"];
+var rest719 = cases715["rest"];
+$ans716 = f717(first718) || rest719["any"](f717);
 break;
-default: $ans242 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases241);
+default: $ans716 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases715);
 }
-return $ans242;
+return $ans716;
 };
-$inner248["$brand"] = "METHOD";
-$inner248["$binder"] = $binderany247;
-return $inner248;
+$inner722["$brand"] = "METHOD";
+$inner722["$binder"] = $binderany721;
+return $inner722;
 };
-$constructorTMP393["any"] = $binderany247($constructorTMP393);
-function $binderappend256(self249) {
-var $inner257 = function innerappend(other252) {
-var cases250 = self249;
-var $ans251 = undefined;
-switch(cases250.$tag) {
-case 0: $ans251 = other252;
+$constructorTMP867["any"] = $binderany721($constructorTMP867);
+function $binderappend730(self723) {
+var $inner731 = function innerappend(other726) {
+var cases724 = self723;
+var $ans725 = undefined;
+switch(cases724.$tag) {
+case 0: $ans725 = other726;
 break;
-case 1: var first253 = cases250["first"];
-var rest254 = cases250["rest"];
-$ans251 = link9(first253,rest254["append"](other252));
+case 1: var first727 = cases724["first"];
+var rest728 = cases724["rest"];
+$ans725 = link47(first727,rest728["append"](other726));
 break;
-default: $ans251 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases250);
+default: $ans725 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases724);
 }
-return $ans251;
+return $ans725;
 };
-$inner257["$brand"] = "METHOD";
-$inner257["$binder"] = $binderappend256;
-return $inner257;
+$inner731["$brand"] = "METHOD";
+$inner731["$binder"] = $binderappend730;
+return $inner731;
 };
-$constructorTMP393["append"] = $binderappend256($constructorTMP393);
-function $binderdrop345(self343) {
-var $inner346 = function innerdrop(n342) {
-return split$at124(n342,self343)["suffix"];
+$constructorTMP867["append"] = $binderappend730($constructorTMP867);
+function $binderdrop819(self817) {
+var $inner820 = function innerdrop(n816) {
+return split$at367(n816,self817)["suffix"];
 };
-$inner346["$brand"] = "METHOD";
-$inner346["$binder"] = $binderdrop345;
-return $inner346;
+$inner820["$brand"] = "METHOD";
+$inner820["$binder"] = $binderdrop819;
+return $inner820;
 };
-$constructorTMP393["drop"] = $binderdrop345($constructorTMP393);
-function $bindereach321(self319) {
-var $inner322 = function innereach(f318) {
-return each93(f318,self319);
+$constructorTMP867["drop"] = $binderdrop819($constructorTMP867);
+function $bindereach795(self793) {
+var $inner796 = function innereach(f792) {
+return each571(f792,self793);
 };
-$inner322["$brand"] = "METHOD";
-$inner322["$binder"] = $bindereach321;
-return $inner322;
+$inner796["$brand"] = "METHOD";
+$inner796["$binder"] = $bindereach795;
+return $inner796;
 };
-$constructorTMP393["each"] = $bindereach321($constructorTMP393);
-function $binderfilter316(self314) {
-var $inner317 = function innerfilter(f313) {
-return filter131(f313,self314);
+$constructorTMP867["each"] = $bindereach795($constructorTMP867);
+function $binderfilter790(self788) {
+var $inner791 = function innerfilter(f787) {
+return filter608(f787,self788);
 };
-$inner317["$brand"] = "METHOD";
-$inner317["$binder"] = $binderfilter316;
-return $inner317;
+$inner791["$brand"] = "METHOD";
+$inner791["$binder"] = $binderfilter790;
+return $inner791;
 };
-$constructorTMP393["filter"] = $binderfilter316($constructorTMP393);
-function $binderfind381(self378) {
-var $inner382 = function innerfind(f379) {
-return none38;
+$constructorTMP867["filter"] = $binderfilter790($constructorTMP867);
+function $binderfind855(self852) {
+var $inner856 = function innerfind(f853) {
+return none518;
 };
-$inner382["$brand"] = "METHOD";
-$inner382["$binder"] = $binderfind381;
-return $inner382;
+$inner856["$brand"] = "METHOD";
+$inner856["$binder"] = $binderfind855;
+return $inner856;
 };
-$constructorTMP393["find"] = $binderfind381($constructorTMP393);
-function $binderfoldl229(self221) {
-var $inner230 = function innerfoldl(f226,base224) {
-var cases222 = self221;
-var $ans223 = undefined;
-switch(cases222.$tag) {
-case 0: $ans223 = base224;
+$constructorTMP867["find"] = $binderfind855($constructorTMP867);
+function $binderfoldl703(self695) {
+var $inner704 = function innerfoldl(f700,base698) {
+var cases696 = self695;
+var $ans697 = undefined;
+switch(cases696.$tag) {
+case 0: $ans697 = base698;
 break;
-case 1: var first227 = cases222["first"];
-var rest225 = cases222["rest"];
-$ans223 = rest225["foldl"](f226,f226(first227,base224));
+case 1: var first701 = cases696["first"];
+var rest699 = cases696["rest"];
+$ans697 = rest699["foldl"](f700,f700(first701,base698));
 break;
-default: $ans223 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases222);
+default: $ans697 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases696);
 }
-return $ans223;
+return $ans697;
 };
-$inner230["$brand"] = "METHOD";
-$inner230["$binder"] = $binderfoldl229;
-return $inner230;
+$inner704["$brand"] = "METHOD";
+$inner704["$binder"] = $binderfoldl703;
+return $inner704;
 };
-$constructorTMP393["foldl"] = $binderfoldl229($constructorTMP393);
-function $binderfoldr219(self211) {
-var $inner220 = function innerfoldr(f215,base214) {
-var cases212 = self211;
-var $ans213 = undefined;
-switch(cases212.$tag) {
-case 0: $ans213 = base214;
+$constructorTMP867["foldl"] = $binderfoldl703($constructorTMP867);
+function $binderfoldr693(self685) {
+var $inner694 = function innerfoldr(f689,base688) {
+var cases686 = self685;
+var $ans687 = undefined;
+switch(cases686.$tag) {
+case 0: $ans687 = base688;
 break;
-case 1: var first216 = cases212["first"];
-var rest217 = cases212["rest"];
-$ans213 = f215(first216,rest217["foldr"](f215,base214));
+case 1: var first690 = cases686["first"];
+var rest691 = cases686["rest"];
+$ans687 = f689(first690,rest691["foldr"](f689,base688));
 break;
-default: $ans213 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases212);
+default: $ans687 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases686);
 }
-return $ans213;
+return $ans687;
 };
-$inner220["$brand"] = "METHOD";
-$inner220["$binder"] = $binderfoldr219;
-return $inner220;
+$inner694["$brand"] = "METHOD";
+$inner694["$binder"] = $binderfoldr693;
+return $inner694;
 };
-$constructorTMP393["foldr"] = $binderfoldr219($constructorTMP393);
-function $binderget350(self347) {
-var $inner351 = function innerget(n348) {
-return get34(self347,n348);
+$constructorTMP867["foldr"] = $binderfoldr693($constructorTMP867);
+function $binderget824(self821) {
+var $inner825 = function innerget(n822) {
+return get514(self821,n822);
 };
-$inner351["$brand"] = "METHOD";
-$inner351["$binder"] = $binderget350;
-return $inner351;
+$inner825["$brand"] = "METHOD";
+$inner825["$binder"] = $binderget824;
+return $inner825;
 };
-$constructorTMP393["get"] = $binderget350($constructorTMP393);
-function $binderhead264(self258) {
-var $inner265 = function innerhead() {
-var cases259 = self258;
-var $ans260 = undefined;
-switch(cases259.$tag) {
-case 0: $ans260 = raise4("head: empty list");
+$constructorTMP867["get"] = $binderget824($constructorTMP867);
+function $binderhead738(self732) {
+var $inner739 = function innerhead() {
+var cases733 = self732;
+var $ans734 = undefined;
+switch(cases733.$tag) {
+case 0: $ans734 = raise7("head: empty list");
 break;
-case 1: var head261 = cases259["first"];
-var $underscore262 = cases259["rest"];
-$ans260 = head261;
+case 1: var head735 = cases733["first"];
+var $underscore736 = cases733["rest"];
+$ans734 = head735;
 break;
-default: $ans260 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases259);
+default: $ans734 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases733);
 }
-return $ans260;
+return $ans734;
 };
-$inner265["$brand"] = "METHOD";
-$inner265["$binder"] = $binderhead264;
-return $inner265;
+$inner739["$brand"] = "METHOD";
+$inner739["$binder"] = $binderhead738;
+return $inner739;
 };
-$constructorTMP393["head"] = $binderhead264($constructorTMP393);
-function $binderjoin$str366(self363) {
-var $inner367 = function innerjoin$str(sep364) {
-return join$str165(self363,sep364);
+$constructorTMP867["head"] = $binderhead738($constructorTMP867);
+function $binderjoin$str840(self837) {
+var $inner841 = function innerjoin$str(sep838) {
+return join$str642(self837,sep838);
 };
-$inner367["$brand"] = "METHOD";
-$inner367["$binder"] = $binderjoin$str366;
-return $inner367;
+$inner841["$brand"] = "METHOD";
+$inner841["$binder"] = $binderjoin$str840;
+return $inner841;
 };
-$constructorTMP393["join-str"] = $binderjoin$str366($constructorTMP393);
-function $binderjoin$str$last372(self368) {
-var $inner373 = function innerjoin$str$last(sep369,last$sep370) {
-return join$str$last155(self368,sep369,last$sep370);
+$constructorTMP867["join-str"] = $binderjoin$str840($constructorTMP867);
+function $binderjoin$str$last846(self842) {
+var $inner847 = function innerjoin$str$last(sep843,last$sep844) {
+return join$str$last632(self842,sep843,last$sep844);
 };
-$inner373["$brand"] = "METHOD";
-$inner373["$binder"] = $binderjoin$str$last372;
-return $inner373;
+$inner847["$brand"] = "METHOD";
+$inner847["$binder"] = $binderjoin$str$last846;
+return $inner847;
 };
-$constructorTMP393["join-str-last"] = $binderjoin$str$last372($constructorTMP393);
-function $binderlast281(self274) {
-var $inner282 = function innerlast() {
-var cases275 = self274;
-var $ans276 = undefined;
-switch(cases275.$tag) {
-case 0: $ans276 = raise4("last: took last of empty list");
+$constructorTMP867["join-str-last"] = $binderjoin$str$last846($constructorTMP867);
+function $binderlast755(self748) {
+var $inner756 = function innerlast() {
+var cases749 = self748;
+var $ans750 = undefined;
+switch(cases749.$tag) {
+case 0: $ans750 = raise7("last: took last of empty list");
 break;
-case 1: var first279 = cases275["first"];
-var rest278 = cases275["rest"];
-var $ans277 = undefined;
-if(is$empty192(rest278)) {
-$ans277 = self274["first"]} else {
-$ans277 = rest278["last"]()}
-$ans276 = $ans277;
+case 1: var first753 = cases749["first"];
+var rest752 = cases749["rest"];
+var $ans751 = undefined;
+if(is$empty102(rest752)) {
+$ans751 = self748["first"]} else {
+$ans751 = rest752["last"]()}
+$ans750 = $ans751;
 break;
-default: $ans276 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases275);
+default: $ans750 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases749);
 }
-return $ans276;
+return $ans750;
 };
-$inner282["$brand"] = "METHOD";
-$inner282["$binder"] = $binderlast281;
-return $inner282;
+$inner756["$brand"] = "METHOD";
+$inner756["$binder"] = $binderlast755;
+return $inner756;
 };
-$constructorTMP393["last"] = $binderlast281($constructorTMP393);
-function $binderlength200(self194) {
-var $inner201 = function innerlength() {
-var cases195 = self194;
-var $ans196 = undefined;
-switch(cases195.$tag) {
-case 0: $ans196 = (0);
+$constructorTMP867["last"] = $binderlast755($constructorTMP867);
+function $binderlength674(self668) {
+var $inner675 = function innerlength() {
+var cases669 = self668;
+var $ans670 = undefined;
+switch(cases669.$tag) {
+case 0: $ans670 = (0);
 break;
-case 1: var first198 = cases195["first"];
-var rest197 = cases195["rest"];
-$ans196 = _runtime["_add"]((1),rest197["length"](),_runtime["_errCallbacks"]);
+case 1: var first672 = cases669["first"];
+var rest671 = cases669["rest"];
+$ans670 = _runtime["_add"]((1),rest671["length"](),_runtime["_errCallbacks"]);
 break;
-default: $ans196 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases195);
+default: $ans670 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases669);
 }
-return $ans196;
+return $ans670;
 };
-$inner201["$brand"] = "METHOD";
-$inner201["$binder"] = $binderlength200;
-return $inner201;
+$inner675["$brand"] = "METHOD";
+$inner675["$binder"] = $binderlength674;
+return $inner675;
 };
-$constructorTMP393["length"] = $binderlength200($constructorTMP393);
-function $bindermap311(self309) {
-var $inner312 = function innermap(f308) {
-return map84(f308,self309);
+$constructorTMP867["length"] = $binderlength674($constructorTMP867);
+function $bindermap785(self783) {
+var $inner786 = function innermap(f782) {
+return map562(f782,self783);
 };
-$inner312["$brand"] = "METHOD";
-$inner312["$binder"] = $bindermap311;
-return $inner312;
+$inner786["$brand"] = "METHOD";
+$inner786["$binder"] = $bindermap785;
+return $inner786;
 };
-$constructorTMP393["map"] = $bindermap311($constructorTMP393);
-function $bindermember209(self202) {
-var $inner210 = function innermember(elt205) {
-var cases203 = self202;
-var $ans204 = undefined;
-switch(cases203.$tag) {
-case 0: $ans204 = false;
+$constructorTMP867["map"] = $bindermap785($constructorTMP867);
+function $bindermember683(self676) {
+var $inner684 = function innermember(elt679) {
+var cases677 = self676;
+var $ans678 = undefined;
+switch(cases677.$tag) {
+case 0: $ans678 = false;
 break;
-case 1: var first206 = cases203["first"];
-var rest207 = cases203["rest"];
-$ans204 = _runtime["equal-always"](elt205,first206) || rest207["member"](elt205);
+case 1: var first680 = cases677["first"];
+var rest681 = cases677["rest"];
+$ans678 = _runtime["equal-always"](elt679,first680) || rest681["member"](elt679);
 break;
-default: $ans204 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases203);
+default: $ans678 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases677);
 }
-return $ans204;
-};
-$inner210["$brand"] = "METHOD";
-$inner210["$binder"] = $bindermember209;
-return $inner210;
-};
-$constructorTMP393["member"] = $bindermember209($constructorTMP393);
-function $binderpartition387(self384) {
-var $inner388 = function innerpartition(f385) {
-var $temporary383 = {"is-true":empty46,
-"is-false":empty46};
-return $temporary383;
-};
-$inner388["$brand"] = "METHOD";
-$inner388["$binder"] = $binderpartition387;
-return $inner388;
-};
-$constructorTMP393["partition"] = $binderpartition387($constructorTMP393);
-function $binderpush330(self328) {
-var $inner331 = function innerpush(elt327) {
-return link9(elt327,self328);
-};
-$inner331["$brand"] = "METHOD";
-$inner331["$binder"] = $binderpush330;
-return $inner331;
-};
-$constructorTMP393["push"] = $binderpush330($constructorTMP393);
-function $binderremove361(self358) {
-var $inner362 = function innerremove(e359) {
-return remove137(self358,e359);
-};
-$inner362["$brand"] = "METHOD";
-$inner362["$binder"] = $binderremove361;
-return $inner362;
-};
-$constructorTMP393["remove"] = $binderremove361($constructorTMP393);
-function $binderreverse325(self323) {
-var $inner326 = function innerreverse() {
-return reverse98(self323);
-};
-$inner326["$brand"] = "METHOD";
-$inner326["$binder"] = $binderreverse325;
-return $inner326;
-};
-$constructorTMP393["reverse"] = $binderreverse325($constructorTMP393);
-function $binderset356(self352) {
-var $inner357 = function innerset(n353,e354) {
-return function$set21(self352,n353,e354);
-};
-$inner357["$brand"] = "METHOD";
-$inner357["$binder"] = $binderset356;
-return $inner357;
-};
-$constructorTMP393["set"] = $binderset356($constructorTMP393);
-function $bindersort391(self389) {
-var $inner392 = function innersort() {
-return self389;
-};
-$inner392["$brand"] = "METHOD";
-$inner392["$binder"] = $bindersort391;
-return $inner392;
-};
-$constructorTMP393["sort"] = $bindersort391($constructorTMP393);
-function $bindersort$by301(self283) {
-var $inner302 = function innersort$by(cmp295,eq294) {
-var cases284 = self283;
-var $ans285 = undefined;
-switch(cases284.$tag) {
-case 0: $ans285 = self283;
-break;
-case 1: var first289 = cases284["first"];
-var $underscore299 = cases284["rest"];
-var pivot290 = first289;
-var are$lt288 = empty46;
-var are$eq287 = empty46;
-var are$gt286 = empty46;
-self283["each"](function (e293) {
-var $ans291 = undefined;
-if(cmp295(e293,pivot290)) {
-$ans291 = are$lt288 = link9(e293,are$lt288)} else {
-var $ans292 = undefined;
-if(eq294(e293,pivot290)) {
-$ans292 = are$eq287 = link9(e293,are$eq287)} else {
-$ans292 = are$gt286 = link9(e293,are$gt286)}
-$ans291 = $ans292}
-return $ans291;
-});
-var less298 = are$lt288["sort-by"](cmp295,eq294);
-var equal297 = are$eq287;
-var greater296 = are$gt286["sort-by"](cmp295,eq294);
-$ans285 = less298["append"](equal297["append"](greater296));
-break;
-default: $ans285 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases284);
-}
-return $ans285;
-};
-$inner302["$brand"] = "METHOD";
-$inner302["$binder"] = $bindersort$by301;
-return $inner302;
-};
-$constructorTMP393["sort-by"] = $bindersort$by301($constructorTMP393);
-function $bindersplit$at335(self333) {
-var $inner336 = function innersplit$at(n332) {
-return split$at124(n332,self333);
-};
-$inner336["$brand"] = "METHOD";
-$inner336["$binder"] = $bindersplit$at335;
-return $inner336;
-};
-$constructorTMP393["split-at"] = $bindersplit$at335($constructorTMP393);
-function $bindertail272(self266) {
-var $inner273 = function innertail() {
-var cases267 = self266;
-var $ans268 = undefined;
-switch(cases267.$tag) {
-case 0: $ans268 = raise4("tail: empty list");
-break;
-case 1: var $underscore270 = cases267["first"];
-var tail269 = cases267["rest"];
-$ans268 = tail269;
-break;
-default: $ans268 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases267);
-}
-return $ans268;
-};
-$inner273["$brand"] = "METHOD";
-$inner273["$binder"] = $bindertail272;
-return $inner273;
-};
-$constructorTMP393["tail"] = $bindertail272($constructorTMP393);
-function $bindertake340(self338) {
-var $inner341 = function innertake(n337) {
-return split$at124(n337,self338)["prefix"];
-};
-$inner341["$brand"] = "METHOD";
-$inner341["$binder"] = $bindertake340;
-return $inner341;
-};
-$constructorTMP393["take"] = $bindertake340($constructorTMP393);
-function $binderlength200(self194) {
-var $inner201 = function innerlength() {
-var cases195 = self194;
-var $ans196 = undefined;
-switch(cases195.$tag) {
-case 0: $ans196 = (0);
-break;
-case 1: var first198 = cases195["first"];
-var rest197 = cases195["rest"];
-$ans196 = _runtime["_add"]((1),rest197["length"](),_runtime["_errCallbacks"]);
-break;
-default: $ans196 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases195);
-}
-return $ans196;
-};
-$inner201["$brand"] = "METHOD";
-$inner201["$binder"] = $binderlength200;
-return $inner201;
-};
-function $bindermember209(self202) {
-var $inner210 = function innermember(elt205) {
-var cases203 = self202;
-var $ans204 = undefined;
-switch(cases203.$tag) {
-case 0: $ans204 = false;
-break;
-case 1: var first206 = cases203["first"];
-var rest207 = cases203["rest"];
-$ans204 = _runtime["equal-always"](elt205,first206) || rest207["member"](elt205);
-break;
-default: $ans204 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases203);
-}
-return $ans204;
-};
-$inner210["$brand"] = "METHOD";
-$inner210["$binder"] = $bindermember209;
-return $inner210;
-};
-function $binderfoldr219(self211) {
-var $inner220 = function innerfoldr(f215,base214) {
-var cases212 = self211;
-var $ans213 = undefined;
-switch(cases212.$tag) {
-case 0: $ans213 = base214;
-break;
-case 1: var first216 = cases212["first"];
-var rest217 = cases212["rest"];
-$ans213 = f215(first216,rest217["foldr"](f215,base214));
-break;
-default: $ans213 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases212);
-}
-return $ans213;
-};
-$inner220["$brand"] = "METHOD";
-$inner220["$binder"] = $binderfoldr219;
-return $inner220;
-};
-function $binderfoldl229(self221) {
-var $inner230 = function innerfoldl(f226,base224) {
-var cases222 = self221;
-var $ans223 = undefined;
-switch(cases222.$tag) {
-case 0: $ans223 = base224;
-break;
-case 1: var first227 = cases222["first"];
-var rest225 = cases222["rest"];
-$ans223 = rest225["foldl"](f226,f226(first227,base224));
-break;
-default: $ans223 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases222);
-}
-return $ans223;
-};
-$inner230["$brand"] = "METHOD";
-$inner230["$binder"] = $binderfoldl229;
-return $inner230;
-};
-function $binderall238(self231) {
-var $inner239 = function innerall(f234) {
-var cases232 = self231;
-var $ans233 = undefined;
-switch(cases232.$tag) {
-case 0: $ans233 = true;
-break;
-case 1: var first235 = cases232["first"];
-var rest236 = cases232["rest"];
-$ans233 = f234(first235) && rest236["all"](f234);
-break;
-default: $ans233 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases232);
-}
-return $ans233;
-};
-$inner239["$brand"] = "METHOD";
-$inner239["$binder"] = $binderall238;
-return $inner239;
-};
-function $binderany247(self240) {
-var $inner248 = function innerany(f243) {
-var cases241 = self240;
-var $ans242 = undefined;
-switch(cases241.$tag) {
-case 0: $ans242 = false;
-break;
-case 1: var first244 = cases241["first"];
-var rest245 = cases241["rest"];
-$ans242 = f243(first244) || rest245["any"](f243);
-break;
-default: $ans242 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases241);
-}
-return $ans242;
-};
-$inner248["$brand"] = "METHOD";
-$inner248["$binder"] = $binderany247;
-return $inner248;
-};
-function $binderappend256(self249) {
-var $inner257 = function innerappend(other252) {
-var cases250 = self249;
-var $ans251 = undefined;
-switch(cases250.$tag) {
-case 0: $ans251 = other252;
-break;
-case 1: var first253 = cases250["first"];
-var rest254 = cases250["rest"];
-$ans251 = link9(first253,rest254["append"](other252));
-break;
-default: $ans251 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases250);
-}
-return $ans251;
-};
-$inner257["$brand"] = "METHOD";
-$inner257["$binder"] = $binderappend256;
-return $inner257;
-};
-function $binderhead264(self258) {
-var $inner265 = function innerhead() {
-var cases259 = self258;
-var $ans260 = undefined;
-switch(cases259.$tag) {
-case 0: $ans260 = raise4("head: empty list");
-break;
-case 1: var head261 = cases259["first"];
-var $underscore262 = cases259["rest"];
-$ans260 = head261;
-break;
-default: $ans260 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases259);
-}
-return $ans260;
-};
-$inner265["$brand"] = "METHOD";
-$inner265["$binder"] = $binderhead264;
-return $inner265;
-};
-function $bindertail272(self266) {
-var $inner273 = function innertail() {
-var cases267 = self266;
-var $ans268 = undefined;
-switch(cases267.$tag) {
-case 0: $ans268 = raise4("tail: empty list");
-break;
-case 1: var $underscore270 = cases267["first"];
-var tail269 = cases267["rest"];
-$ans268 = tail269;
-break;
-default: $ans268 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases267);
-}
-return $ans268;
-};
-$inner273["$brand"] = "METHOD";
-$inner273["$binder"] = $bindertail272;
-return $inner273;
-};
-function $binderlast281(self274) {
-var $inner282 = function innerlast() {
-var cases275 = self274;
-var $ans276 = undefined;
-switch(cases275.$tag) {
-case 0: $ans276 = raise4("last: took last of empty list");
-break;
-case 1: var first279 = cases275["first"];
-var rest278 = cases275["rest"];
-var $ans277 = undefined;
-if(is$empty192(rest278)) {
-$ans277 = self274["first"]} else {
-$ans277 = rest278["last"]()}
-$ans276 = $ans277;
-break;
-default: $ans276 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases275);
-}
-return $ans276;
-};
-$inner282["$brand"] = "METHOD";
-$inner282["$binder"] = $binderlast281;
-return $inner282;
-};
-function $bindersort$by301(self283) {
-var $inner302 = function innersort$by(cmp295,eq294) {
-var cases284 = self283;
-var $ans285 = undefined;
-switch(cases284.$tag) {
-case 0: $ans285 = self283;
-break;
-case 1: var first289 = cases284["first"];
-var $underscore299 = cases284["rest"];
-var pivot290 = first289;
-var are$lt288 = empty46;
-var are$eq287 = empty46;
-var are$gt286 = empty46;
-self283["each"](function (e293) {
-var $ans291 = undefined;
-if(cmp295(e293,pivot290)) {
-$ans291 = are$lt288 = link9(e293,are$lt288)} else {
-var $ans292 = undefined;
-if(eq294(e293,pivot290)) {
-$ans292 = are$eq287 = link9(e293,are$eq287)} else {
-$ans292 = are$gt286 = link9(e293,are$gt286)}
-$ans291 = $ans292}
-return $ans291;
-});
-var less298 = are$lt288["sort-by"](cmp295,eq294);
-var equal297 = are$eq287;
-var greater296 = are$gt286["sort-by"](cmp295,eq294);
-$ans285 = less298["append"](equal297["append"](greater296));
-break;
-default: $ans285 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases284);
-}
-return $ans285;
-};
-$inner302["$brand"] = "METHOD";
-$inner302["$binder"] = $bindersort$by301;
-return $inner302;
-};
-function $binder_plus306(self303) {
-var $inner307 = function inner_plus(other304) {
-return self303["append"](other304);
-};
-$inner307["$brand"] = "METHOD";
-$inner307["$binder"] = $binder_plus306;
-return $inner307;
-};
-function $bindermap311(self309) {
-var $inner312 = function innermap(f308) {
-return map84(f308,self309);
-};
-$inner312["$brand"] = "METHOD";
-$inner312["$binder"] = $bindermap311;
-return $inner312;
-};
-function $binderfilter316(self314) {
-var $inner317 = function innerfilter(f313) {
-return filter131(f313,self314);
-};
-$inner317["$brand"] = "METHOD";
-$inner317["$binder"] = $binderfilter316;
-return $inner317;
-};
-function $bindereach321(self319) {
-var $inner322 = function innereach(f318) {
-return each93(f318,self319);
-};
-$inner322["$brand"] = "METHOD";
-$inner322["$binder"] = $bindereach321;
-return $inner322;
-};
-function $binderreverse325(self323) {
-var $inner326 = function innerreverse() {
-return reverse98(self323);
-};
-$inner326["$brand"] = "METHOD";
-$inner326["$binder"] = $binderreverse325;
-return $inner326;
-};
-function $binderpush330(self328) {
-var $inner331 = function innerpush(elt327) {
-return link9(elt327,self328);
-};
-$inner331["$brand"] = "METHOD";
-$inner331["$binder"] = $binderpush330;
-return $inner331;
-};
-function $bindersplit$at335(self333) {
-var $inner336 = function innersplit$at(n332) {
-return split$at124(n332,self333);
-};
-$inner336["$brand"] = "METHOD";
-$inner336["$binder"] = $bindersplit$at335;
-return $inner336;
-};
-function $bindertake340(self338) {
-var $inner341 = function innertake(n337) {
-return split$at124(n337,self338)["prefix"];
-};
-$inner341["$brand"] = "METHOD";
-$inner341["$binder"] = $bindertake340;
-return $inner341;
-};
-function $binderdrop345(self343) {
-var $inner346 = function innerdrop(n342) {
-return split$at124(n342,self343)["suffix"];
-};
-$inner346["$brand"] = "METHOD";
-$inner346["$binder"] = $binderdrop345;
-return $inner346;
-};
-function $binderget350(self347) {
-var $inner351 = function innerget(n348) {
-return get34(self347,n348);
-};
-$inner351["$brand"] = "METHOD";
-$inner351["$binder"] = $binderget350;
-return $inner351;
-};
-function $binderset356(self352) {
-var $inner357 = function innerset(n353,e354) {
-return function$set21(self352,n353,e354);
-};
-$inner357["$brand"] = "METHOD";
-$inner357["$binder"] = $binderset356;
-return $inner357;
-};
-function $binderremove361(self358) {
-var $inner362 = function innerremove(e359) {
-return remove137(self358,e359);
-};
-$inner362["$brand"] = "METHOD";
-$inner362["$binder"] = $binderremove361;
-return $inner362;
-};
-function $binderjoin$str366(self363) {
-var $inner367 = function innerjoin$str(sep364) {
-return join$str165(self363,sep364);
-};
-$inner367["$brand"] = "METHOD";
-$inner367["$binder"] = $binderjoin$str366;
-return $inner367;
-};
-function $binderjoin$str$last372(self368) {
-var $inner373 = function innerjoin$str$last(sep369,last$sep370) {
-return join$str$last155(self368,sep369,last$sep370);
-};
-$inner373["$brand"] = "METHOD";
-$inner373["$binder"] = $binderjoin$str$last372;
-return $inner373;
-};
-var List190 = {"empty":$constructorTMP393,
-"link":function link(first405,rest406) {
-var $constructorTMP407 = {"$brand":$link377,
-"$tag":1,
-"first":first405,
-"rest":rest406};
-function $binder_plus306(self303) {
-var $inner307 = function inner_plus(other304) {
-return self303["append"](other304);
-};
-$inner307["$brand"] = "METHOD";
-$inner307["$binder"] = $binder_plus306;
-return $inner307;
-};
-$constructorTMP407["_plus"] = $binder_plus306($constructorTMP407);
-function $binderall238(self231) {
-var $inner239 = function innerall(f234) {
-var cases232 = self231;
-var $ans233 = undefined;
-switch(cases232.$tag) {
-case 0: $ans233 = true;
-break;
-case 1: var first235 = cases232["first"];
-var rest236 = cases232["rest"];
-$ans233 = f234(first235) && rest236["all"](f234);
-break;
-default: $ans233 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases232);
-}
-return $ans233;
-};
-$inner239["$brand"] = "METHOD";
-$inner239["$binder"] = $binderall238;
-return $inner239;
-};
-$constructorTMP407["all"] = $binderall238($constructorTMP407);
-function $binderany247(self240) {
-var $inner248 = function innerany(f243) {
-var cases241 = self240;
-var $ans242 = undefined;
-switch(cases241.$tag) {
-case 0: $ans242 = false;
-break;
-case 1: var first244 = cases241["first"];
-var rest245 = cases241["rest"];
-$ans242 = f243(first244) || rest245["any"](f243);
-break;
-default: $ans242 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases241);
-}
-return $ans242;
-};
-$inner248["$brand"] = "METHOD";
-$inner248["$binder"] = $binderany247;
-return $inner248;
-};
-$constructorTMP407["any"] = $binderany247($constructorTMP407);
-function $binderappend256(self249) {
-var $inner257 = function innerappend(other252) {
-var cases250 = self249;
-var $ans251 = undefined;
-switch(cases250.$tag) {
-case 0: $ans251 = other252;
-break;
-case 1: var first253 = cases250["first"];
-var rest254 = cases250["rest"];
-$ans251 = link9(first253,rest254["append"](other252));
-break;
-default: $ans251 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases250);
-}
-return $ans251;
-};
-$inner257["$brand"] = "METHOD";
-$inner257["$binder"] = $binderappend256;
-return $inner257;
-};
-$constructorTMP407["append"] = $binderappend256($constructorTMP407);
-function $binderdrop345(self343) {
-var $inner346 = function innerdrop(n342) {
-return split$at124(n342,self343)["suffix"];
-};
-$inner346["$brand"] = "METHOD";
-$inner346["$binder"] = $binderdrop345;
-return $inner346;
-};
-$constructorTMP407["drop"] = $binderdrop345($constructorTMP407);
-function $bindereach321(self319) {
-var $inner322 = function innereach(f318) {
-return each93(f318,self319);
-};
-$inner322["$brand"] = "METHOD";
-$inner322["$binder"] = $bindereach321;
-return $inner322;
-};
-$constructorTMP407["each"] = $bindereach321($constructorTMP407);
-function $binderfilter316(self314) {
-var $inner317 = function innerfilter(f313) {
-return filter131(f313,self314);
-};
-$inner317["$brand"] = "METHOD";
-$inner317["$binder"] = $binderfilter316;
-return $inner317;
-};
-$constructorTMP407["filter"] = $binderfilter316($constructorTMP407);
-function $binderfind400(self399) {
-var $inner401 = function innerfind(f398) {
-return find40(f398,self399);
-};
-$inner401["$brand"] = "METHOD";
-$inner401["$binder"] = $binderfind400;
-return $inner401;
-};
-$constructorTMP407["find"] = $binderfind400($constructorTMP407);
-function $binderfoldl229(self221) {
-var $inner230 = function innerfoldl(f226,base224) {
-var cases222 = self221;
-var $ans223 = undefined;
-switch(cases222.$tag) {
-case 0: $ans223 = base224;
-break;
-case 1: var first227 = cases222["first"];
-var rest225 = cases222["rest"];
-$ans223 = rest225["foldl"](f226,f226(first227,base224));
-break;
-default: $ans223 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases222);
-}
-return $ans223;
-};
-$inner230["$brand"] = "METHOD";
-$inner230["$binder"] = $binderfoldl229;
-return $inner230;
-};
-$constructorTMP407["foldl"] = $binderfoldl229($constructorTMP407);
-function $binderfoldr219(self211) {
-var $inner220 = function innerfoldr(f215,base214) {
-var cases212 = self211;
-var $ans213 = undefined;
-switch(cases212.$tag) {
-case 0: $ans213 = base214;
-break;
-case 1: var first216 = cases212["first"];
-var rest217 = cases212["rest"];
-$ans213 = f215(first216,rest217["foldr"](f215,base214));
-break;
-default: $ans213 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases212);
-}
-return $ans213;
-};
-$inner220["$brand"] = "METHOD";
-$inner220["$binder"] = $binderfoldr219;
-return $inner220;
-};
-$constructorTMP407["foldr"] = $binderfoldr219($constructorTMP407);
-function $binderget350(self347) {
-var $inner351 = function innerget(n348) {
-return get34(self347,n348);
-};
-$inner351["$brand"] = "METHOD";
-$inner351["$binder"] = $binderget350;
-return $inner351;
-};
-$constructorTMP407["get"] = $binderget350($constructorTMP407);
-function $binderhead264(self258) {
-var $inner265 = function innerhead() {
-var cases259 = self258;
-var $ans260 = undefined;
-switch(cases259.$tag) {
-case 0: $ans260 = raise4("head: empty list");
-break;
-case 1: var head261 = cases259["first"];
-var $underscore262 = cases259["rest"];
-$ans260 = head261;
-break;
-default: $ans260 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases259);
-}
-return $ans260;
-};
-$inner265["$brand"] = "METHOD";
-$inner265["$binder"] = $binderhead264;
-return $inner265;
-};
-$constructorTMP407["head"] = $binderhead264($constructorTMP407);
-function $binderjoin$str366(self363) {
-var $inner367 = function innerjoin$str(sep364) {
-return join$str165(self363,sep364);
-};
-$inner367["$brand"] = "METHOD";
-$inner367["$binder"] = $binderjoin$str366;
-return $inner367;
-};
-$constructorTMP407["join-str"] = $binderjoin$str366($constructorTMP407);
-function $binderjoin$str$last372(self368) {
-var $inner373 = function innerjoin$str$last(sep369,last$sep370) {
-return join$str$last155(self368,sep369,last$sep370);
-};
-$inner373["$brand"] = "METHOD";
-$inner373["$binder"] = $binderjoin$str$last372;
-return $inner373;
-};
-$constructorTMP407["join-str-last"] = $binderjoin$str$last372($constructorTMP407);
-function $binderlast281(self274) {
-var $inner282 = function innerlast() {
-var cases275 = self274;
-var $ans276 = undefined;
-switch(cases275.$tag) {
-case 0: $ans276 = raise4("last: took last of empty list");
-break;
-case 1: var first279 = cases275["first"];
-var rest278 = cases275["rest"];
-var $ans277 = undefined;
-if(is$empty192(rest278)) {
-$ans277 = self274["first"]} else {
-$ans277 = rest278["last"]()}
-$ans276 = $ans277;
-break;
-default: $ans276 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases275);
-}
-return $ans276;
-};
-$inner282["$brand"] = "METHOD";
-$inner282["$binder"] = $binderlast281;
-return $inner282;
-};
-$constructorTMP407["last"] = $binderlast281($constructorTMP407);
-function $binderlength200(self194) {
-var $inner201 = function innerlength() {
-var cases195 = self194;
-var $ans196 = undefined;
-switch(cases195.$tag) {
-case 0: $ans196 = (0);
-break;
-case 1: var first198 = cases195["first"];
-var rest197 = cases195["rest"];
-$ans196 = _runtime["_add"]((1),rest197["length"](),_runtime["_errCallbacks"]);
-break;
-default: $ans196 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases195);
-}
-return $ans196;
-};
-$inner201["$brand"] = "METHOD";
-$inner201["$binder"] = $binderlength200;
-return $inner201;
-};
-$constructorTMP407["length"] = $binderlength200($constructorTMP407);
-function $bindermap311(self309) {
-var $inner312 = function innermap(f308) {
-return map84(f308,self309);
-};
-$inner312["$brand"] = "METHOD";
-$inner312["$binder"] = $bindermap311;
-return $inner312;
-};
-$constructorTMP407["map"] = $bindermap311($constructorTMP407);
-function $bindermember209(self202) {
-var $inner210 = function innermember(elt205) {
-var cases203 = self202;
-var $ans204 = undefined;
-switch(cases203.$tag) {
-case 0: $ans204 = false;
-break;
-case 1: var first206 = cases203["first"];
-var rest207 = cases203["rest"];
-$ans204 = _runtime["equal-always"](elt205,first206) || rest207["member"](elt205);
-break;
-default: $ans204 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases203);
-}
-return $ans204;
-};
-$inner210["$brand"] = "METHOD";
-$inner210["$binder"] = $bindermember209;
-return $inner210;
-};
-$constructorTMP407["member"] = $bindermember209($constructorTMP407);
-function $binderpartition396(self395) {
-var $inner397 = function innerpartition(f394) {
-return partition63(f394,self395);
-};
-$inner397["$brand"] = "METHOD";
-$inner397["$binder"] = $binderpartition396;
-return $inner397;
-};
-$constructorTMP407["partition"] = $binderpartition396($constructorTMP407);
-function $binderpush330(self328) {
-var $inner331 = function innerpush(elt327) {
-return link9(elt327,self328);
-};
-$inner331["$brand"] = "METHOD";
-$inner331["$binder"] = $binderpush330;
-return $inner331;
-};
-$constructorTMP407["push"] = $binderpush330($constructorTMP407);
-function $binderremove361(self358) {
-var $inner362 = function innerremove(e359) {
-return remove137(self358,e359);
-};
-$inner362["$brand"] = "METHOD";
-$inner362["$binder"] = $binderremove361;
-return $inner362;
-};
-$constructorTMP407["remove"] = $binderremove361($constructorTMP407);
-function $binderreverse325(self323) {
-var $inner326 = function innerreverse() {
-return reverse98(self323);
-};
-$inner326["$brand"] = "METHOD";
-$inner326["$binder"] = $binderreverse325;
-return $inner326;
-};
-$constructorTMP407["reverse"] = $binderreverse325($constructorTMP407);
-function $binderset356(self352) {
-var $inner357 = function innerset(n353,e354) {
-return function$set21(self352,n353,e354);
-};
-$inner357["$brand"] = "METHOD";
-$inner357["$binder"] = $binderset356;
-return $inner357;
-};
-$constructorTMP407["set"] = $binderset356($constructorTMP407);
-function $bindersort403(self402) {
-var $inner404 = function innersort() {
-return raise4("TODO: fix typechecker / ordering to implement sort()");
-};
-$inner404["$brand"] = "METHOD";
-$inner404["$binder"] = $bindersort403;
-return $inner404;
-};
-$constructorTMP407["sort"] = $bindersort403($constructorTMP407);
-function $bindersort$by301(self283) {
-var $inner302 = function innersort$by(cmp295,eq294) {
-var cases284 = self283;
-var $ans285 = undefined;
-switch(cases284.$tag) {
-case 0: $ans285 = self283;
-break;
-case 1: var first289 = cases284["first"];
-var $underscore299 = cases284["rest"];
-var pivot290 = first289;
-var are$lt288 = empty46;
-var are$eq287 = empty46;
-var are$gt286 = empty46;
-self283["each"](function (e293) {
-var $ans291 = undefined;
-if(cmp295(e293,pivot290)) {
-$ans291 = are$lt288 = link9(e293,are$lt288)} else {
-var $ans292 = undefined;
-if(eq294(e293,pivot290)) {
-$ans292 = are$eq287 = link9(e293,are$eq287)} else {
-$ans292 = are$gt286 = link9(e293,are$gt286)}
-$ans291 = $ans292}
-return $ans291;
-});
-var less298 = are$lt288["sort-by"](cmp295,eq294);
-var equal297 = are$eq287;
-var greater296 = are$gt286["sort-by"](cmp295,eq294);
-$ans285 = less298["append"](equal297["append"](greater296));
-break;
-default: $ans285 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases284);
-}
-return $ans285;
-};
-$inner302["$brand"] = "METHOD";
-$inner302["$binder"] = $bindersort$by301;
-return $inner302;
-};
-$constructorTMP407["sort-by"] = $bindersort$by301($constructorTMP407);
-function $bindersplit$at335(self333) {
-var $inner336 = function innersplit$at(n332) {
-return split$at124(n332,self333);
-};
-$inner336["$brand"] = "METHOD";
-$inner336["$binder"] = $bindersplit$at335;
-return $inner336;
-};
-$constructorTMP407["split-at"] = $bindersplit$at335($constructorTMP407);
-function $bindertail272(self266) {
-var $inner273 = function innertail() {
-var cases267 = self266;
-var $ans268 = undefined;
-switch(cases267.$tag) {
-case 0: $ans268 = raise4("tail: empty list");
-break;
-case 1: var $underscore270 = cases267["first"];
-var tail269 = cases267["rest"];
-$ans268 = tail269;
-break;
-default: $ans268 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases267);
-}
-return $ans268;
-};
-$inner273["$brand"] = "METHOD";
-$inner273["$binder"] = $bindertail272;
-return $inner273;
-};
-$constructorTMP407["tail"] = $bindertail272($constructorTMP407);
-function $bindertake340(self338) {
-var $inner341 = function innertake(n337) {
-return split$at124(n337,self338)["prefix"];
-};
-$inner341["$brand"] = "METHOD";
-$inner341["$binder"] = $bindertake340;
-return $inner341;
-};
-$constructorTMP407["take"] = $bindertake340($constructorTMP407);
-return $constructorTMP407;
-},
-"is-empty":function empty(val) {
-return val.$brand === $empty376;
-},
-"is-link":function link(val) {
-return val.$brand === $link377;
-}};
-var is$List193 = List190["List"];
-var is$empty192 = List190["is-empty"];
-var empty46 = List190["empty"];
-var is$link191 = List190["is-link"];
-var link9 = List190["link"];
-var to$raw$array189 = function to$raw$array(lst185) {
-return lst185["foldl"](function (elem187,acc186) {
-return RA179["raw-array-push"](acc186,elem187);
-},RA179["raw-array"]["make"]([]));
-};
-var raw$array$to$list184 = function raw$array$to$list(array182) {
-return RA179["raw-array-foldr"](function (acc181,current180) {
-return link9(current180,acc181);
-},empty46,array182);
-};
-var foldl$complicated152 = function foldl$complicated(is$first177,flist166,f172,x173,l174,base176) {
-var cases167 = flist166;
-var $ans168 = undefined;
-switch(cases167.$tag) {
-case 1: var head175 = cases167["first"];
-var tail171 = cases167["rest"];
-var $ans169 = undefined;
-if(is$first177) {
-$ans169 = foldl$complicated152(false,tail171,f172,x173,l174,f172(head175,base176))} else {
-var $ans170 = undefined;
-if(_runtime["equal-always"](tail171,empty46)) {
-$ans170 = foldl$complicated152(false,tail171,f172,x173,l174,l174(head175,base176))} else {
-$ans170 = foldl$complicated152(false,tail171,f172,x173,l174,x173(head175,base176))}
-$ans169 = $ans170}
-$ans168 = $ans169;
-break;
-case 0: $ans168 = base176;
-break;
-default: $ans168 = _global["throwNoCasesMatched"](["builtin://lists",318,2,11455,328,5,11784],cases167);
-}
-return $ans168;
-};
-var join$str165 = function join$str(l163,sep157) {
-var f162 = function (elem161,acc160) {
-return _runtime["_add"](acc160,G109["js-to-string"](elem161),_runtime["_errCallbacks"]);
-};
-var x159 = function (elem158,acc156) {
-return _runtime["_add"](_runtime["_add"](acc156,sep157,_runtime["_errCallbacks"]),G109["js-to-string"](elem158),_runtime["_errCallbacks"]);
-};
-return foldl$complicated152(true,l163,f162,x159,x159,"");
-};
-var join$str$last155 = function join$str$last(jlist153,sep146,last$sep142) {
-var f151 = function (elem150,acc149) {
-return _runtime["_add"](acc149,G109["js-to-string"](elem150),_runtime["_errCallbacks"]);
-};
-var x148 = function (elem147,acc145) {
-return _runtime["_add"](_runtime["_add"](acc145,sep146,_runtime["_errCallbacks"]),G109["js-to-string"](elem147),_runtime["_errCallbacks"]);
-};
-var l144 = function (elem143,acc141) {
-return _runtime["_add"](_runtime["_add"](acc141,last$sep142,_runtime["_errCallbacks"]),G109["js-to-string"](elem143),_runtime["_errCallbacks"]);
-};
-return foldl$complicated152(true,jlist153,f151,x148,l144,"");
-};
-var remove137 = function remove(lst132,elt138) {
-var cases133 = lst132;
-var $ans134 = undefined;
-switch(cases133.$tag) {
-case 0: $ans134 = empty46;
-break;
-case 1: var first136 = cases133["first"];
-var rest139 = cases133["rest"];
-var $ans135 = undefined;
-if(_runtime["equal-always"](elt138,lst132["first"])) {
-$ans135 = remove137(rest139,elt138)} else {
-$ans135 = link9(first136,remove137(lst132["rest"],elt138))}
-$ans134 = $ans135;
-break;
-default: $ans134 = _global["throwNoCasesMatched"](["builtin://lists",376,2,13574,384,5,13762],cases133);
-}
-return $ans134;
-};
-var filter131 = function filter(f128,lst125) {
-return lst125["foldr"](function (e129,acc127) {
-var $ans126 = undefined;
-if(f128(e129)) {
-$ans126 = link9(e129,acc127)} else {
-$ans126 = acc127}
-return $ans126;
-},empty46);
-};
-var split$at124 = function split$at(n108,lst121) {
-var $ans107 = undefined;
-if(_runtime["_lessThan"](n108,(0),_runtime["_errCallbacks"]) || G109["not"](G109["num-is-integer"](n108))) {
-raise4("Invalid index");
-$ans107 = nothing52} else {
-$ans107 = nothing52}
-$ans107;
-var prefix111 = empty46;
-var suffix110 = empty46;
-var help116 = function help(ind117,l113) {
-var $ans112 = undefined;
-if(_runtime["equal-always"](ind117,(0))) {
-$ans112 = suffix110 = l113} else {
-var cases114 = l113;
-var $ans115 = undefined;
-switch(cases114.$tag) {
-case 0: $ans115 = raise4("Index too large");
-break;
-case 1: var fst119 = cases114["first"];
-var rst118 = cases114["rest"];
-help116(_runtime["_subtract"](ind117,(1),_runtime["_errCallbacks"]),rst118);
-$ans115 = prefix111 = function (arg_120) {
-return link9(arg_120,prefix111);
-}(fst119);
-break;
-default: $ans115 = _global["throwNoCasesMatched"](["builtin://lists",413,6,14579,418,9,14752],cases114);
-}
-$ans112 = $ans115}
-return $ans112;
-};
-help116(n108,lst121);
-var $temporary122 = {"prefix":prefix111,
-"suffix":suffix110};
-return $temporary122;
-};
-var fold87 = function fold(f102,base103,lst99) {
-var cases100 = lst99;
-var $ans101 = undefined;
-switch(cases100.$tag) {
-case 1: var fst104 = cases100["first"];
-var rst105 = cases100["rest"];
-$ans101 = fold87(f102,f102(base103,fst104),rst105);
-break;
-case 0: $ans101 = base103;
-break;
-default: $ans101 = _global["throwNoCasesMatched"](["builtin://lists",430,2,15188,435,5,15293],cases100);
-}
-return $ans101;
-};
-var reverse98 = function reverse(lst96) {
-return fold87(function (acc95,elt94) {
-return link9(elt94,acc95);
-},empty46,lst96);
-};
-var each93 = function each(f88,lst91) {
-fold87(function ($underscore90,elt89) {
-return f88(elt89);
-},nothing52,lst91);
-return nothing52;
-};
-var map84 = function map(f82,lst79) {
-var cases80 = lst79;
-var $ans81 = undefined;
-switch(cases80.$tag) {
-case 1: var fst83 = cases80["first"];
-var rst85 = cases80["rest"];
-$ans81 = link9(f82(fst83),map84(f82,rst85));
-break;
-case 0: $ans81 = empty46;
-break;
-default: $ans81 = _global["throwNoCasesMatched"](["builtin://lists",456,2,16136,459,5,16229],cases80);
-}
-return $ans81;
-};
-var slice78 = function slice(lst76,inclusive$lower71,exclusive$upper72) {
-var help73 = function help(acc67,inner$lst64,index70) {
-var cases65 = inner$lst64;
-var $ans66 = undefined;
-switch(cases65.$tag) {
-case 0: $ans66 = acc67;
-break;
-case 1: var first75 = cases65["first"];
-var rest74 = cases65["rest"];
-var $ans68 = undefined;
-if(_runtime["_greaterThanOrEqual"](index70,inclusive$lower71,_runtime["_errCallbacks"]) && _runtime["_lessThan"](index70,exclusive$upper72,_runtime["_errCallbacks"])) {
-$ans68 = link9(inner$lst64["first"],help73(acc67,rest74,_runtime["_add"](index70,(1),_runtime["_errCallbacks"])))} else {
-var $ans69 = undefined;
-if(_runtime["_lessThan"](index70,inclusive$lower71,_runtime["_errCallbacks"]) && _runtime["_lessThan"](index70,exclusive$upper72,_runtime["_errCallbacks"])) {
-$ans69 = help73(acc67,rest74,_runtime["_add"](index70,(1),_runtime["_errCallbacks"]))} else {
-$ans69 = acc67}
-$ans68 = $ans69}
-$ans66 = $ans68;
-break;
-default: $ans66 = _global["throwNoCasesMatched"](["builtin://lists",464,4,16418,475,7,16794],cases65);
-}
-return $ans66;
-};
-return help73(empty46,lst76,(0));
-};
-var partition63 = function partition(f57,lst60) {
-var is$true48 = empty46;
-var is$false47 = empty46;
-var help53 = function help(inner$lst49) {
-var cases50 = inner$lst49;
-var $ans51 = undefined;
-switch(cases50.$tag) {
-case 0: $ans51 = nothing52;
-break;
-case 1: var first59 = cases50["first"];
-var rest54 = cases50["rest"];
-help53(rest54);
-var $ans55 = undefined;
-if(f57(inner$lst49["first"])) {
-$ans55 = is$true48 = function (arg_58) {
-return link9(arg_58,is$true48);
-}(inner$lst49["first"])} else {
-$ans55 = is$false47 = function (arg_56) {
-return link9(arg_56,is$false47);
-}(inner$lst49["first"])}
-$ans55;
-$ans51 = nothing52;
-break;
-default: $ans51 = _global["throwNoCasesMatched"](["builtin://lists",485,4,17124,496,7,17431],cases50);
-}
-return $ans51;
-};
-help53(lst60);
-var $temporary61 = {"is-true":is$true48,
-"is-false":is$false47};
-return $temporary61;
-};
-var find40 = function find(f41,lst35) {
-var cases36 = lst35;
-var $ans37 = undefined;
-switch(cases36.$tag) {
-case 0: $ans37 = none38;
-break;
-case 1: var first43 = cases36["first"];
-var rest42 = cases36["rest"];
-var $ans39 = undefined;
-if(f41(first43)) {
-$ans39 = some44(first43)} else {
-$ans39 = find40(f41,rest42)}
-$ans37 = $ans39;
-break;
-default: $ans37 = _global["throwNoCasesMatched"](["builtin://lists",506,2,17690,514,5,17842],cases36);
-}
-return $ans37;
-};
-var get34 = function get(lst32,n25) {
-var help27 = function help(l22,cur29) {
-var cases23 = l22;
-var $ans24 = undefined;
-switch(cases23.$tag) {
-case 0: $ans24 = raise4(_runtime["_add"]("get: n too large ",tostring5(n25),_runtime["_errCallbacks"]));
-break;
-case 1: var first30 = cases23["first"];
-var rest28 = cases23["rest"];
-var $ans26 = undefined;
-if(_runtime["equal-always"](cur29,(0))) {
-$ans26 = first30} else {
-$ans26 = help27(rest28,_runtime["_subtract"](cur29,(1),_runtime["_errCallbacks"]))}
-$ans24 = $ans26;
-break;
-default: $ans24 = _global["throwNoCasesMatched"](["builtin://lists",520,4,18031,528,7,18223],cases23);
-}
-return $ans24;
-};
-var $ans31 = undefined;
-if(_runtime["_lessThan"](n25,(0),_runtime["_errCallbacks"])) {
-$ans31 = raise4(_runtime["_add"]("get: invalid argument: ",tostring5(n25),_runtime["_errCallbacks"]))} else {
-$ans31 = help27(lst32,n25)}
-return $ans31;
-};
-var function$set21 = function function$set(lst19,n6,v15) {
-var help11 = function help(l1,cur13) {
-var cases2 = l1;
-var $ans3 = undefined;
-switch(cases2.$tag) {
-case 0: $ans3 = raise4(_runtime["_add"]("set: n too large ",tostring5(n6),_runtime["_errCallbacks"]));
-break;
-case 1: var first8 = cases2["first"];
-var rest12 = cases2["rest"];
-var $ans7 = undefined;
-if(_runtime["equal-always"](cur13,(0))) {
-$ans7 = function (arg_16) {
-return link9(arg_16,rest12);
-}(v15)} else {
-$ans7 = function (arg_10) {
-return link9(arg_10,help11(rest12,_runtime["_subtract"](cur13,(1),_runtime["_errCallbacks"])));
-}(first8)}
-$ans3 = $ans7;
-break;
-default: $ans3 = _global["throwNoCasesMatched"](["builtin://lists",539,4,18603,547,7,18834],cases2);
-}
-return $ans3;
-};
-var $ans18 = undefined;
-if(_runtime["_lessThan"](n6,(0),_runtime["_errCallbacks"])) {
-$ans18 = raise4(_runtime["_add"]("set: invalid argument: ",tostring5(n6),_runtime["_errCallbacks"]))} else {
-$ans18 = help11(lst19,n6)}
-return $ans18;
-};
-var $temporary410 = {"make":raw$array$to$list184,
-"make0":function () {
-return empty46;
-},
-"make1":function (a411) {
-return link9(a411,empty46);
-},
-"make2":function (a412,b413) {
-return link9(a412,link9(b413,empty46));
-},
-"make3":function (a414,b415,c416) {
-return link9(a414,link9(b415,link9(c416,empty46)));
-},
-"make4":function (a417,b418,c419,d420) {
-return link9(a417,link9(b418,link9(c419,link9(d420,empty46))));
-},
-"make5":function (a421,b422,c423,d424,e425) {
-return link9(a421,link9(b422,link9(c423,link9(d424,link9(e425,empty46)))));
-}};
-var list426 = $temporary410;
-var length883 = function length(lst881) {
-var help878 = function help(l874,cur877) {
-var cases875 = l874;
-var $ans876 = undefined;
-switch(cases875.$tag) {
-case 0: $ans876 = cur877;
-break;
-case 1: var $underscore880 = cases875["first"];
-var r879 = cases875["rest"];
-$ans876 = help878(r879,_runtime["_add"](cur877,(1),_runtime["_errCallbacks"]));
-break;
-default: $ans876 = _global["throwNoCasesMatched"](["builtin://lists",571,4,19694,574,7,19777],cases875);
-}
-return $ans876;
-};
-return help878(lst881,(0));
-};
-var same$length868 = function same$length(lst1860,lst2863) {
-var cases861 = lst1860;
-var $ans862 = undefined;
-switch(cases861.$tag) {
-case 0: var cases864 = lst2863;
-var $ans865 = undefined;
-switch(cases864.$tag) {
-case 0: $ans865 = true;
-break;
-default: $ans865 = false;
-}
-$ans862 = $ans865;
-break;
-case 1: var $underscore872 = cases861["first"];
-var rest1869 = cases861["rest"];
-var cases866 = lst2863;
-var $ans867 = undefined;
-switch(cases866.$tag) {
-case 0: $ans867 = false;
-break;
-case 1: var $underscore871 = cases866["first"];
-var rest2870 = cases866["rest"];
-$ans867 = same$length868(rest1869,rest2870);
-break;
-default: $ans867 = _global["throwNoCasesMatched"](["builtin://lists",588,6,20146,591,9,20252],cases866);
-}
-$ans862 = $ans867;
-break;
-default: $ans862 = _global["throwNoCasesMatched"](["builtin://lists",581,2,20001,592,5,20258],cases861);
-}
-return $ans862;
-};
-var longer$than856 = function longer$than(lst852,len855) {
-var cases853 = lst852;
-var $ans854 = undefined;
-switch(cases853.$tag) {
-case 0: $ans854 = _runtime["_lessThan"](len855,(0),_runtime["_errCallbacks"]);
-break;
-case 1: var $underscore858 = cases853["first"];
-var rest857 = cases853["rest"];
-$ans854 = _runtime["_lessThan"](len855,(1),_runtime["_errCallbacks"]) || longer$than856(rest857,_runtime["_subtract"](len855,(1),_runtime["_errCallbacks"]));
-break;
-default: $ans854 = _global["throwNoCasesMatched"](["builtin://lists",601,2,20644,604,5,20752],cases853);
-}
-return $ans854;
-};
-var shorter$than848 = function shorter$than(lst844,len847) {
-var cases845 = lst844;
-var $ans846 = undefined;
-switch(cases845.$tag) {
-case 0: $ans846 = _runtime["_greaterThan"](len847,(0),_runtime["_errCallbacks"]);
-break;
-case 1: var $underscore850 = cases845["first"];
-var rest849 = cases845["rest"];
-$ans846 = _runtime["_greaterThan"](len847,(1),_runtime["_errCallbacks"]) && shorter$than848(rest849,_runtime["_subtract"](len847,(1),_runtime["_errCallbacks"]));
-break;
-default: $ans846 = _global["throwNoCasesMatched"](["builtin://lists",613,2,21088,616,5,21198],cases845);
-}
-return $ans846;
-};
-var push843 = function push(l841,elt840) {
-return link9(elt840,l841);
-};
-var last839 = function last(lst830) {
-var helper834 = function helper(l837) {
-var cases831 = lst830;
-var $ans832 = undefined;
-switch(cases831.$tag) {
-case 0: $ans832 = raise4("last: took last of empty list");
-break;
-case 1: var first836 = cases831["first"];
-var rest835 = cases831["rest"];
-var $ans833 = undefined;
-if(is$empty192(rest835)) {
-$ans833 = first836} else {
-$ans833 = helper834(rest835)}
-$ans832 = $ans833;
-break;
-default: $ans832 = _global["throwNoCasesMatched"](["builtin://lists",630,4,21561,638,7,21762],cases831);
-}
-return $ans832;
-};
-return helper834(lst830);
-};
-var sort$by829 = function sort$by(lst825,cmp826,eq827) {
-return lst825["sort-by"](cmp826,eq827);
-};
-var sort824 = function sort(lst822) {
-return lst822["sort"]();
-};
-var range821 = function range(start818,stop819) {
-var $ans816 = undefined;
-if(_runtime["_greaterThan"](start818,stop819,_runtime["_errCallbacks"])) {
-$ans816 = raise4(_runtime["_add"](_runtime["_add"](_runtime["_add"](_runtime["_add"]("range: start greater than stop: (",tostring5(start818),_runtime["_errCallbacks"]),", ",_runtime["_errCallbacks"]),tostring5(stop819),_runtime["_errCallbacks"]),")",_runtime["_errCallbacks"]))} else {
-$ans816 = raw$array$to$list184(RA179["raw-array-build"](function (i817) {
-return _runtime["_add"](i817,start818,_runtime["_errCallbacks"]);
-},_runtime["_subtract"](stop819,start818,_runtime["_errCallbacks"])))}
-return $ans816;
-};
-var range$by815 = function range$by(start809,stop808,delta810) {
-var $ans805 = undefined;
-if(_runtime["equal-always"](delta810,(0))) {
-var $ans813 = undefined;
-if(_runtime["equal-always"](start809,stop808)) {
-$ans813 = empty46} else {
-$ans813 = raise4("range-by: an interval of 0 would produce an infinite list")}
-$ans805 = $ans813} else {
-var len811 = num$max806(num$ceiling807(_runtime["_divide"](_runtime["_subtract"](stop808,start809,_runtime["_errCallbacks"]),delta810,_runtime["_errCallbacks"])),(0));
-$ans805 = raw$array$to$list184(RA179["raw-array-build"](function (i812) {
-return _runtime["_add"](start809,_runtime["_multiply"](i812,delta810,_runtime["_errCallbacks"]),_runtime["_errCallbacks"]);
-},len811))}
-return $ans805;
-};
-var repeat804 = function repeat(n802,e801) {
-var $ans800 = undefined;
-if(_runtime["_lessThan"](n802,(0),_runtime["_errCallbacks"])) {
-$ans800 = raise4("repeat: can't have a negative argument'")} else {
-$ans800 = raw$array$to$list184(RA179["raw-array-of"](e801,n802))}
-return $ans800;
-};
-var append797 = function append(front792,back795) {
-var cases793 = front792;
-var $ans794 = undefined;
-switch(cases793.$tag) {
-case 0: $ans794 = back795;
-break;
-case 1: var f796 = cases793["first"];
-var r798 = cases793["rest"];
-$ans794 = link9(f796,append797(r798,back795));
-break;
-default: $ans794 = _global["throwNoCasesMatched"](["builtin://lists",691,2,23362,694,5,23451],cases793);
-}
-return $ans794;
-};
-var take791 = function take(n788,lst789) {
-return split$at124(n788,lst789)["prefix"];
-};
-var drop787 = function drop(n784,lst785) {
-return split$at124(n784,lst785)["suffix"];
-};
-var any781 = function any(f779,lst776) {
-var cases777 = lst776;
-var $ans778 = undefined;
-switch(cases777.$tag) {
-case 0: $ans778 = false;
-break;
-case 1: var first780 = cases777["first"];
-var rest782 = cases777["rest"];
-$ans778 = f779(first780) || any781(f779,rest782);
-break;
-default: $ans778 = _global["throwNoCasesMatched"](["builtin://lists",709,2,23909,712,5,24004],cases777);
-}
-return $ans778;
-};
-var all773 = function all(f771,lst768) {
-var cases769 = lst768;
-var $ans770 = undefined;
-switch(cases769.$tag) {
-case 0: $ans770 = true;
-break;
-case 1: var first772 = cases769["first"];
-var rest774 = cases769["rest"];
-$ans770 = f771(first772) && all773(f771,rest774);
-break;
-default: $ans770 = _global["throwNoCasesMatched"](["builtin://lists",717,2,24139,720,5,24234],cases769);
-}
-return $ans770;
-};
-var all2767 = function all2(f760,lst1764,lst2765) {
-var help763 = function help(l1761,l2762) {
+return $ans678;
+};
+$inner684["$brand"] = "METHOD";
+$inner684["$binder"] = $bindermember683;
+return $inner684;
+};
+$constructorTMP867["member"] = $bindermember683($constructorTMP867);
+function $binderpartition861(self858) {
+var $inner862 = function innerpartition(f859) {
+var $temporary857 = {"is-true":empty39,
+"is-false":empty39};
+return $temporary857;
+};
+$inner862["$brand"] = "METHOD";
+$inner862["$binder"] = $binderpartition861;
+return $inner862;
+};
+$constructorTMP867["partition"] = $binderpartition861($constructorTMP867);
+function $binderpush804(self802) {
+var $inner805 = function innerpush(elt801) {
+return link47(elt801,self802);
+};
+$inner805["$brand"] = "METHOD";
+$inner805["$binder"] = $binderpush804;
+return $inner805;
+};
+$constructorTMP867["push"] = $binderpush804($constructorTMP867);
+function $binderremove835(self832) {
+var $inner836 = function innerremove(e833) {
+return remove614(self832,e833);
+};
+$inner836["$brand"] = "METHOD";
+$inner836["$binder"] = $binderremove835;
+return $inner836;
+};
+$constructorTMP867["remove"] = $binderremove835($constructorTMP867);
+function $binderreverse799(self797) {
+var $inner800 = function innerreverse() {
+return reverse576(self797);
+};
+$inner800["$brand"] = "METHOD";
+$inner800["$binder"] = $binderreverse799;
+return $inner800;
+};
+$constructorTMP867["reverse"] = $binderreverse799($constructorTMP867);
+function $binderset830(self826) {
+var $inner831 = function innerset(n827,e828) {
+return function$set501(self826,n827,e828);
+};
+$inner831["$brand"] = "METHOD";
+$inner831["$binder"] = $binderset830;
+return $inner831;
+};
+$constructorTMP867["set"] = $binderset830($constructorTMP867);
+function $bindersort865(self863) {
+var $inner866 = function innersort() {
+return self863;
+};
+$inner866["$brand"] = "METHOD";
+$inner866["$binder"] = $bindersort865;
+return $inner866;
+};
+$constructorTMP867["sort"] = $bindersort865($constructorTMP867);
+function $bindersort$by775(self757) {
+var $inner776 = function innersort$by(cmp769,eq768) {
+var cases758 = self757;
 var $ans759 = undefined;
-if(is$empty192(l1761) || is$empty192(l2762)) {
-$ans759 = true} else {
-$ans759 = f760(l1761["head"](),l2762["head"]()) && help763(l1761["tail"](),l2762["tail"]())}
+switch(cases758.$tag) {
+case 0: $ans759 = self757;
+break;
+case 1: var first763 = cases758["first"];
+var $underscore773 = cases758["rest"];
+var pivot764 = first763;
+var are$lt762 = empty39;
+var are$eq761 = empty39;
+var are$gt760 = empty39;
+self757["each"](function (e767) {
+var $ans765 = undefined;
+if(cmp769(e767,pivot764)) {
+$ans765 = are$lt762 = link47(e767,are$lt762)} else {
+var $ans766 = undefined;
+if(eq768(e767,pivot764)) {
+$ans766 = are$eq761 = link47(e767,are$eq761)} else {
+$ans766 = are$gt760 = link47(e767,are$gt760)}
+$ans765 = $ans766}
+return $ans765;
+});
+var less772 = are$lt762["sort-by"](cmp769,eq768);
+var equal771 = are$eq761;
+var greater770 = are$gt760["sort-by"](cmp769,eq768);
+$ans759 = less772["append"](equal771["append"](greater770));
+break;
+default: $ans759 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases758);
+}
 return $ans759;
 };
-return help763(lst1764,lst2765);
+$inner776["$brand"] = "METHOD";
+$inner776["$binder"] = $bindersort$by775;
+return $inner776;
 };
-var map2757 = function map2(f753,l1754,l2755) {
-var $ans752 = undefined;
-if(is$empty192(l1754) || is$empty192(l2755)) {
-$ans752 = empty46} else {
-$ans752 = function (arg_756) {
-return link9(arg_756,map2757(f753,l1754["tail"](),l2755["tail"]()));
-}(f753(l1754["head"](),l2755["head"]()))}
-return $ans752;
+$constructorTMP867["sort-by"] = $bindersort$by775($constructorTMP867);
+function $bindersplit$at809(self807) {
+var $inner810 = function innersplit$at(n806) {
+return split$at367(n806,self807);
 };
-var map3750 = function map3(f745,l1746,l2747,l3748) {
-var $ans744 = undefined;
-if(is$empty192(l1746) || is$empty192(l2747) || is$empty192(l3748)) {
-$ans744 = empty46} else {
-$ans744 = function (arg_749) {
-return link9(arg_749,map3750(f745,l1746["tail"](),l2747["tail"](),l3748["tail"]()));
-}(f745(l1746["head"](),l2747["head"](),l3748["head"]()))}
-return $ans744;
+$inner810["$brand"] = "METHOD";
+$inner810["$binder"] = $bindersplit$at809;
+return $inner810;
 };
-var map4742 = function map4(f736,l1737,l2738,l3739,l4740) {
-var $ans735 = undefined;
-if(is$empty192(l1737) || is$empty192(l2738) || is$empty192(l3739) || is$empty192(l4740)) {
-$ans735 = empty46} else {
-$ans735 = function (arg_741) {
-return link9(arg_741,map4742(f736,l1737["tail"](),l2738["tail"](),l3739["tail"](),l4740["tail"]()));
-}(f736(l1737["head"](),l2738["head"](),l3739["head"](),l4740["head"]()))}
-return $ans735;
-};
-var map_n733 = function map_n(f729,n730,lst731) {
-var $ans728 = undefined;
-if(is$empty192(lst731)) {
-$ans728 = empty46} else {
-$ans728 = function (arg_732) {
-return link9(arg_732,map_n733(f729,_runtime["_add"](n730,(1),_runtime["_errCallbacks"]),lst731["tail"]()));
-}(f729(n730,lst731["head"]()))}
-return $ans728;
-};
-var map2_n726 = function map2_n(f721,n722,l1723,l2724) {
-var $ans720 = undefined;
-if(is$empty192(l1723) || is$empty192(l2724)) {
-$ans720 = empty46} else {
-$ans720 = function (arg_725) {
-return link9(arg_725,map2_n726(f721,_runtime["_add"](n722,(1),_runtime["_errCallbacks"]),l1723["tail"](),l2724["tail"]()));
-}(f721(n722,l1723["head"](),l2724["head"]()))}
-return $ans720;
-};
-var map3_n718 = function map3_n(f712,n713,l1714,l2715,l3716) {
-var $ans711 = undefined;
-if(is$empty192(l1714) || is$empty192(l2715) || is$empty192(l3716)) {
-$ans711 = empty46} else {
-$ans711 = function (arg_717) {
-return link9(arg_717,map3_n718(f712,_runtime["_add"](n713,(1),_runtime["_errCallbacks"]),l1714["tail"](),l2715["tail"](),l3716["tail"]()));
-}(f712(n713,l1714["head"](),l2715["head"](),l3716["head"]()))}
-return $ans711;
-};
-var map4_n709 = function map4_n(f702,n703,l1704,l2705,l3706,l4707) {
-var $ans701 = undefined;
-if(is$empty192(l1704) || is$empty192(l2705) || is$empty192(l3706) || is$empty192(l4707)) {
-$ans701 = empty46} else {
-$ans701 = function (arg_708) {
-return link9(arg_708,map4_n709(f702,_runtime["_add"](n703,(1),_runtime["_errCallbacks"]),l1704["tail"](),l2705["tail"](),l3706["tail"](),l4707["tail"]()));
-}(f702(n703,l1704["head"](),l2705["head"](),l3706["head"](),l4707["head"]()))}
-return $ans701;
-};
-var each2700 = function each2(f693,lst1697,lst2698) {
-var help696 = function help(l1694,l2695) {
-var $ans692 = undefined;
-if(is$empty192(l1694) || is$empty192(l2695)) {
-$ans692 = nothing52} else {
-f693(l1694["head"](),l2695["head"]());
-$ans692 = help696(l1694["tail"](),l2695["tail"]())}
-return $ans692;
-};
-return help696(lst1697,lst2698);
-};
-var each3691 = function each3(f682,lst1687,lst2688,lst3689) {
-var help686 = function help(l1683,l2684,l3685) {
-var $ans681 = undefined;
-if(is$empty192(l1683) || is$empty192(l2684) || is$empty192(l3685)) {
-$ans681 = nothing52} else {
-f682(l1683["head"](),l2684["head"](),l3685["head"]());
-$ans681 = help686(l1683["tail"](),l2684["tail"](),l3685["tail"]())}
-return $ans681;
-};
-return help686(lst1687,lst2688,lst3689);
-};
-var each4680 = function each4(f669,lst1675,lst2676,lst3677,lst4678) {
-var help674 = function help(l1670,l2671,l3672,l4673) {
-var $ans668 = undefined;
-if(is$empty192(l1670) || is$empty192(l2671) || is$empty192(l3672) || is$empty192(l4673)) {
-$ans668 = nothing52} else {
-f669(l1670["head"](),l2671["head"](),l3672["head"](),l4673["head"]());
-$ans668 = help674(l1670["tail"](),l2671["tail"](),l3672["tail"](),l4673["tail"]())}
-return $ans668;
-};
-return help674(lst1675,lst2676,lst3677,lst4678);
-};
-var each_n667 = function each_n(f660,num664,lst665) {
-var help663 = function help(n661,l662) {
-var $ans659 = undefined;
-if(is$empty192(l662)) {
-$ans659 = nothing52} else {
-f660(n661,l662["head"]());
-$ans659 = help663(_runtime["_add"](n661,(1),_runtime["_errCallbacks"]),l662["tail"]())}
-return $ans659;
-};
-return help663(num664,lst665);
-};
-var each2_n658 = function each2_n(f649,num654,lst1655,lst2656) {
-var help653 = function help(n650,l1651,l2652) {
-var $ans648 = undefined;
-if(is$empty192(l1651) || is$empty192(l2652)) {
-$ans648 = nothing52} else {
-f649(n650,l1651["head"](),l2652["head"]());
-$ans648 = help653(_runtime["_add"](n650,(1),_runtime["_errCallbacks"]),l1651["tail"](),l2652["tail"]())}
-return $ans648;
-};
-return help653(num654,lst1655,lst2656);
-};
-var each3_n647 = function each3_n(f636,num642,lst1643,lst2644,lst3645) {
-var help641 = function help(n637,l1638,l2639,l3640) {
-var $ans635 = undefined;
-if(is$empty192(l1638) || is$empty192(l2639) || is$empty192(l3640)) {
-$ans635 = nothing52} else {
-f636(n637,l1638["head"](),l2639["head"](),l3640["head"]());
-$ans635 = help641(_runtime["_add"](n637,(1),_runtime["_errCallbacks"]),l1638["tail"](),l2639["tail"](),l3640["tail"]())}
-return $ans635;
-};
-return help641(num642,lst1643,lst2644,lst3645);
-};
-var each4_n634 = function each4_n(f621,num628,lst1629,lst2630,lst3631,lst4632) {
-var help627 = function help(n622,l1623,l2624,l3625,l4626) {
-var $ans620 = undefined;
-if(is$empty192(l1623) || is$empty192(l2624) || is$empty192(l3625) || is$empty192(l4626)) {
-$ans620 = nothing52} else {
-f621(n622,l1623["head"](),l2624["head"](),l3625["head"](),l4626["head"]());
-$ans620 = help627(_runtime["_add"](n622,(1),_runtime["_errCallbacks"]),l1623["tail"](),l2624["tail"](),l3625["tail"](),l4626["tail"]())}
-return $ans620;
-};
-return help627(num628,lst1629,lst2630,lst3631,lst4632);
-};
-var fold$while615 = function fold$while(f611,base610,lst607) {
-var cases608 = lst607;
-var $ans609 = undefined;
-switch(cases608.$tag) {
-case 0: $ans609 = base610;
+$constructorTMP867["split-at"] = $bindersplit$at809($constructorTMP867);
+function $bindertail746(self740) {
+var $inner747 = function innertail() {
+var cases741 = self740;
+var $ans742 = undefined;
+switch(cases741.$tag) {
+case 0: $ans742 = raise7("tail: empty list");
 break;
-case 1: var elt612 = cases608["first"];
-var r617 = cases608["rest"];
-var cases613 = f611(base610,elt612);
-var $ans614 = undefined;
-switch(cases613.$tag) {
-case 0: var v616 = cases613["v"];
-$ans614 = fold$while615(f611,v616,r617);
+case 1: var $underscore744 = cases741["first"];
+var tail743 = cases741["rest"];
+$ans742 = tail743;
 break;
-case 1: var v618 = cases613["v"];
-$ans614 = v618;
-break;
-default: $ans614 = _global["throwNoCasesMatched"](["builtin://lists",895,6,31200,898,9,31302],cases613);
+default: $ans742 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases741);
 }
-$ans609 = $ans614;
+return $ans742;
+};
+$inner747["$brand"] = "METHOD";
+$inner747["$binder"] = $bindertail746;
+return $inner747;
+};
+$constructorTMP867["tail"] = $bindertail746($constructorTMP867);
+function $bindertake814(self812) {
+var $inner815 = function innertake(n811) {
+return split$at367(n811,self812)["prefix"];
+};
+$inner815["$brand"] = "METHOD";
+$inner815["$binder"] = $bindertake814;
+return $inner815;
+};
+$constructorTMP867["take"] = $bindertake814($constructorTMP867);
+function $binderlength674(self668) {
+var $inner675 = function innerlength() {
+var cases669 = self668;
+var $ans670 = undefined;
+switch(cases669.$tag) {
+case 0: $ans670 = (0);
 break;
-default: $ans609 = _global["throwNoCasesMatched"](["builtin://lists",892,2,31135,899,5,31308],cases608);
+case 1: var first672 = cases669["first"];
+var rest671 = cases669["rest"];
+$ans670 = _runtime["_add"]((1),rest671["length"](),_runtime["_errCallbacks"]);
+break;
+default: $ans670 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases669);
 }
-return $ans609;
+return $ans670;
 };
-var foldr603 = function foldr(f602,base604,lst605) {
-var $ans601 = undefined;
-if(is$empty192(lst605)) {
-$ans601 = base604} else {
-$ans601 = f602(foldr603(f602,base604,lst605["tail"]()),lst605["head"]())}
-return $ans601;
+$inner675["$brand"] = "METHOD";
+$inner675["$binder"] = $binderlength674;
+return $inner675;
 };
-var fold2595 = function fold2(f596,base597,l1598,l2599) {
-var $ans594 = undefined;
-if(is$empty192(l1598) || is$empty192(l2599)) {
-$ans594 = base597} else {
-$ans594 = fold2595(f596,f596(base597,l1598["head"](),l2599["head"]()),l1598["tail"](),l2599["tail"]())}
-return $ans594;
-};
-var fold3587 = function fold3(f588,base589,l1590,l2591,l3592) {
-var $ans586 = undefined;
-if(is$empty192(l1590) || is$empty192(l2591) || is$empty192(l3592)) {
-$ans586 = base589} else {
-$ans586 = fold3587(f588,f588(base589,l1590["head"](),l2591["head"](),l3592["head"]()),l1590["tail"](),l2591["tail"](),l3592["tail"]())}
-return $ans586;
-};
-var fold4578 = function fold4(f579,base580,l1581,l2582,l3583,l4584) {
-var $ans577 = undefined;
-if(is$empty192(l1581) || is$empty192(l2582) || is$empty192(l3583) || is$empty192(l4584)) {
-$ans577 = base580} else {
-$ans577 = fold4578(f579,f579(base580,l1581["head"](),l2582["head"](),l3583["head"](),l4584["head"]()),l1581["tail"](),l2582["tail"](),l3583["tail"](),l4584["tail"]())}
-return $ans577;
-};
-var fold_n514 = function fold_n(f570,num573,base574,lst575) {
-var help568 = function help(n569,acc571,partial$list572) {
-var $ans567 = undefined;
-if(is$empty192(partial$list572)) {
-$ans567 = acc571} else {
-$ans567 = help568(_runtime["_add"](n569,(1),_runtime["_errCallbacks"]),f570(n569,acc571,partial$list572["head"]()),partial$list572["tail"]())}
-return $ans567;
-};
-return help568(num573,base574,lst575);
-};
-var member$with529 = function member$with(lst556,elt559,eq560) {
-var cases557 = lst556;
-var $ans558 = undefined;
-switch(cases557.$tag) {
-case 0: $ans558 = equality523["NotEqual"]("list",elt559,lst556);
+function $bindermember683(self676) {
+var $inner684 = function innermember(elt679) {
+var cases677 = self676;
+var $ans678 = undefined;
+switch(cases677.$tag) {
+case 0: $ans678 = false;
 break;
-case 1: var first561 = cases557["first"];
-var rest565 = cases557["rest"];
-var first$elt$equal562 = eq560(first561,elt559);
-var cases563 = first$elt$equal562;
-var $ans564 = undefined;
-switch(cases563.$tag) {
-case 0: $ans564 = equality523["Equal"];
+case 1: var first680 = cases677["first"];
+var rest681 = cases677["rest"];
+$ans678 = _runtime["equal-always"](elt679,first680) || rest681["member"](elt679);
 break;
-default: $ans564 = equality523["equal-or"](first$elt$equal562,member$with529(rest565,elt559,eq560));
+default: $ans678 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases677);
 }
-$ans558 = $ans564;
-break;
-default: $ans558 = _global["throwNoCasesMatched"](["builtin://lists",963,2,33997,971,5,34306],cases557);
-}
-return $ans558;
+return $ans678;
 };
-var member3479 = function member3(lst550,elt551) {
-return member$with529(lst550,elt551,function (l553,r554) {
-return equal$always3552(l553,r554);
+$inner684["$brand"] = "METHOD";
+$inner684["$binder"] = $bindermember683;
+return $inner684;
+};
+function $binderfoldr693(self685) {
+var $inner694 = function innerfoldr(f689,base688) {
+var cases686 = self685;
+var $ans687 = undefined;
+switch(cases686.$tag) {
+case 0: $ans687 = base688;
+break;
+case 1: var first690 = cases686["first"];
+var rest691 = cases686["rest"];
+$ans687 = f689(first690,rest691["foldr"](f689,base688));
+break;
+default: $ans687 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases686);
+}
+return $ans687;
+};
+$inner694["$brand"] = "METHOD";
+$inner694["$binder"] = $binderfoldr693;
+return $inner694;
+};
+function $binderfoldl703(self695) {
+var $inner704 = function innerfoldl(f700,base698) {
+var cases696 = self695;
+var $ans697 = undefined;
+switch(cases696.$tag) {
+case 0: $ans697 = base698;
+break;
+case 1: var first701 = cases696["first"];
+var rest699 = cases696["rest"];
+$ans697 = rest699["foldl"](f700,f700(first701,base698));
+break;
+default: $ans697 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases696);
+}
+return $ans697;
+};
+$inner704["$brand"] = "METHOD";
+$inner704["$binder"] = $binderfoldl703;
+return $inner704;
+};
+function $binderall712(self705) {
+var $inner713 = function innerall(f708) {
+var cases706 = self705;
+var $ans707 = undefined;
+switch(cases706.$tag) {
+case 0: $ans707 = true;
+break;
+case 1: var first709 = cases706["first"];
+var rest710 = cases706["rest"];
+$ans707 = f708(first709) && rest710["all"](f708);
+break;
+default: $ans707 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases706);
+}
+return $ans707;
+};
+$inner713["$brand"] = "METHOD";
+$inner713["$binder"] = $binderall712;
+return $inner713;
+};
+function $binderany721(self714) {
+var $inner722 = function innerany(f717) {
+var cases715 = self714;
+var $ans716 = undefined;
+switch(cases715.$tag) {
+case 0: $ans716 = false;
+break;
+case 1: var first718 = cases715["first"];
+var rest719 = cases715["rest"];
+$ans716 = f717(first718) || rest719["any"](f717);
+break;
+default: $ans716 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases715);
+}
+return $ans716;
+};
+$inner722["$brand"] = "METHOD";
+$inner722["$binder"] = $binderany721;
+return $inner722;
+};
+function $binderappend730(self723) {
+var $inner731 = function innerappend(other726) {
+var cases724 = self723;
+var $ans725 = undefined;
+switch(cases724.$tag) {
+case 0: $ans725 = other726;
+break;
+case 1: var first727 = cases724["first"];
+var rest728 = cases724["rest"];
+$ans725 = link47(first727,rest728["append"](other726));
+break;
+default: $ans725 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases724);
+}
+return $ans725;
+};
+$inner731["$brand"] = "METHOD";
+$inner731["$binder"] = $binderappend730;
+return $inner731;
+};
+function $binderhead738(self732) {
+var $inner739 = function innerhead() {
+var cases733 = self732;
+var $ans734 = undefined;
+switch(cases733.$tag) {
+case 0: $ans734 = raise7("head: empty list");
+break;
+case 1: var head735 = cases733["first"];
+var $underscore736 = cases733["rest"];
+$ans734 = head735;
+break;
+default: $ans734 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases733);
+}
+return $ans734;
+};
+$inner739["$brand"] = "METHOD";
+$inner739["$binder"] = $binderhead738;
+return $inner739;
+};
+function $bindertail746(self740) {
+var $inner747 = function innertail() {
+var cases741 = self740;
+var $ans742 = undefined;
+switch(cases741.$tag) {
+case 0: $ans742 = raise7("tail: empty list");
+break;
+case 1: var $underscore744 = cases741["first"];
+var tail743 = cases741["rest"];
+$ans742 = tail743;
+break;
+default: $ans742 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases741);
+}
+return $ans742;
+};
+$inner747["$brand"] = "METHOD";
+$inner747["$binder"] = $bindertail746;
+return $inner747;
+};
+function $binderlast755(self748) {
+var $inner756 = function innerlast() {
+var cases749 = self748;
+var $ans750 = undefined;
+switch(cases749.$tag) {
+case 0: $ans750 = raise7("last: took last of empty list");
+break;
+case 1: var first753 = cases749["first"];
+var rest752 = cases749["rest"];
+var $ans751 = undefined;
+if(is$empty102(rest752)) {
+$ans751 = self748["first"]} else {
+$ans751 = rest752["last"]()}
+$ans750 = $ans751;
+break;
+default: $ans750 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases749);
+}
+return $ans750;
+};
+$inner756["$brand"] = "METHOD";
+$inner756["$binder"] = $binderlast755;
+return $inner756;
+};
+function $bindersort$by775(self757) {
+var $inner776 = function innersort$by(cmp769,eq768) {
+var cases758 = self757;
+var $ans759 = undefined;
+switch(cases758.$tag) {
+case 0: $ans759 = self757;
+break;
+case 1: var first763 = cases758["first"];
+var $underscore773 = cases758["rest"];
+var pivot764 = first763;
+var are$lt762 = empty39;
+var are$eq761 = empty39;
+var are$gt760 = empty39;
+self757["each"](function (e767) {
+var $ans765 = undefined;
+if(cmp769(e767,pivot764)) {
+$ans765 = are$lt762 = link47(e767,are$lt762)} else {
+var $ans766 = undefined;
+if(eq768(e767,pivot764)) {
+$ans766 = are$eq761 = link47(e767,are$eq761)} else {
+$ans766 = are$gt760 = link47(e767,are$gt760)}
+$ans765 = $ans766}
+return $ans765;
 });
+var less772 = are$lt762["sort-by"](cmp769,eq768);
+var equal771 = are$eq761;
+var greater770 = are$gt760["sort-by"](cmp769,eq768);
+$ans759 = less772["append"](equal771["append"](greater770));
+break;
+default: $ans759 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases758);
+}
+return $ans759;
 };
-var member549 = function member(lst546,elt547) {
-return equality523["to-boolean"](member3479(lst546,elt547));
+$inner776["$brand"] = "METHOD";
+$inner776["$binder"] = $bindersort$by775;
+return $inner776;
 };
-var member$now3536 = function member$now3(lst541,elt542) {
-return member$with529(lst541,elt542,function (l543,r544) {
-return equality523["equal-now3"](l543,r544);
+function $binder_plus780(self777) {
+var $inner781 = function inner_plus(other778) {
+return self777["append"](other778);
+};
+$inner781["$brand"] = "METHOD";
+$inner781["$binder"] = $binder_plus780;
+return $inner781;
+};
+function $bindermap785(self783) {
+var $inner786 = function innermap(f782) {
+return map562(f782,self783);
+};
+$inner786["$brand"] = "METHOD";
+$inner786["$binder"] = $bindermap785;
+return $inner786;
+};
+function $binderfilter790(self788) {
+var $inner791 = function innerfilter(f787) {
+return filter608(f787,self788);
+};
+$inner791["$brand"] = "METHOD";
+$inner791["$binder"] = $binderfilter790;
+return $inner791;
+};
+function $bindereach795(self793) {
+var $inner796 = function innereach(f792) {
+return each571(f792,self793);
+};
+$inner796["$brand"] = "METHOD";
+$inner796["$binder"] = $bindereach795;
+return $inner796;
+};
+function $binderreverse799(self797) {
+var $inner800 = function innerreverse() {
+return reverse576(self797);
+};
+$inner800["$brand"] = "METHOD";
+$inner800["$binder"] = $binderreverse799;
+return $inner800;
+};
+function $binderpush804(self802) {
+var $inner805 = function innerpush(elt801) {
+return link47(elt801,self802);
+};
+$inner805["$brand"] = "METHOD";
+$inner805["$binder"] = $binderpush804;
+return $inner805;
+};
+function $bindersplit$at809(self807) {
+var $inner810 = function innersplit$at(n806) {
+return split$at367(n806,self807);
+};
+$inner810["$brand"] = "METHOD";
+$inner810["$binder"] = $bindersplit$at809;
+return $inner810;
+};
+function $bindertake814(self812) {
+var $inner815 = function innertake(n811) {
+return split$at367(n811,self812)["prefix"];
+};
+$inner815["$brand"] = "METHOD";
+$inner815["$binder"] = $bindertake814;
+return $inner815;
+};
+function $binderdrop819(self817) {
+var $inner820 = function innerdrop(n816) {
+return split$at367(n816,self817)["suffix"];
+};
+$inner820["$brand"] = "METHOD";
+$inner820["$binder"] = $binderdrop819;
+return $inner820;
+};
+function $binderget824(self821) {
+var $inner825 = function innerget(n822) {
+return get514(self821,n822);
+};
+$inner825["$brand"] = "METHOD";
+$inner825["$binder"] = $binderget824;
+return $inner825;
+};
+function $binderset830(self826) {
+var $inner831 = function innerset(n827,e828) {
+return function$set501(self826,n827,e828);
+};
+$inner831["$brand"] = "METHOD";
+$inner831["$binder"] = $binderset830;
+return $inner831;
+};
+function $binderremove835(self832) {
+var $inner836 = function innerremove(e833) {
+return remove614(self832,e833);
+};
+$inner836["$brand"] = "METHOD";
+$inner836["$binder"] = $binderremove835;
+return $inner836;
+};
+function $binderjoin$str840(self837) {
+var $inner841 = function innerjoin$str(sep838) {
+return join$str642(self837,sep838);
+};
+$inner841["$brand"] = "METHOD";
+$inner841["$binder"] = $binderjoin$str840;
+return $inner841;
+};
+function $binderjoin$str$last846(self842) {
+var $inner847 = function innerjoin$str$last(sep843,last$sep844) {
+return join$str$last632(self842,sep843,last$sep844);
+};
+$inner847["$brand"] = "METHOD";
+$inner847["$binder"] = $binderjoin$str$last846;
+return $inner847;
+};
+var List665 = {"empty":$constructorTMP867,
+"link":function link(first879,rest880) {
+var $constructorTMP881 = {"$brand":$link851,
+"$tag":1,
+"first":first879,
+"rest":rest880};
+function $binder_plus780(self777) {
+var $inner781 = function inner_plus(other778) {
+return self777["append"](other778);
+};
+$inner781["$brand"] = "METHOD";
+$inner781["$binder"] = $binder_plus780;
+return $inner781;
+};
+$constructorTMP881["_plus"] = $binder_plus780($constructorTMP881);
+function $binderall712(self705) {
+var $inner713 = function innerall(f708) {
+var cases706 = self705;
+var $ans707 = undefined;
+switch(cases706.$tag) {
+case 0: $ans707 = true;
+break;
+case 1: var first709 = cases706["first"];
+var rest710 = cases706["rest"];
+$ans707 = f708(first709) && rest710["all"](f708);
+break;
+default: $ans707 = _global["throwNoCasesMatched"](["builtin://lists",143,4,5362,146,7,5463],cases706);
+}
+return $ans707;
+};
+$inner713["$brand"] = "METHOD";
+$inner713["$binder"] = $binderall712;
+return $inner713;
+};
+$constructorTMP881["all"] = $binderall712($constructorTMP881);
+function $binderany721(self714) {
+var $inner722 = function innerany(f717) {
+var cases715 = self714;
+var $ans716 = undefined;
+switch(cases715.$tag) {
+case 0: $ans716 = false;
+break;
+case 1: var first718 = cases715["first"];
+var rest719 = cases715["rest"];
+$ans716 = f717(first718) || rest719["any"](f717);
+break;
+default: $ans716 = _global["throwNoCasesMatched"](["builtin://lists",151,4,5616,155,7,5725],cases715);
+}
+return $ans716;
+};
+$inner722["$brand"] = "METHOD";
+$inner722["$binder"] = $binderany721;
+return $inner722;
+};
+$constructorTMP881["any"] = $binderany721($constructorTMP881);
+function $binderappend730(self723) {
+var $inner731 = function innerappend(other726) {
+var cases724 = self723;
+var $ans725 = undefined;
+switch(cases724.$tag) {
+case 0: $ans725 = other726;
+break;
+case 1: var first727 = cases724["first"];
+var rest728 = cases724["rest"];
+$ans725 = link47(first727,rest728["append"](other726));
+break;
+default: $ans725 = _global["throwNoCasesMatched"](["builtin://lists",160,4,5878,164,7,5995],cases724);
+}
+return $ans725;
+};
+$inner731["$brand"] = "METHOD";
+$inner731["$binder"] = $binderappend730;
+return $inner731;
+};
+$constructorTMP881["append"] = $binderappend730($constructorTMP881);
+function $binderdrop819(self817) {
+var $inner820 = function innerdrop(n816) {
+return split$at367(n816,self817)["suffix"];
+};
+$inner820["$brand"] = "METHOD";
+$inner820["$binder"] = $binderdrop819;
+return $inner820;
+};
+$constructorTMP881["drop"] = $binderdrop819($constructorTMP881);
+function $bindereach795(self793) {
+var $inner796 = function innereach(f792) {
+return each571(f792,self793);
+};
+$inner796["$brand"] = "METHOD";
+$inner796["$binder"] = $bindereach795;
+return $inner796;
+};
+$constructorTMP881["each"] = $bindereach795($constructorTMP881);
+function $binderfilter790(self788) {
+var $inner791 = function innerfilter(f787) {
+return filter608(f787,self788);
+};
+$inner791["$brand"] = "METHOD";
+$inner791["$binder"] = $binderfilter790;
+return $inner791;
+};
+$constructorTMP881["filter"] = $binderfilter790($constructorTMP881);
+function $binderfind874(self873) {
+var $inner875 = function innerfind(f872) {
+return find520(f872,self873);
+};
+$inner875["$brand"] = "METHOD";
+$inner875["$binder"] = $binderfind874;
+return $inner875;
+};
+$constructorTMP881["find"] = $binderfind874($constructorTMP881);
+function $binderfoldl703(self695) {
+var $inner704 = function innerfoldl(f700,base698) {
+var cases696 = self695;
+var $ans697 = undefined;
+switch(cases696.$tag) {
+case 0: $ans697 = base698;
+break;
+case 1: var first701 = cases696["first"];
+var rest699 = cases696["rest"];
+$ans697 = rest699["foldl"](f700,f700(first701,base698));
+break;
+default: $ans697 = _global["throwNoCasesMatched"](["builtin://lists",135,4,5101,138,7,5207],cases696);
+}
+return $ans697;
+};
+$inner704["$brand"] = "METHOD";
+$inner704["$binder"] = $binderfoldl703;
+return $inner704;
+};
+$constructorTMP881["foldl"] = $binderfoldl703($constructorTMP881);
+function $binderfoldr693(self685) {
+var $inner694 = function innerfoldr(f689,base688) {
+var cases686 = self685;
+var $ans687 = undefined;
+switch(cases686.$tag) {
+case 0: $ans687 = base688;
+break;
+case 1: var first690 = cases686["first"];
+var rest691 = cases686["rest"];
+$ans687 = f689(first690,rest691["foldr"](f689,base688));
+break;
+default: $ans687 = _global["throwNoCasesMatched"](["builtin://lists",126,4,4774,129,7,4880],cases686);
+}
+return $ans687;
+};
+$inner694["$brand"] = "METHOD";
+$inner694["$binder"] = $binderfoldr693;
+return $inner694;
+};
+$constructorTMP881["foldr"] = $binderfoldr693($constructorTMP881);
+function $binderget824(self821) {
+var $inner825 = function innerget(n822) {
+return get514(self821,n822);
+};
+$inner825["$brand"] = "METHOD";
+$inner825["$binder"] = $binderget824;
+return $inner825;
+};
+$constructorTMP881["get"] = $binderget824($constructorTMP881);
+function $binderhead738(self732) {
+var $inner739 = function innerhead() {
+var cases733 = self732;
+var $ans734 = undefined;
+switch(cases733.$tag) {
+case 0: $ans734 = raise7("head: empty list");
+break;
+case 1: var head735 = cases733["first"];
+var $underscore736 = cases733["rest"];
+$ans734 = head735;
+break;
+default: $ans734 = _global["throwNoCasesMatched"](["builtin://lists",168,4,6034,171,7,6132],cases733);
+}
+return $ans734;
+};
+$inner739["$brand"] = "METHOD";
+$inner739["$binder"] = $binderhead738;
+return $inner739;
+};
+$constructorTMP881["head"] = $binderhead738($constructorTMP881);
+function $binderjoin$str840(self837) {
+var $inner841 = function innerjoin$str(sep838) {
+return join$str642(self837,sep838);
+};
+$inner841["$brand"] = "METHOD";
+$inner841["$binder"] = $binderjoin$str840;
+return $inner841;
+};
+$constructorTMP881["join-str"] = $binderjoin$str840($constructorTMP881);
+function $binderjoin$str$last846(self842) {
+var $inner847 = function innerjoin$str$last(sep843,last$sep844) {
+return join$str$last632(self842,sep843,last$sep844);
+};
+$inner847["$brand"] = "METHOD";
+$inner847["$binder"] = $binderjoin$str$last846;
+return $inner847;
+};
+$constructorTMP881["join-str-last"] = $binderjoin$str$last846($constructorTMP881);
+function $binderlast755(self748) {
+var $inner756 = function innerlast() {
+var cases749 = self748;
+var $ans750 = undefined;
+switch(cases749.$tag) {
+case 0: $ans750 = raise7("last: took last of empty list");
+break;
+case 1: var first753 = cases749["first"];
+var rest752 = cases749["rest"];
+var $ans751 = undefined;
+if(is$empty102(rest752)) {
+$ans751 = self748["first"]} else {
+$ans751 = rest752["last"]()}
+$ans750 = $ans751;
+break;
+default: $ans750 = _global["throwNoCasesMatched"](["builtin://lists",183,4,6404,194,7,6620],cases749);
+}
+return $ans750;
+};
+$inner756["$brand"] = "METHOD";
+$inner756["$binder"] = $binderlast755;
+return $inner756;
+};
+$constructorTMP881["last"] = $binderlast755($constructorTMP881);
+function $binderlength674(self668) {
+var $inner675 = function innerlength() {
+var cases669 = self668;
+var $ans670 = undefined;
+switch(cases669.$tag) {
+case 0: $ans670 = (0);
+break;
+case 1: var first672 = cases669["first"];
+var rest671 = cases669["rest"];
+$ans670 = _runtime["_add"]((1),rest671["length"](),_runtime["_errCallbacks"]);
+break;
+default: $ans670 = _global["throwNoCasesMatched"](["builtin://lists",109,4,4210,112,7,4301],cases669);
+}
+return $ans670;
+};
+$inner675["$brand"] = "METHOD";
+$inner675["$binder"] = $binderlength674;
+return $inner675;
+};
+$constructorTMP881["length"] = $binderlength674($constructorTMP881);
+function $bindermap785(self783) {
+var $inner786 = function innermap(f782) {
+return map562(f782,self783);
+};
+$inner786["$brand"] = "METHOD";
+$inner786["$binder"] = $bindermap785;
+return $inner786;
+};
+$constructorTMP881["map"] = $bindermap785($constructorTMP881);
+function $bindermember683(self676) {
+var $inner684 = function innermember(elt679) {
+var cases677 = self676;
+var $ans678 = undefined;
+switch(cases677.$tag) {
+case 0: $ans678 = false;
+break;
+case 1: var first680 = cases677["first"];
+var rest681 = cases677["rest"];
+$ans678 = _runtime["equal-always"](elt679,first680) || rest681["member"](elt679);
+break;
+default: $ans678 = _global["throwNoCasesMatched"](["builtin://lists",117,4,4439,120,7,4552],cases677);
+}
+return $ans678;
+};
+$inner684["$brand"] = "METHOD";
+$inner684["$binder"] = $bindermember683;
+return $inner684;
+};
+$constructorTMP881["member"] = $bindermember683($constructorTMP881);
+function $binderpartition870(self869) {
+var $inner871 = function innerpartition(f868) {
+return partition541(f868,self869);
+};
+$inner871["$brand"] = "METHOD";
+$inner871["$binder"] = $binderpartition870;
+return $inner871;
+};
+$constructorTMP881["partition"] = $binderpartition870($constructorTMP881);
+function $binderpush804(self802) {
+var $inner805 = function innerpush(elt801) {
+return link47(elt801,self802);
+};
+$inner805["$brand"] = "METHOD";
+$inner805["$binder"] = $binderpush804;
+return $inner805;
+};
+$constructorTMP881["push"] = $binderpush804($constructorTMP881);
+function $binderremove835(self832) {
+var $inner836 = function innerremove(e833) {
+return remove614(self832,e833);
+};
+$inner836["$brand"] = "METHOD";
+$inner836["$binder"] = $binderremove835;
+return $inner836;
+};
+$constructorTMP881["remove"] = $binderremove835($constructorTMP881);
+function $binderreverse799(self797) {
+var $inner800 = function innerreverse() {
+return reverse576(self797);
+};
+$inner800["$brand"] = "METHOD";
+$inner800["$binder"] = $binderreverse799;
+return $inner800;
+};
+$constructorTMP881["reverse"] = $binderreverse799($constructorTMP881);
+function $binderset830(self826) {
+var $inner831 = function innerset(n827,e828) {
+return function$set501(self826,n827,e828);
+};
+$inner831["$brand"] = "METHOD";
+$inner831["$binder"] = $binderset830;
+return $inner831;
+};
+$constructorTMP881["set"] = $binderset830($constructorTMP881);
+function $bindersort877(self876) {
+var $inner878 = function innersort() {
+return raise7("TODO: fix typechecker / ordering to implement sort()");
+};
+$inner878["$brand"] = "METHOD";
+$inner878["$binder"] = $bindersort877;
+return $inner878;
+};
+$constructorTMP881["sort"] = $bindersort877($constructorTMP881);
+function $bindersort$by775(self757) {
+var $inner776 = function innersort$by(cmp769,eq768) {
+var cases758 = self757;
+var $ans759 = undefined;
+switch(cases758.$tag) {
+case 0: $ans759 = self757;
+break;
+case 1: var first763 = cases758["first"];
+var $underscore773 = cases758["rest"];
+var pivot764 = first763;
+var are$lt762 = empty39;
+var are$eq761 = empty39;
+var are$gt760 = empty39;
+self757["each"](function (e767) {
+var $ans765 = undefined;
+if(cmp769(e767,pivot764)) {
+$ans765 = are$lt762 = link47(e767,are$lt762)} else {
+var $ans766 = undefined;
+if(eq768(e767,pivot764)) {
+$ans766 = are$eq761 = link47(e767,are$eq761)} else {
+$ans766 = are$gt760 = link47(e767,are$gt760)}
+$ans765 = $ans766}
+return $ans765;
 });
+var less772 = are$lt762["sort-by"](cmp769,eq768);
+var equal771 = are$eq761;
+var greater770 = are$gt760["sort-by"](cmp769,eq768);
+$ans759 = less772["append"](equal771["append"](greater770));
+break;
+default: $ans759 = _global["throwNoCasesMatched"](["builtin://lists",201,4,6982,233,7,8214],cases758);
+}
+return $ans759;
 };
-var member$now540 = function member$now(lst537,elt538) {
-return equality523["to-boolean"](member$now3536(lst537,elt538));
+$inner776["$brand"] = "METHOD";
+$inner776["$binder"] = $bindersort$by775;
+return $inner776;
 };
-var member$identical3524 = function member$identical3(lst530,elt531) {
-return member$with529(lst530,elt531,function (l533,r534) {
-return identical3532(l533,r534);
-});
+$constructorTMP881["sort-by"] = $bindersort$by775($constructorTMP881);
+function $bindersplit$at809(self807) {
+var $inner810 = function innersplit$at(n806) {
+return split$at367(n806,self807);
 };
-var member$identical528 = function member$identical(lst525,elt526) {
-return equality523["to-boolean"](member$identical3524(lst525,elt526));
+$inner810["$brand"] = "METHOD";
+$inner810["$binder"] = $bindersplit$at809;
+return $inner810;
 };
-var shuffle522 = function shuffle(lst519) {
-var $ans513 = undefined;
-if(is$empty192(lst519)) {
-$ans513 = empty46} else {
-var elts520 = fold_n514(function (i517,arr516,e518) {
-var ix515 = raise4("TODO(alex): Implement random generator somewhere");
-RA179["raw-array-set"](arr516,i517,RA179["raw-array-get"](arr516,ix515));
-RA179["raw-array-set"](arr516,ix515,e518);
-return arr516;
-},(1),RA179["raw-array-of"](lst519["head"](),lst519["length"]()),lst519["tail"]());
-$ans513 = raw$array$to$list184(elts520)}
-return $ans513;
+$constructorTMP881["split-at"] = $bindersplit$at809($constructorTMP881);
+function $bindertail746(self740) {
+var $inner747 = function innertail() {
+var cases741 = self740;
+var $ans742 = undefined;
+switch(cases741.$tag) {
+case 0: $ans742 = raise7("tail: empty list");
+break;
+case 1: var $underscore744 = cases741["first"];
+var tail743 = cases741["rest"];
+$ans742 = tail743;
+break;
+default: $ans742 = _global["throwNoCasesMatched"](["builtin://lists",175,4,6177,178,7,6275],cases741);
+}
+return $ans742;
 };
-var filter$map509 = function filter$map(f505,lst502) {
-var cases503 = lst502;
+$inner747["$brand"] = "METHOD";
+$inner747["$binder"] = $bindertail746;
+return $inner747;
+};
+$constructorTMP881["tail"] = $bindertail746($constructorTMP881);
+function $bindertake814(self812) {
+var $inner815 = function innertake(n811) {
+return split$at367(n811,self812)["prefix"];
+};
+$inner815["$brand"] = "METHOD";
+$inner815["$binder"] = $bindertake814;
+return $inner815;
+};
+$constructorTMP881["take"] = $bindertake814($constructorTMP881);
+return $constructorTMP881;
+},
+"is-empty":function empty(val) {
+return val.$brand === $empty850;
+},
+"is-link":function link(val) {
+return val.$brand === $link851;
+}};
+var is$List667 = List665["List"];
+var is$empty102 = List665["is-empty"];
+var empty39 = List665["empty"];
+var is$link666 = List665["is-link"];
+var link47 = List665["link"];
+var to$raw$array664 = function to$raw$array(lst660) {
+return lst660["foldl"](function (elem662,acc661) {
+return RA94["raw-array-push"](acc661,elem662);
+},RA94["raw-array"]["make"]([]));
+};
+var raw$array$to$list101 = function raw$array$to$list(array658) {
+return RA94["raw-array-foldr"](function (acc657,current656) {
+return link47(current656,acc657);
+},empty39,array658);
+};
+var foldl$complicated629 = function foldl$complicated(is$first654,flist643,f649,x650,l651,base653) {
+var cases644 = flist643;
+var $ans645 = undefined;
+switch(cases644.$tag) {
+case 1: var head652 = cases644["first"];
+var tail648 = cases644["rest"];
+var $ans646 = undefined;
+if(is$first654) {
+$ans646 = foldl$complicated629(false,tail648,f649,x650,l651,f649(head652,base653))} else {
+var $ans647 = undefined;
+if(_runtime["equal-always"](tail648,empty39)) {
+$ans647 = foldl$complicated629(false,tail648,f649,x650,l651,l651(head652,base653))} else {
+$ans647 = foldl$complicated629(false,tail648,f649,x650,l651,x650(head652,base653))}
+$ans646 = $ans647}
+$ans645 = $ans646;
+break;
+case 0: $ans645 = base653;
+break;
+default: $ans645 = _global["throwNoCasesMatched"](["builtin://lists",318,2,11455,328,5,11784],cases644);
+}
+return $ans645;
+};
+var join$str642 = function join$str(l640,sep634) {
+var f639 = function (elem638,acc637) {
+return _runtime["_add"](acc637,G587["js-to-string"](elem638),_runtime["_errCallbacks"]);
+};
+var x636 = function (elem635,acc633) {
+return _runtime["_add"](_runtime["_add"](acc633,sep634,_runtime["_errCallbacks"]),G587["js-to-string"](elem635),_runtime["_errCallbacks"]);
+};
+return foldl$complicated629(true,l640,f639,x636,x636,"");
+};
+var join$str$last632 = function join$str$last(jlist630,sep623,last$sep619) {
+var f628 = function (elem627,acc626) {
+return _runtime["_add"](acc626,G587["js-to-string"](elem627),_runtime["_errCallbacks"]);
+};
+var x625 = function (elem624,acc622) {
+return _runtime["_add"](_runtime["_add"](acc622,sep623,_runtime["_errCallbacks"]),G587["js-to-string"](elem624),_runtime["_errCallbacks"]);
+};
+var l621 = function (elem620,acc618) {
+return _runtime["_add"](_runtime["_add"](acc618,last$sep619,_runtime["_errCallbacks"]),G587["js-to-string"](elem620),_runtime["_errCallbacks"]);
+};
+return foldl$complicated629(true,jlist630,f628,x625,l621,"");
+};
+var remove614 = function remove(lst609,elt615) {
+var cases610 = lst609;
+var $ans611 = undefined;
+switch(cases610.$tag) {
+case 0: $ans611 = empty39;
+break;
+case 1: var first613 = cases610["first"];
+var rest616 = cases610["rest"];
+var $ans612 = undefined;
+if(_runtime["equal-always"](elt615,lst609["first"])) {
+$ans612 = remove614(rest616,elt615)} else {
+$ans612 = link47(first613,remove614(lst609["rest"],elt615))}
+$ans611 = $ans612;
+break;
+default: $ans611 = _global["throwNoCasesMatched"](["builtin://lists",376,2,13574,384,5,13762],cases610);
+}
+return $ans611;
+};
+var filter608 = function filter(f605,lst602) {
+return lst602["foldr"](function (e606,acc604) {
+var $ans603 = undefined;
+if(f605(e606)) {
+$ans603 = link47(e606,acc604)} else {
+$ans603 = acc604}
+return $ans603;
+},empty39);
+};
+var split$at367 = function split$at(n586,lst599) {
+var $ans585 = undefined;
+if(_runtime["_lessthan"](n586,(0),_runtime["_errCallbacks"]) || G587["not"](G587["num-is-integer"](n586))) {
+raise7("Invalid index");
+$ans585 = nothing210} else {
+$ans585 = nothing210}
+$ans585;
+var prefix589 = empty39;
+var suffix588 = empty39;
+var help594 = function help(ind595,l591) {
+var $ans590 = undefined;
+if(_runtime["equal-always"](ind595,(0))) {
+$ans590 = suffix588 = l591} else {
+var cases592 = l591;
+var $ans593 = undefined;
+switch(cases592.$tag) {
+case 0: $ans593 = raise7("Index too large");
+break;
+case 1: var fst597 = cases592["first"];
+var rst596 = cases592["rest"];
+help594(_runtime["_subtract"](ind595,(1),_runtime["_errCallbacks"]),rst596);
+$ans593 = prefix589 = function (arg_598) {
+return link47(arg_598,prefix589);
+}(fst597);
+break;
+default: $ans593 = _global["throwNoCasesMatched"](["builtin://lists",413,6,14579,418,9,14752],cases592);
+}
+$ans590 = $ans593}
+return $ans590;
+};
+help594(n586,lst599);
+var $temporary600 = {"prefix":prefix589,
+"suffix":suffix588};
+return $temporary600;
+};
+var fold565 = function fold(f580,base581,lst577) {
+var cases578 = lst577;
+var $ans579 = undefined;
+switch(cases578.$tag) {
+case 1: var fst582 = cases578["first"];
+var rst583 = cases578["rest"];
+$ans579 = fold565(f580,f580(base581,fst582),rst583);
+break;
+case 0: $ans579 = base581;
+break;
+default: $ans579 = _global["throwNoCasesMatched"](["builtin://lists",430,2,15188,435,5,15293],cases578);
+}
+return $ans579;
+};
+var reverse576 = function reverse(lst574) {
+return fold565(function (acc573,elt572) {
+return link47(elt572,acc573);
+},empty39,lst574);
+};
+var each571 = function each(f566,lst569) {
+fold565(function ($underscore568,elt567) {
+return f566(elt567);
+},nothing210,lst569);
+return nothing210;
+};
+var map562 = function map(f560,lst557) {
+var cases558 = lst557;
+var $ans559 = undefined;
+switch(cases558.$tag) {
+case 1: var fst561 = cases558["first"];
+var rst563 = cases558["rest"];
+$ans559 = link47(f560(fst561),map562(f560,rst563));
+break;
+case 0: $ans559 = empty39;
+break;
+default: $ans559 = _global["throwNoCasesMatched"](["builtin://lists",456,2,16136,459,5,16229],cases558);
+}
+return $ans559;
+};
+var slice556 = function slice(lst554,inclusive$lower549,exclusive$upper550) {
+var help551 = function help(acc545,inner$lst542,index548) {
+var cases543 = inner$lst542;
+var $ans544 = undefined;
+switch(cases543.$tag) {
+case 0: $ans544 = acc545;
+break;
+case 1: var first553 = cases543["first"];
+var rest552 = cases543["rest"];
+var $ans546 = undefined;
+if(_runtime["_greaterequal"](index548,inclusive$lower549,_runtime["_errCallbacks"]) && _runtime["_lessthan"](index548,exclusive$upper550,_runtime["_errCallbacks"])) {
+$ans546 = link47(inner$lst542["first"],help551(acc545,rest552,_runtime["_add"](index548,(1),_runtime["_errCallbacks"])))} else {
+var $ans547 = undefined;
+if(_runtime["_lessthan"](index548,inclusive$lower549,_runtime["_errCallbacks"]) && _runtime["_lessthan"](index548,exclusive$upper550,_runtime["_errCallbacks"])) {
+$ans547 = help551(acc545,rest552,_runtime["_add"](index548,(1),_runtime["_errCallbacks"]))} else {
+$ans547 = acc545}
+$ans546 = $ans547}
+$ans544 = $ans546;
+break;
+default: $ans544 = _global["throwNoCasesMatched"](["builtin://lists",464,4,16418,475,7,16794],cases543);
+}
+return $ans544;
+};
+return help551(empty39,lst554,(0));
+};
+var partition541 = function partition(f535,lst538) {
+var is$true527 = empty39;
+var is$false526 = empty39;
+var help531 = function help(inner$lst528) {
+var cases529 = inner$lst528;
+var $ans530 = undefined;
+switch(cases529.$tag) {
+case 0: $ans530 = nothing210;
+break;
+case 1: var first537 = cases529["first"];
+var rest532 = cases529["rest"];
+help531(rest532);
+var $ans533 = undefined;
+if(f535(inner$lst528["first"])) {
+$ans533 = is$true527 = function (arg_536) {
+return link47(arg_536,is$true527);
+}(inner$lst528["first"])} else {
+$ans533 = is$false526 = function (arg_534) {
+return link47(arg_534,is$false526);
+}(inner$lst528["first"])}
+$ans533;
+$ans530 = nothing210;
+break;
+default: $ans530 = _global["throwNoCasesMatched"](["builtin://lists",485,4,17124,496,7,17431],cases529);
+}
+return $ans530;
+};
+help531(lst538);
+var $temporary539 = {"is-true":is$true527,
+"is-false":is$false526};
+return $temporary539;
+};
+var find520 = function find(f521,lst515) {
+var cases516 = lst515;
+var $ans517 = undefined;
+switch(cases516.$tag) {
+case 0: $ans517 = none518;
+break;
+case 1: var first523 = cases516["first"];
+var rest522 = cases516["rest"];
+var $ans519 = undefined;
+if(f521(first523)) {
+$ans519 = some524(first523)} else {
+$ans519 = find520(f521,rest522)}
+$ans517 = $ans519;
+break;
+default: $ans517 = _global["throwNoCasesMatched"](["builtin://lists",506,2,17690,514,5,17842],cases516);
+}
+return $ans517;
+};
+var get514 = function get(lst512,n505) {
+var help507 = function help(l502,cur509) {
+var cases503 = l502;
 var $ans504 = undefined;
 switch(cases503.$tag) {
-case 0: $ans504 = empty46;
+case 0: $ans504 = raise7(_runtime["_add"]("get: n too large ",tostring404(n505),_runtime["_errCallbacks"]));
 break;
-case 1: var first506 = cases503["first"];
-var rest510 = cases503["rest"];
-var cases507 = f505(first506);
-var $ans508 = undefined;
-switch(cases507.$tag) {
-case 1: $ans508 = filter$map509(f505,rest510);
+case 1: var first510 = cases503["first"];
+var rest508 = cases503["rest"];
+var $ans506 = undefined;
+if(_runtime["equal-always"](cur509,(0))) {
+$ans506 = first510} else {
+$ans506 = help507(rest508,_runtime["_subtract"](cur509,(1),_runtime["_errCallbacks"]))}
+$ans504 = $ans506;
 break;
-case 0: var v511 = cases507["value"];
-$ans508 = link9(v511,filter$map509(f505,rest510));
-break;
-default: $ans508 = _global["throwNoCasesMatched"](["builtin://lists",1017,6,35680,1020,9,35801],cases507);
-}
-$ans504 = $ans508;
-break;
-default: $ans504 = _global["throwNoCasesMatched"](["builtin://lists",1014,2,35609,1021,5,35807],cases503);
+default: $ans504 = _global["throwNoCasesMatched"](["builtin://lists",520,4,18031,528,7,18223],cases503);
 }
 return $ans504;
 };
-var filter$values498 = function filter$values(lst492) {
-var cases493 = lst492;
-var $ans494 = undefined;
-switch(cases493.$tag) {
-case 0: $ans494 = empty46;
-break;
-case 1: var first495 = cases493["first"];
-var rest499 = cases493["rest"];
-var cases496 = first495;
-var $ans497 = undefined;
-switch(cases496.$tag) {
-case 1: $ans497 = filter$values498(rest499);
-break;
-case 0: var v500 = cases496["value"];
-$ans497 = link9(v500,filter$values498(rest499));
-break;
-default: $ans497 = _global["throwNoCasesMatched"](["builtin://lists",1028,6,35943,1031,9,36061],cases496);
-}
-$ans494 = $ans497;
-break;
-default: $ans494 = _global["throwNoCasesMatched"](["builtin://lists",1025,2,35872,1032,5,36067],cases493);
-}
-return $ans494;
+var $ans511 = undefined;
+if(_runtime["_lessthan"](n505,(0),_runtime["_errCallbacks"])) {
+$ans511 = raise7(_runtime["_add"]("get: invalid argument: ",tostring404(n505),_runtime["_errCallbacks"]))} else {
+$ans511 = help507(lst512,n505)}
+return $ans511;
 };
-var distinct484 = function distinct(l476) {
-var cases477 = l476;
-var $ans478 = undefined;
-switch(cases477.$tag) {
-case 0: $ans478 = empty46;
+var function$set501 = function function$set(lst499,n489,v496) {
+var help493 = function help(l486,cur495) {
+var cases487 = l486;
+var $ans488 = undefined;
+switch(cases487.$tag) {
+case 0: $ans488 = raise7(_runtime["_add"]("set: n too large ",tostring404(n489),_runtime["_errCallbacks"]));
 break;
-case 1: var first481 = cases477["first"];
-var rest480 = cases477["rest"];
-var cases482 = member3479(rest480,first481);
-var $ans483 = undefined;
-switch(cases482.$tag) {
-case 1: var $underscore485 = cases482["reason"];
-var $underscore486 = cases482["value1"];
-var $underscore487 = cases482["value2"];
-$ans483 = link9(first481,distinct484(rest480));
+case 1: var first491 = cases487["first"];
+var rest494 = cases487["rest"];
+var $ans490 = undefined;
+if(_runtime["equal-always"](cur495,(0))) {
+$ans490 = function (arg_497) {
+return link47(arg_497,rest494);
+}(v496)} else {
+$ans490 = function (arg_492) {
+return link47(arg_492,help493(rest494,_runtime["_subtract"](cur495,(1),_runtime["_errCallbacks"])));
+}(first491)}
+$ans488 = $ans490;
 break;
-case 2: var $underscore488 = cases482["reason"];
-var $underscore489 = cases482["value1"];
-var $underscore490 = cases482["value2"];
-$ans483 = link9(first481,distinct484(rest480));
-break;
-case 0: $ans483 = distinct484(rest480);
-break;
-default: $ans483 = _global["throwNoCasesMatched"](["builtin://lists",1040,6,36295,1044,9,36499],cases482);
+default: $ans488 = _global["throwNoCasesMatched"](["builtin://lists",539,4,18603,547,7,18834],cases487);
 }
-$ans478 = $ans483;
-break;
-default: $ans478 = _global["throwNoCasesMatched"](["builtin://lists",1037,2,36225,1045,5,36505],cases477);
-}
-return $ans478;
+return $ans488;
 };
-var take$while475 = function take$while(pred469,lst473) {
-var tail464 = empty46;
-var help471 = function help(l465) {
-var cases466 = l465;
-var $ans467 = undefined;
-switch(cases466.$tag) {
-case 0: $ans467 = empty46;
-break;
-case 1: var first470 = cases466["first"];
-var rest472 = cases466["rest"];
-var $ans468 = undefined;
-if(pred469(first470)) {
-$ans468 = link9(first470,help471(rest472))} else {
-tail464 = l465;
-$ans468 = empty46}
-$ans467 = $ans468;
-break;
-default: $ans467 = _global["throwNoCasesMatched"](["builtin://lists",1052,4,36733,1061,7,36933],cases466);
-}
-return $ans467;
+var $ans498 = undefined;
+if(_runtime["_lessthan"](n489,(0),_runtime["_errCallbacks"])) {
+$ans498 = raise7(_runtime["_add"]("set: invalid argument: ",tostring404(n489),_runtime["_errCallbacks"]))} else {
+$ans498 = help493(lst499,n489)}
+return $ans498;
 };
-return _runtime["PTuple"]([help471(lst473),tail464]);
-};
-var max463 = function max(lst449) {
-var cases450 = lst449;
-var $ans451 = undefined;
-switch(cases450.$tag) {
-case 0: $ans451 = raise4("list max: empty list");
+var $temporary469 = {"make":raw$array$to$list101,
+"make0":function () {
+return empty39;
+},
+"make1":function (a470) {
+return link47(a470,empty39);
+},
+"make2":function (a471,b472) {
+return link47(a471,link47(b472,empty39));
+},
+"make3":function (a473,b474,c475) {
+return link47(a473,link47(b474,link47(c475,empty39)));
+},
+"make4":function (a476,b477,c478,d479) {
+return link47(a476,link47(b477,link47(c478,link47(d479,empty39))));
+},
+"make5":function (a480,b481,c482,d483,e484) {
+return link47(a480,link47(b481,link47(c482,link47(d483,link47(e484,empty39)))));
+}};
+var list485 = $temporary469;
+var length468 = function length(lst466) {
+var help463 = function help(l459,cur462) {
+var cases460 = l459;
+var $ans461 = undefined;
+switch(cases460.$tag) {
+case 0: $ans461 = cur462;
 break;
-case 1: var first453 = cases450["first"];
-var rest452 = cases450["rest"];
-$ans451 = _runtime["PTuple"]([first453,rest452]);
+case 1: var $underscore465 = cases460["first"];
+var r464 = cases460["rest"];
+$ans461 = help463(r464,_runtime["_add"](cur462,(1),_runtime["_errCallbacks"]));
 break;
-default: $ans451 = _global["throwNoCasesMatched"](["builtin://lists",1077,26,37703,1080,5,37813],cases450);
+default: $ans461 = _global["throwNoCasesMatched"](["builtin://lists",574,4,19878,577,7,19961],cases460);
 }
-var tup446 = $ans451;
-var max$v448 = tup446[0];
-var lst447 = tup446[1];
-var helper459 = function helper(inner454,inner$max457) {
-var cases455 = inner454;
-var $ans456 = undefined;
-switch(cases455.$tag) {
-case 0: $ans456 = inner$max457;
-break;
-case 1: var first461 = cases455["first"];
-var rest460 = cases455["rest"];
-var $ans458 = undefined;
-if(_runtime["_greaterThan"](first461,inner$max457,_runtime["_errCallbacks"])) {
-$ans458 = helper459(rest460,first461)} else {
-$ans458 = helper459(rest460,inner$max457)}
-$ans456 = $ans458;
-break;
-default: $ans456 = _global["throwNoCasesMatched"](["builtin://lists",1083,4,37887,1091,7,38089],cases455);
-}
-return $ans456;
+return $ans461;
 };
-return helper459(lst447,max$v448);
+return help463(lst466,(0));
 };
-var min445 = function min(lst430) {
-var cases431 = lst430;
-var $ans432 = undefined;
-switch(cases431.$tag) {
-case 0: $ans432 = raise4("list max: empty list");
+var same$length453 = function same$length(lst1445,lst2448) {
+var cases446 = lst1445;
+var $ans447 = undefined;
+switch(cases446.$tag) {
+case 0: var cases449 = lst2448;
+var $ans450 = undefined;
+switch(cases449.$tag) {
+case 0: $ans450 = true;
 break;
-case 1: var first434 = cases431["first"];
-var rest433 = cases431["rest"];
-$ans432 = _runtime["PTuple"]([first434,rest433]);
-break;
-default: $ans432 = _global["throwNoCasesMatched"](["builtin://lists",1098,26,38189,1101,5,38299],cases431);
+default: $ans450 = false;
 }
-var tup427 = $ans432;
-var min$v429 = tup427[0];
-var lst428 = tup427[1];
-var helper440 = function helper(inner435,inner$min438) {
-var cases436 = inner435;
-var $ans437 = undefined;
-switch(cases436.$tag) {
-case 0: $ans437 = inner$min438;
+$ans447 = $ans450;
 break;
-case 1: var first442 = cases436["first"];
-var rest441 = cases436["rest"];
+case 1: var $underscore457 = cases446["first"];
+var rest1454 = cases446["rest"];
+var cases451 = lst2448;
+var $ans452 = undefined;
+switch(cases451.$tag) {
+case 0: $ans452 = false;
+break;
+case 1: var $underscore456 = cases451["first"];
+var rest2455 = cases451["rest"];
+$ans452 = same$length453(rest1454,rest2455);
+break;
+default: $ans452 = _global["throwNoCasesMatched"](["builtin://lists",591,6,20330,594,9,20436],cases451);
+}
+$ans447 = $ans452;
+break;
+default: $ans447 = _global["throwNoCasesMatched"](["builtin://lists",584,2,20185,595,5,20442],cases446);
+}
+return $ans447;
+};
+var longer$than441 = function longer$than(lst437,len440) {
+var cases438 = lst437;
 var $ans439 = undefined;
-if(_runtime["_lessThan"](first442,inner$min438,_runtime["_errCallbacks"])) {
-$ans439 = helper440(rest441,first442)} else {
-$ans439 = helper440(rest441,inner$min438)}
-$ans437 = $ans439;
+switch(cases438.$tag) {
+case 0: $ans439 = _runtime["_lessthan"](len440,(0),_runtime["_errCallbacks"]);
 break;
-default: $ans437 = _global["throwNoCasesMatched"](["builtin://lists",1104,4,38373,1112,7,38575],cases436);
+case 1: var $underscore443 = cases438["first"];
+var rest442 = cases438["rest"];
+$ans439 = _runtime["_lessthan"](len440,(1),_runtime["_errCallbacks"]) || longer$than441(rest442,_runtime["_subtract"](len440,(1),_runtime["_errCallbacks"]));
+break;
+default: $ans439 = _global["throwNoCasesMatched"](["builtin://lists",604,2,20828,607,5,20936],cases438);
 }
-return $ans437;
+return $ans439;
 };
-return helper440(lst428,min$v429);
+var shorter$than433 = function shorter$than(lst429,len432) {
+var cases430 = lst429;
+var $ans431 = undefined;
+switch(cases430.$tag) {
+case 0: $ans431 = _runtime["_greaterthan"](len432,(0),_runtime["_errCallbacks"]);
+break;
+case 1: var $underscore435 = cases430["first"];
+var rest434 = cases430["rest"];
+$ans431 = _runtime["_greaterthan"](len432,(1),_runtime["_errCallbacks"]) && shorter$than433(rest434,_runtime["_subtract"](len432,(1),_runtime["_errCallbacks"]));
+break;
+default: $ans431 = _global["throwNoCasesMatched"](["builtin://lists",616,2,21272,619,5,21382],cases430);
+}
+return $ans431;
 };
-var member$always3886 = member3479;
-var member$always885 = member549;
-var foldl884 = fold87;
-var $answer887 = _global["trace-value"](["dummy location"],nothing52);
-return module["exports"] = {"sort":sort824,
-"list":list426,
-"is-link":is$link191,
-"range":range821,
-"distinct":distinct484,
-"map":map84,
-"repeat":repeat804,
-"link":link9,
-"append":append797,
-"push":push843,
-"member":member549,
-"shuffle":shuffle522,
-"find":find40,
-"member3":member3479,
-"member-with":member$with529,
-"filter":filter131,
-"map4":map4742,
-"map3":map3750,
-"filter-values":filter$values498,
-"raw-array-to-list":raw$array$to$list184,
-"get":get34,
-"last":last839,
-"map2":map2757,
-"join-str-last":join$str$last155,
-"each4":each4680,
-"fold4":fold4578,
-"each3":each3691,
-"min":min445,
-"slice":slice78,
-"fold3":fold3587,
+var push428 = function push(l426,elt425) {
+return link47(elt425,l426);
+};
+var last424 = function last(lst415) {
+var helper419 = function helper(l422) {
+var cases416 = lst415;
+var $ans417 = undefined;
+switch(cases416.$tag) {
+case 0: $ans417 = raise7("last: took last of empty list");
+break;
+case 1: var first421 = cases416["first"];
+var rest420 = cases416["rest"];
+var $ans418 = undefined;
+if(is$empty102(rest420)) {
+$ans418 = first421} else {
+$ans418 = helper419(rest420)}
+$ans417 = $ans418;
+break;
+default: $ans417 = _global["throwNoCasesMatched"](["builtin://lists",633,4,21745,641,7,21946],cases416);
+}
+return $ans417;
+};
+return helper419(lst415);
+};
+var sort$by414 = function sort$by(lst410,cmp411,eq412) {
+return lst410["sort-by"](cmp411,eq412);
+};
+var sort409 = function sort(lst407) {
+return lst407["sort"]();
+};
+var range406 = function range(start402,stop403) {
+var $ans400 = undefined;
+if(_runtime["_greaterthan"](start402,stop403,_runtime["_errCallbacks"])) {
+$ans400 = raise7(_runtime["_add"](_runtime["_add"](_runtime["_add"](_runtime["_add"]("range: start greater than stop: (",tostring404(start402),_runtime["_errCallbacks"]),", ",_runtime["_errCallbacks"]),tostring404(stop403),_runtime["_errCallbacks"]),")",_runtime["_errCallbacks"]))} else {
+$ans400 = raw$array$to$list101(RA94["raw-array-build"](function (i401) {
+return _runtime["_add"](i401,start402,_runtime["_errCallbacks"]);
+},_runtime["_subtract"](stop403,start402,_runtime["_errCallbacks"])))}
+return $ans400;
+};
+var range$by399 = function range$by(start393,stop392,delta394) {
+var $ans389 = undefined;
+if(_runtime["equal-always"](delta394,(0))) {
+var $ans397 = undefined;
+if(_runtime["equal-always"](start393,stop392)) {
+$ans397 = empty39} else {
+$ans397 = raise7("range-by: an interval of 0 would produce an infinite list")}
+$ans389 = $ans397} else {
+var len395 = num$max390(num$ceiling391(_runtime["_divide"](_runtime["_subtract"](stop392,start393,_runtime["_errCallbacks"]),delta394,_runtime["_errCallbacks"])),(0));
+$ans389 = raw$array$to$list101(RA94["raw-array-build"](function (i396) {
+return _runtime["_add"](start393,_runtime["_multiply"](i396,delta394,_runtime["_errCallbacks"]),_runtime["_errCallbacks"]);
+},len395))}
+return $ans389;
+};
+var repeat388 = function repeat(n386,e385) {
+var $ans384 = undefined;
+if(_runtime["_lessthan"](n386,(0),_runtime["_errCallbacks"])) {
+$ans384 = raise7("repeat: can't have a negative argument'")} else {
+$ans384 = raw$array$to$list101(RA94["raw-array-of"](e385,n386))}
+return $ans384;
+};
+var append381 = function append(front376,back379) {
+var cases377 = front376;
+var $ans378 = undefined;
+switch(cases377.$tag) {
+case 0: $ans378 = back379;
+break;
+case 1: var f380 = cases377["first"];
+var r382 = cases377["rest"];
+$ans378 = link47(f380,append381(r382,back379));
+break;
+default: $ans378 = _global["throwNoCasesMatched"](["builtin://lists",694,2,23546,697,5,23635],cases377);
+}
+return $ans378;
+};
+var take375 = function take(n372,lst373) {
+return split$at367(n372,lst373)["prefix"];
+};
+var drop371 = function drop(n368,lst369) {
+return split$at367(n368,lst369)["suffix"];
+};
+var any364 = function any(f362,lst359) {
+var cases360 = lst359;
+var $ans361 = undefined;
+switch(cases360.$tag) {
+case 0: $ans361 = false;
+break;
+case 1: var first363 = cases360["first"];
+var rest365 = cases360["rest"];
+$ans361 = f362(first363) || any364(f362,rest365);
+break;
+default: $ans361 = _global["throwNoCasesMatched"](["builtin://lists",712,2,24093,715,5,24188],cases360);
+}
+return $ans361;
+};
+var all356 = function all(f354,lst351) {
+var cases352 = lst351;
+var $ans353 = undefined;
+switch(cases352.$tag) {
+case 0: $ans353 = true;
+break;
+case 1: var first355 = cases352["first"];
+var rest357 = cases352["rest"];
+$ans353 = f354(first355) && all356(f354,rest357);
+break;
+default: $ans353 = _global["throwNoCasesMatched"](["builtin://lists",720,2,24323,723,5,24418],cases352);
+}
+return $ans353;
+};
+var all2350 = function all2(f343,lst1347,lst2348) {
+var help346 = function help(l1344,l2345) {
+var $ans342 = undefined;
+if(is$empty102(l1344) || is$empty102(l2345)) {
+$ans342 = true} else {
+$ans342 = f343(l1344["head"](),l2345["head"]()) && help346(l1344["tail"](),l2345["tail"]())}
+return $ans342;
+};
+return help346(lst1347,lst2348);
+};
+var map2340 = function map2(f336,l1337,l2338) {
+var $ans335 = undefined;
+if(is$empty102(l1337) || is$empty102(l2338)) {
+$ans335 = empty39} else {
+$ans335 = function (arg_339) {
+return link47(arg_339,map2340(f336,l1337["tail"](),l2338["tail"]()));
+}(f336(l1337["head"](),l2338["head"]()))}
+return $ans335;
+};
+var map3333 = function map3(f328,l1329,l2330,l3331) {
+var $ans327 = undefined;
+if(is$empty102(l1329) || is$empty102(l2330) || is$empty102(l3331)) {
+$ans327 = empty39} else {
+$ans327 = function (arg_332) {
+return link47(arg_332,map3333(f328,l1329["tail"](),l2330["tail"](),l3331["tail"]()));
+}(f328(l1329["head"](),l2330["head"](),l3331["head"]()))}
+return $ans327;
+};
+var map4325 = function map4(f319,l1320,l2321,l3322,l4323) {
+var $ans318 = undefined;
+if(is$empty102(l1320) || is$empty102(l2321) || is$empty102(l3322) || is$empty102(l4323)) {
+$ans318 = empty39} else {
+$ans318 = function (arg_324) {
+return link47(arg_324,map4325(f319,l1320["tail"](),l2321["tail"](),l3322["tail"](),l4323["tail"]()));
+}(f319(l1320["head"](),l2321["head"](),l3322["head"](),l4323["head"]()))}
+return $ans318;
+};
+var map_n316 = function map_n(f312,n313,lst314) {
+var $ans311 = undefined;
+if(is$empty102(lst314)) {
+$ans311 = empty39} else {
+$ans311 = function (arg_315) {
+return link47(arg_315,map_n316(f312,_runtime["_add"](n313,(1),_runtime["_errCallbacks"]),lst314["tail"]()));
+}(f312(n313,lst314["head"]()))}
+return $ans311;
+};
+var map2_n309 = function map2_n(f304,n305,l1306,l2307) {
+var $ans303 = undefined;
+if(is$empty102(l1306) || is$empty102(l2307)) {
+$ans303 = empty39} else {
+$ans303 = function (arg_308) {
+return link47(arg_308,map2_n309(f304,_runtime["_add"](n305,(1),_runtime["_errCallbacks"]),l1306["tail"](),l2307["tail"]()));
+}(f304(n305,l1306["head"](),l2307["head"]()))}
+return $ans303;
+};
+var map3_n301 = function map3_n(f295,n296,l1297,l2298,l3299) {
+var $ans294 = undefined;
+if(is$empty102(l1297) || is$empty102(l2298) || is$empty102(l3299)) {
+$ans294 = empty39} else {
+$ans294 = function (arg_300) {
+return link47(arg_300,map3_n301(f295,_runtime["_add"](n296,(1),_runtime["_errCallbacks"]),l1297["tail"](),l2298["tail"](),l3299["tail"]()));
+}(f295(n296,l1297["head"](),l2298["head"](),l3299["head"]()))}
+return $ans294;
+};
+var map4_n292 = function map4_n(f285,n286,l1287,l2288,l3289,l4290) {
+var $ans284 = undefined;
+if(is$empty102(l1287) || is$empty102(l2288) || is$empty102(l3289) || is$empty102(l4290)) {
+$ans284 = empty39} else {
+$ans284 = function (arg_291) {
+return link47(arg_291,map4_n292(f285,_runtime["_add"](n286,(1),_runtime["_errCallbacks"]),l1287["tail"](),l2288["tail"](),l3289["tail"](),l4290["tail"]()));
+}(f285(n286,l1287["head"](),l2288["head"](),l3289["head"](),l4290["head"]()))}
+return $ans284;
+};
+var each2283 = function each2(f276,lst1280,lst2281) {
+var help279 = function help(l1277,l2278) {
+var $ans275 = undefined;
+if(is$empty102(l1277) || is$empty102(l2278)) {
+$ans275 = nothing210} else {
+f276(l1277["head"](),l2278["head"]());
+$ans275 = help279(l1277["tail"](),l2278["tail"]())}
+return $ans275;
+};
+return help279(lst1280,lst2281);
+};
+var each3274 = function each3(f265,lst1270,lst2271,lst3272) {
+var help269 = function help(l1266,l2267,l3268) {
+var $ans264 = undefined;
+if(is$empty102(l1266) || is$empty102(l2267) || is$empty102(l3268)) {
+$ans264 = nothing210} else {
+f265(l1266["head"](),l2267["head"](),l3268["head"]());
+$ans264 = help269(l1266["tail"](),l2267["tail"](),l3268["tail"]())}
+return $ans264;
+};
+return help269(lst1270,lst2271,lst3272);
+};
+var each4263 = function each4(f252,lst1258,lst2259,lst3260,lst4261) {
+var help257 = function help(l1253,l2254,l3255,l4256) {
+var $ans251 = undefined;
+if(is$empty102(l1253) || is$empty102(l2254) || is$empty102(l3255) || is$empty102(l4256)) {
+$ans251 = nothing210} else {
+f252(l1253["head"](),l2254["head"](),l3255["head"](),l4256["head"]());
+$ans251 = help257(l1253["tail"](),l2254["tail"](),l3255["tail"](),l4256["tail"]())}
+return $ans251;
+};
+return help257(lst1258,lst2259,lst3260,lst4261);
+};
+var each_n250 = function each_n(f243,num247,lst248) {
+var help246 = function help(n244,l245) {
+var $ans242 = undefined;
+if(is$empty102(l245)) {
+$ans242 = nothing210} else {
+f243(n244,l245["head"]());
+$ans242 = help246(_runtime["_add"](n244,(1),_runtime["_errCallbacks"]),l245["tail"]())}
+return $ans242;
+};
+return help246(num247,lst248);
+};
+var each2_n241 = function each2_n(f232,num237,lst1238,lst2239) {
+var help236 = function help(n233,l1234,l2235) {
+var $ans231 = undefined;
+if(is$empty102(l1234) || is$empty102(l2235)) {
+$ans231 = nothing210} else {
+f232(n233,l1234["head"](),l2235["head"]());
+$ans231 = help236(_runtime["_add"](n233,(1),_runtime["_errCallbacks"]),l1234["tail"](),l2235["tail"]())}
+return $ans231;
+};
+return help236(num237,lst1238,lst2239);
+};
+var each3_n230 = function each3_n(f219,num225,lst1226,lst2227,lst3228) {
+var help224 = function help(n220,l1221,l2222,l3223) {
+var $ans218 = undefined;
+if(is$empty102(l1221) || is$empty102(l2222) || is$empty102(l3223)) {
+$ans218 = nothing210} else {
+f219(n220,l1221["head"](),l2222["head"](),l3223["head"]());
+$ans218 = help224(_runtime["_add"](n220,(1),_runtime["_errCallbacks"]),l1221["tail"](),l2222["tail"](),l3223["tail"]())}
+return $ans218;
+};
+return help224(num225,lst1226,lst2227,lst3228);
+};
+var each4_n217 = function each4_n(f203,num211,lst1212,lst2213,lst3214,lst4215) {
+var help209 = function help(n204,l1205,l2206,l3207,l4208) {
+var $ans202 = undefined;
+if(is$empty102(l1205) || is$empty102(l2206) || is$empty102(l3207) || is$empty102(l4208)) {
+$ans202 = nothing210} else {
+f203(n204,l1205["head"](),l2206["head"](),l3207["head"](),l4208["head"]());
+$ans202 = help209(_runtime["_add"](n204,(1),_runtime["_errCallbacks"]),l1205["tail"](),l2206["tail"](),l3207["tail"](),l4208["tail"]())}
+return $ans202;
+};
+return help209(num211,lst1212,lst2213,lst3214,lst4215);
+};
+var fold$while197 = function fold$while(f193,base192,lst189) {
+var cases190 = lst189;
+var $ans191 = undefined;
+switch(cases190.$tag) {
+case 0: $ans191 = base192;
+break;
+case 1: var elt194 = cases190["first"];
+var r199 = cases190["rest"];
+var cases195 = f193(base192,elt194);
+var $ans196 = undefined;
+switch(cases195.$tag) {
+case 0: var v198 = cases195["v"];
+$ans196 = fold$while197(f193,v198,r199);
+break;
+case 1: var v200 = cases195["v"];
+$ans196 = v200;
+break;
+default: $ans196 = _global["throwNoCasesMatched"](["builtin://lists",898,6,31384,901,9,31486],cases195);
+}
+$ans191 = $ans196;
+break;
+default: $ans191 = _global["throwNoCasesMatched"](["builtin://lists",895,2,31319,902,5,31492],cases190);
+}
+return $ans191;
+};
+var foldr185 = function foldr(f184,base186,lst187) {
+var $ans183 = undefined;
+if(is$empty102(lst187)) {
+$ans183 = base186} else {
+$ans183 = f184(foldr185(f184,base186,lst187["tail"]()),lst187["head"]())}
+return $ans183;
+};
+var fold2177 = function fold2(f178,base179,l1180,l2181) {
+var $ans176 = undefined;
+if(is$empty102(l1180) || is$empty102(l2181)) {
+$ans176 = base179} else {
+$ans176 = fold2177(f178,f178(base179,l1180["head"](),l2181["head"]()),l1180["tail"](),l2181["tail"]())}
+return $ans176;
+};
+var fold3169 = function fold3(f170,base171,l1172,l2173,l3174) {
+var $ans168 = undefined;
+if(is$empty102(l1172) || is$empty102(l2173) || is$empty102(l3174)) {
+$ans168 = base171} else {
+$ans168 = fold3169(f170,f170(base171,l1172["head"](),l2173["head"](),l3174["head"]()),l1172["tail"](),l2173["tail"](),l3174["tail"]())}
+return $ans168;
+};
+var fold4160 = function fold4(f161,base162,l1163,l2164,l3165,l4166) {
+var $ans159 = undefined;
+if(is$empty102(l1163) || is$empty102(l2164) || is$empty102(l3165) || is$empty102(l4166)) {
+$ans159 = base162} else {
+$ans159 = fold4160(f161,f161(base162,l1163["head"](),l2164["head"](),l3165["head"](),l4166["head"]()),l1163["tail"](),l2164["tail"](),l3165["tail"](),l4166["tail"]())}
+return $ans159;
+};
+var fold_n92 = function fold_n(f152,num155,base156,lst157) {
+var help150 = function help(n151,acc153,partial$list154) {
+var $ans149 = undefined;
+if(is$empty102(partial$list154)) {
+$ans149 = acc153} else {
+$ans149 = help150(_runtime["_add"](n151,(1),_runtime["_errCallbacks"]),f152(n151,acc153,partial$list154["head"]()),partial$list154["tail"]())}
+return $ans149;
+};
+return help150(num155,base156,lst157);
+};
+var member$with111 = function member$with(lst138,elt141,eq142) {
+var cases139 = lst138;
+var $ans140 = undefined;
+switch(cases139.$tag) {
+case 0: $ans140 = equality105["NotEqual"]("list",elt141,lst138);
+break;
+case 1: var first143 = cases139["first"];
+var rest147 = cases139["rest"];
+var first$elt$equal144 = eq142(first143,elt141);
+var cases145 = first$elt$equal144;
+var $ans146 = undefined;
+switch(cases145.$tag) {
+case 0: $ans146 = equality105["Equal"];
+break;
+default: $ans146 = equality105["equal-or"](first$elt$equal144,member$with111(rest147,elt141,eq142));
+}
+$ans140 = $ans146;
+break;
+default: $ans140 = _global["throwNoCasesMatched"](["builtin://lists",966,2,34181,974,5,34490],cases139);
+}
+return $ans140;
+};
+var member357 = function member3(lst132,elt133) {
+return member$with111(lst132,elt133,function (l135,r136) {
+return equal$always3134(l135,r136);
+});
+};
+var member131 = function member(lst128,elt129) {
+return equality105["to-boolean"](member357(lst128,elt129));
+};
+var member$now3118 = function member$now3(lst123,elt124) {
+return member$with111(lst123,elt124,function (l125,r126) {
+return equality105["equal-now3"](l125,r126);
+});
+};
+var member$now122 = function member$now(lst119,elt120) {
+return equality105["to-boolean"](member$now3118(lst119,elt120));
+};
+var member$identical3106 = function member$identical3(lst112,elt113) {
+return member$with111(lst112,elt113,function (l115,r116) {
+return identical3114(l115,r116);
+});
+};
+var member$identical110 = function member$identical(lst107,elt108) {
+return equality105["to-boolean"](member$identical3106(lst107,elt108));
+};
+var shuffle104 = function shuffle(lst99) {
+var $ans91 = undefined;
+if(is$empty102(lst99)) {
+$ans91 = empty39} else {
+var elts100 = fold_n92(function (i96,arr95,e97) {
+var ix93 = raise7("TODO(alex): Implement random generator somewhere");
+RA94["raw-array-set"](arr95,i96,RA94["raw-array-get"](arr95,ix93));
+RA94["raw-array-set"](arr95,ix93,e97);
+return arr95;
+},(1),RA94["raw-array-of"](lst99["head"](),lst99["length"]()),lst99["tail"]());
+$ans91 = raw$array$to$list101(elts100)}
+return $ans91;
+};
+var filter$map87 = function filter$map(f83,lst80) {
+var cases81 = lst80;
+var $ans82 = undefined;
+switch(cases81.$tag) {
+case 0: $ans82 = empty39;
+break;
+case 1: var first84 = cases81["first"];
+var rest88 = cases81["rest"];
+var cases85 = f83(first84);
+var $ans86 = undefined;
+switch(cases85.$tag) {
+case 1: $ans86 = filter$map87(f83,rest88);
+break;
+case 0: var v89 = cases85["value"];
+$ans86 = link47(v89,filter$map87(f83,rest88));
+break;
+default: $ans86 = _global["throwNoCasesMatched"](["builtin://lists",1020,6,35864,1023,9,35985],cases85);
+}
+$ans82 = $ans86;
+break;
+default: $ans82 = _global["throwNoCasesMatched"](["builtin://lists",1017,2,35793,1024,5,35991],cases81);
+}
+return $ans82;
+};
+var filter$values76 = function filter$values(lst70) {
+var cases71 = lst70;
+var $ans72 = undefined;
+switch(cases71.$tag) {
+case 0: $ans72 = empty39;
+break;
+case 1: var first73 = cases71["first"];
+var rest77 = cases71["rest"];
+var cases74 = first73;
+var $ans75 = undefined;
+switch(cases74.$tag) {
+case 1: $ans75 = filter$values76(rest77);
+break;
+case 0: var v78 = cases74["value"];
+$ans75 = link47(v78,filter$values76(rest77));
+break;
+default: $ans75 = _global["throwNoCasesMatched"](["builtin://lists",1031,6,36127,1034,9,36245],cases74);
+}
+$ans72 = $ans75;
+break;
+default: $ans72 = _global["throwNoCasesMatched"](["builtin://lists",1028,2,36056,1035,5,36251],cases71);
+}
+return $ans72;
+};
+var distinct62 = function distinct(l54) {
+var cases55 = l54;
+var $ans56 = undefined;
+switch(cases55.$tag) {
+case 0: $ans56 = empty39;
+break;
+case 1: var first59 = cases55["first"];
+var rest58 = cases55["rest"];
+var cases60 = member357(rest58,first59);
+var $ans61 = undefined;
+switch(cases60.$tag) {
+case 1: var $underscore63 = cases60["reason"];
+var $underscore64 = cases60["value1"];
+var $underscore65 = cases60["value2"];
+$ans61 = link47(first59,distinct62(rest58));
+break;
+case 2: var $underscore66 = cases60["reason"];
+var $underscore67 = cases60["value1"];
+var $underscore68 = cases60["value2"];
+$ans61 = link47(first59,distinct62(rest58));
+break;
+case 0: $ans61 = distinct62(rest58);
+break;
+default: $ans61 = _global["throwNoCasesMatched"](["builtin://lists",1043,6,36479,1047,9,36683],cases60);
+}
+$ans56 = $ans61;
+break;
+default: $ans56 = _global["throwNoCasesMatched"](["builtin://lists",1040,2,36409,1048,5,36689],cases55);
+}
+return $ans56;
+};
+var take$while53 = function take$while(pred45,lst51) {
+var tail40 = empty39;
+var help48 = function help(l41) {
+var cases42 = l41;
+var $ans43 = undefined;
+switch(cases42.$tag) {
+case 0: $ans43 = empty39;
+break;
+case 1: var first46 = cases42["first"];
+var rest49 = cases42["rest"];
+var $ans44 = undefined;
+if(pred45(first46)) {
+$ans44 = link47(first46,help48(rest49))} else {
+tail40 = l41;
+$ans44 = empty39}
+$ans43 = $ans44;
+break;
+default: $ans43 = _global["throwNoCasesMatched"](["builtin://lists",1055,4,36917,1064,7,37117],cases42);
+}
+return $ans43;
+};
+return _runtime["PTuple"]([help48(lst51),tail40]);
+};
+var max38 = function max(lst24) {
+var cases25 = lst24;
+var $ans26 = undefined;
+switch(cases25.$tag) {
+case 0: $ans26 = raise7("list max: empty list");
+break;
+case 1: var first28 = cases25["first"];
+var rest27 = cases25["rest"];
+$ans26 = _runtime["PTuple"]([first28,rest27]);
+break;
+default: $ans26 = _global["throwNoCasesMatched"](["builtin://lists",1080,26,37887,1083,5,37997],cases25);
+}
+var tup21 = $ans26;
+var max$v23 = tup21[0];
+var lst22 = tup21[1];
+var helper34 = function helper(inner29,inner$max32) {
+var cases30 = inner29;
+var $ans31 = undefined;
+switch(cases30.$tag) {
+case 0: $ans31 = inner$max32;
+break;
+case 1: var first36 = cases30["first"];
+var rest35 = cases30["rest"];
+var $ans33 = undefined;
+if(_runtime["_greaterthan"](first36,inner$max32,_runtime["_errCallbacks"])) {
+$ans33 = helper34(rest35,first36)} else {
+$ans33 = helper34(rest35,inner$max32)}
+$ans31 = $ans33;
+break;
+default: $ans31 = _global["throwNoCasesMatched"](["builtin://lists",1086,4,38071,1094,7,38273],cases30);
+}
+return $ans31;
+};
+return helper34(lst22,max$v23);
+};
+var min20 = function min(lst4) {
+var cases5 = lst4;
+var $ans6 = undefined;
+switch(cases5.$tag) {
+case 0: $ans6 = raise7("list max: empty list");
+break;
+case 1: var first9 = cases5["first"];
+var rest8 = cases5["rest"];
+$ans6 = _runtime["PTuple"]([first9,rest8]);
+break;
+default: $ans6 = _global["throwNoCasesMatched"](["builtin://lists",1101,26,38373,1104,5,38483],cases5);
+}
+var tup1 = $ans6;
+var min$v3 = tup1[0];
+var lst2 = tup1[1];
+var helper15 = function helper(inner10,inner$min13) {
+var cases11 = inner10;
+var $ans12 = undefined;
+switch(cases11.$tag) {
+case 0: $ans12 = inner$min13;
+break;
+case 1: var first17 = cases11["first"];
+var rest16 = cases11["rest"];
+var $ans14 = undefined;
+if(_runtime["_lessthan"](first17,inner$min13,_runtime["_errCallbacks"])) {
+$ans14 = helper15(rest16,first17)} else {
+$ans14 = helper15(rest16,inner$min13)}
+$ans12 = $ans14;
+break;
+default: $ans12 = _global["throwNoCasesMatched"](["builtin://lists",1107,4,38557,1115,7,38759],cases11);
+}
+return $ans12;
+};
+return helper15(lst2,min$v3);
+};
+var member$always3886 = member357;
+var member$always885 = member131;
+var foldl884 = fold565;
+var $answer887 = _global["trace-value"](["dummy location"],nothing210);
+return module["exports"] = {"sort":sort409,
+"list":list485,
+"is-link":is$link666,
+"range":range406,
+"distinct":distinct62,
+"map":map562,
+"repeat":repeat388,
+"link":link47,
+"append":append381,
+"push":push428,
+"member":member131,
+"shuffle":shuffle104,
+"find":find520,
+"member3":member357,
+"member-with":member$with111,
+"filter":filter608,
+"map4":map4325,
+"map3":map3333,
+"filter-values":filter$values76,
+"raw-array-to-list":raw$array$to$list101,
+"get":get514,
+"last":last424,
+"map2":map2340,
+"join-str-last":join$str$last632,
+"each4":each4263,
+"fold4":fold4160,
+"each3":each3274,
+"min":min20,
+"slice":slice556,
+"fold3":fold3169,
 "member-always3":member$always3886,
-"member-identical3":member$identical3524,
-"all2":all2767,
-"each2":each2700,
-"foldr":foldr603,
-"fold2":fold2595,
-"fold_n":fold_n514,
-"member-now3":member$now3536,
-"each_n":each_n667,
-"drop":drop787,
-"join-str":join$str165,
-"same-length":same$length868,
-"empty":empty46,
-"function-set":function$set21,
-"any":any781,
-"take-while":take$while475,
-"map_n":map_n733,
+"member-identical3":member$identical3106,
+"all2":all2350,
+"each2":each2283,
+"foldr":foldr185,
+"fold2":fold2177,
+"fold_n":fold_n92,
+"member-now3":member$now3118,
+"each_n":each_n250,
+"drop":drop371,
+"join-str":join$str642,
+"same-length":same$length453,
+"empty":empty39,
+"function-set":function$set501,
+"any":any364,
+"take-while":take$while53,
+"map_n":map_n316,
 "foldl":foldl884,
-"is-empty":is$empty192,
-"partition":partition63,
-"foldl-complicated":foldl$complicated152,
-"range-by":range$by815,
-"filter-map":filter$map509,
-"take":take791,
-"map4_n":map4_n709,
-"split-at":split$at124,
-"sort-by":sort$by829,
-"length":length883,
-"map3_n":map3_n718,
-"shorter-than":shorter$than848,
-"fold-while":fold$while615,
-"longer-than":longer$than856,
-"map2_n":map2_n726,
-"max":max463,
-"remove":remove137,
-"member-now":member$now540,
-"to-raw-array":to$raw$array189,
-"reverse":reverse98,
-"each4_n":each4_n634,
-"member-identical":member$identical528,
+"is-empty":is$empty102,
+"partition":partition541,
+"foldl-complicated":foldl$complicated629,
+"range-by":range$by399,
+"filter-map":filter$map87,
+"take":take375,
+"map4_n":map4_n292,
+"split-at":split$at367,
+"sort-by":sort$by414,
+"length":length468,
+"map3_n":map3_n301,
+"shorter-than":shorter$than433,
+"fold-while":fold$while197,
+"longer-than":longer$than441,
+"map2_n":map2_n309,
+"max":max38,
+"remove":remove614,
+"member-now":member$now122,
+"to-raw-array":to$raw$array664,
+"reverse":reverse576,
+"each4_n":each4_n217,
+"member-identical":member$identical110,
 "member-always":member$always885,
-"is-List":is$List193,
-"each":each93,
-"each3_n":each3_n647,
-"all":all773,
-"fold":fold87,
-"each2_n":each2_n658,
+"is-List":is$List667,
+"each":each571,
+"each3_n":each3_n230,
+"all":all356,
+"fold":fold565,
+"each2_n":each2_n241,
 "$answer":$answer887,
 "$checks":_runtime["$checkResults"](),
 "$traces":_runtime["$getTraces"](),
 "$locations":[{"name":"sort",
-"srcloc":["builtin://lists",648,0,21911,650,3,21967]},
+"srcloc":["builtin://lists",651,0,22095,653,3,22151]},
 {"name":"list",
-"srcloc":["builtin://lists",558,0,19016,566,1,19530]},
+"srcloc":["builtin://lists",561,0,19182,569,1,19714]},
 {"name":"is-link",
 "srcloc":["builtin://lists",80,2,2742,100,8,3791]},
 {"name":"range",
-"srcloc":["builtin://lists",652,0,21969,661,3,22345]},
+"srcloc":["builtin://lists",655,0,22153,664,3,22529]},
 {"name":"distinct",
-"srcloc":["builtin://lists",1035,0,36073,1046,3,36509]},
+"srcloc":["builtin://lists",1038,0,36257,1049,3,36693]},
 {"name":"map",
 "srcloc":["builtin://lists",454,0,16007,460,3,16233]},
 {"name":"repeat",
-"srcloc":["builtin://lists",683,0,23088,688,3,23297]},
+"srcloc":["builtin://lists",686,0,23272,691,3,23481]},
 {"name":"link",
 "srcloc":["builtin://lists",80,2,2742,100,8,3791]},
 {"name":"append",
-"srcloc":["builtin://lists",690,0,23299,695,3,23455]},
+"srcloc":["builtin://lists",693,0,23483,698,3,23639]},
 {"name":"push",
-"srcloc":["builtin://lists",623,0,21334,625,3,21400]},
+"srcloc":["builtin://lists",626,0,21518,628,3,21584]},
 {"name":"member",
-"srcloc":["builtin://lists",978,0,34447,980,3,34543]},
+"srcloc":["builtin://lists",981,0,34631,983,3,34727]},
 {"name":"shuffle",
-"srcloc":["builtin://lists",998,0,35055,1011,3,35533]},
+"srcloc":["builtin://lists",1001,0,35239,1014,3,35717]},
 {"name":"find",
 "srcloc":["builtin://lists",502,0,17498,515,3,17846]},
 {"name":"member3",
-"srcloc":["builtin://lists",974,0,34312,976,3,34445]},
+"srcloc":["builtin://lists",977,0,34496,979,3,34629]},
 {"name":"member-with",
-"srcloc":["builtin://lists",961,0,33898,972,3,34310]},
+"srcloc":["builtin://lists",964,0,34082,975,3,34494]},
 {"name":"filter",
 "srcloc":["builtin://lists",389,0,13912,401,3,14162]},
 {"name":"map4",
-"srcloc":["builtin://lists",752,0,25295,759,3,25723]},
+"srcloc":["builtin://lists",755,0,25479,762,3,25907]},
 {"name":"map3",
-"srcloc":["builtin://lists",743,0,24938,750,3,25293]},
+"srcloc":["builtin://lists",746,0,25122,753,3,25477]},
 {"name":"filter-values",
-"srcloc":["builtin://lists",1024,0,35813,1033,3,36071]},
+"srcloc":["builtin://lists",1027,0,35997,1036,3,36255]},
 {"name":"raw-array-to-list",
 "srcloc":["builtin://lists",305,0,11016,307,3,11156]},
 {"name":"get",
 "srcloc":["builtin://lists",517,0,17848,533,3,18319]},
 {"name":"last",
-"srcloc":["builtin://lists",627,0,21402,642,3,21787]},
+"srcloc":["builtin://lists",630,0,21586,645,3,21971]},
 {"name":"map2",
-"srcloc":["builtin://lists",734,0,24642,741,3,24936]},
+"srcloc":["builtin://lists",737,0,24826,744,3,25120]},
 {"name":"join-str-last",
 "srcloc":["builtin://lists",350,0,12482,372,3,13427]},
 {"name":"each4",
-"srcloc":["builtin://lists",823,0,28182,834,3,28771]},
+"srcloc":["builtin://lists",826,0,28366,837,3,28955]},
 {"name":"fold4",
-"srcloc":["builtin://lists",932,0,32528,940,3,33063]},
+"srcloc":["builtin://lists",935,0,32712,943,3,33247]},
 {"name":"each3",
-"srcloc":["builtin://lists",810,0,27676,821,3,28180]},
+"srcloc":["builtin://lists",813,0,27860,824,3,28364]},
 {"name":"min",
-"srcloc":["builtin://lists",1097,0,38123,1116,3,38607]},
+"srcloc":["builtin://lists",1100,0,38307,1119,3,38791]},
 {"name":"slice",
 "srcloc":["builtin://lists",462,0,16235,478,3,16826]},
 {"name":"fold3",
-"srcloc":["builtin://lists",922,0,32049,930,3,32526]},
+"srcloc":["builtin://lists",925,0,32233,933,3,32710]},
 {"name":"member-always3",
-"srcloc":["builtin://lists",1118,0,38609,1118,24,38633]},
+"srcloc":["builtin://lists",1121,0,38793,1121,24,38817]},
 {"name":"member-identical3",
-"srcloc":["builtin://lists",990,0,34795,992,3,34935]},
+"srcloc":["builtin://lists",993,0,34979,995,3,35119]},
 {"name":"all2",
-"srcloc":["builtin://lists",723,0,24240,732,3,24640]},
+"srcloc":["builtin://lists",726,0,24424,735,3,24824]},
 {"name":"each2",
-"srcloc":["builtin://lists",797,0,27258,808,3,27674]},
+"srcloc":["builtin://lists",800,0,27442,811,3,27858]},
 {"name":"foldr",
-"srcloc":["builtin://lists",902,0,31314,910,3,31626]},
+"srcloc":["builtin://lists",905,0,31498,913,3,31810]},
 {"name":"fold2",
-"srcloc":["builtin://lists",912,0,31628,920,3,32047]},
+"srcloc":["builtin://lists",915,0,31812,923,3,32231]},
 {"name":"fold_n",
-"srcloc":["builtin://lists",942,0,33065,953,3,33562]},
+"srcloc":["builtin://lists",945,0,33249,956,3,33746]},
 {"name":"member-now3",
-"srcloc":["builtin://lists",982,0,34545,984,3,34687]},
+"srcloc":["builtin://lists",985,0,34729,987,3,34871]},
 {"name":"each_n",
-"srcloc":["builtin://lists",836,0,28773,847,3,29103]},
+"srcloc":["builtin://lists",839,0,28957,850,3,29287]},
 {"name":"drop",
-"srcloc":["builtin://lists",702,0,23615,705,3,23779]},
+"srcloc":["builtin://lists",705,0,23799,708,3,23963]},
 {"name":"join-str",
 "srcloc":["builtin://lists",331,0,11790,348,3,12480]},
 {"name":"same-length",
-"srcloc":["builtin://lists",579,0,19804,597,3,20441]},
+"srcloc":["builtin://lists",582,0,19988,600,3,20625]},
 {"name":"empty",
 "srcloc":["builtin://lists",61,2,1886,79,8,2739]},
 {"name":"function-set",
 "srcloc":["builtin://lists",535,0,18321,553,3,18931]},
 {"name":"any",
-"srcloc":["builtin://lists",707,0,23781,713,3,24008]},
+"srcloc":["builtin://lists",710,0,23965,716,3,24192]},
 {"name":"take-while",
-"srcloc":["builtin://lists",1048,0,36511,1074,3,37635]},
+"srcloc":["builtin://lists",1051,0,36695,1077,3,37819]},
 {"name":"map_n",
-"srcloc":["builtin://lists",761,0,25725,768,3,25993]},
+"srcloc":["builtin://lists",764,0,25909,771,3,26177]},
 {"name":"foldl",
-"srcloc":["builtin://lists",1120,0,38657,1120,12,38669]},
+"srcloc":["builtin://lists",1123,0,38841,1123,12,38853]},
 {"name":"is-empty",
 "srcloc":["builtin://lists",61,2,1886,79,8,2739]},
 {"name":"partition",
@@ -2297,54 +2297,54 @@ return module["exports"] = {"sort":sort824,
 {"name":"foldl-complicated",
 "srcloc":["builtin://lists",311,0,11302,329,3,11788]},
 {"name":"range-by",
-"srcloc":["builtin://lists",663,0,22347,681,3,23086]},
+"srcloc":["builtin://lists",666,0,22531,684,3,23270]},
 {"name":"filter-map",
-"srcloc":["builtin://lists",1013,0,35535,1022,3,35811]},
+"srcloc":["builtin://lists",1016,0,35719,1025,3,35995]},
 {"name":"take",
-"srcloc":["builtin://lists",697,0,23457,700,3,23613]},
+"srcloc":["builtin://lists",700,0,23641,703,3,23797]},
 {"name":"map4_n",
-"srcloc":["builtin://lists",788,0,26764,795,3,27256]},
+"srcloc":["builtin://lists",791,0,26948,798,3,27440]},
 {"name":"split-at",
 "srcloc":["builtin://lists",403,0,14164,423,3,14822]},
 {"name":"sort-by",
-"srcloc":["builtin://lists",644,0,21789,646,3,21909]},
+"srcloc":["builtin://lists",647,0,21973,649,3,22093]},
 {"name":"length",
-"srcloc":["builtin://lists",568,0,19532,577,3,19802]},
+"srcloc":["builtin://lists",571,0,19716,580,3,19986]},
 {"name":"map3_n",
-"srcloc":["builtin://lists",779,0,26343,786,3,26762]},
+"srcloc":["builtin://lists",782,0,26527,789,3,26946]},
 {"name":"shorter-than",
-"srcloc":["builtin://lists",611,0,20885,621,3,21332]},
+"srcloc":["builtin://lists",614,0,21069,624,3,21516]},
 {"name":"fold-while",
-"srcloc":["builtin://lists",888,0,30785,900,3,31312]},
+"srcloc":["builtin://lists",891,0,30969,903,3,31496]},
 {"name":"longer-than",
-"srcloc":["builtin://lists",599,0,20443,609,3,20883]},
+"srcloc":["builtin://lists",602,0,20627,612,3,21067]},
 {"name":"map2_n",
-"srcloc":["builtin://lists",770,0,25995,777,3,26341]},
+"srcloc":["builtin://lists",773,0,26179,780,3,26525]},
 {"name":"max",
-"srcloc":["builtin://lists",1076,0,37637,1095,3,38121]},
+"srcloc":["builtin://lists",1079,0,37821,1098,3,38305]},
 {"name":"remove",
 "srcloc":["builtin://lists",374,0,13429,385,3,13766]},
 {"name":"member-now",
-"srcloc":["builtin://lists",986,0,34689,988,3,34793]},
+"srcloc":["builtin://lists",989,0,34873,991,3,34977]},
 {"name":"to-raw-array",
 "srcloc":["builtin://lists",301,0,10879,303,3,11014]},
 {"name":"reverse",
 "srcloc":["builtin://lists",438,0,15299,444,3,15674]},
 {"name":"each4_n",
-"srcloc":["builtin://lists",875,0,30127,886,3,30783]},
+"srcloc":["builtin://lists",878,0,30311,889,3,30967]},
 {"name":"member-identical",
-"srcloc":["builtin://lists",994,0,34937,996,3,35053]},
+"srcloc":["builtin://lists",997,0,35121,999,3,35237]},
 {"name":"member-always",
-"srcloc":["builtin://lists",1119,0,38634,1119,22,38656]},
+"srcloc":["builtin://lists",1122,0,38818,1122,22,38840]},
 {"name":"is-List",
 "srcloc":["builtin://lists",60,0,1870,299,3,10877]},
 {"name":"each",
 "srcloc":["builtin://lists",446,0,15676,450,3,15861]},
 {"name":"each3_n",
-"srcloc":["builtin://lists",862,0,29567,873,3,30125]},
+"srcloc":["builtin://lists",865,0,29751,876,3,30309]},
 {"name":"all",
-"srcloc":["builtin://lists",715,0,24010,721,3,24238]},
+"srcloc":["builtin://lists",718,0,24194,724,3,24422]},
 {"name":"fold",
 "srcloc":["builtin://lists",427,0,14968,436,3,15297]},
 {"name":"each2_n",
-"srcloc":["builtin://lists",849,0,29105,860,3,29565]}]};
+"srcloc":["builtin://lists",852,0,29289,863,3,29749]}]};

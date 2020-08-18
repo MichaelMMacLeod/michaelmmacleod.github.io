@@ -102,7 +102,7 @@ var is$bar$chart$series143 = DataSeries142["is-bar-chart-series"];
 var bar$chart$series76 = DataSeries142["bar-chart-series"];
 var check$chart$window83 = function check$chart$window(p140) {
 var $ans139 = undefined;
-if(_runtime["_lessThanOrEqual"](p140["width"],(0),_runtime["_errCallbacks"]) || _runtime["_lessThanOrEqual"](p140["height"],(0),_runtime["_errCallbacks"])) {
+if(_runtime["_lessequal"](p140["width"],(0),_runtime["_errCallbacks"]) || _runtime["_lessequal"](p140["height"],(0),_runtime["_errCallbacks"])) {
 $ans139 = G41["raise"]("render: width and height must be positive")} else {
 $ans139 = G41["nothing"]}
 return $ans139;
@@ -323,7 +323,7 @@ var $ans59 = undefined;
 switch(cases58.$tag) {
 case 0: var y$max62 = cases58["value"];
 var $ans60 = undefined;
-if(_runtime["_greaterThanOrEqual"](y$min61,y$max62,_runtime["_errCallbacks"])) {
+if(_runtime["_greaterequal"](y$min61,y$max62,_runtime["_errCallbacks"])) {
 $ans60 = G41["raise"]("render: y-min must be strictly less than y-max")} else {
 $ans60 = G41["nothing"]}
 $ans59 = $ans60;
@@ -345,7 +345,7 @@ $shallow$copy54["render"] = $binder66($shallow$copy54);
 _runtime["$rebind"]($shallow$copy54);
 $ans52 = bar$chart$window53($shallow$copy54);
 break;
-default: $ans52 = _global["throwNoCasesMatched"](["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",217,2,6038,237,5,6719],cases51);
+default: $ans52 = _global["throwNoCasesMatched"](["builtin://chart",217,2,6038,237,5,6719],cases51);
 }
 return $ans52;
 };
@@ -374,42 +374,42 @@ return module["exports"] = {"compute-min":compute$min29,
 "$checks":_runtime["$checkResults"](),
 "$traces":_runtime["$getTraces"](),
 "$locations":[{"name":"compute-min",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",70,0,1816,72,3,1893]},
+"srcloc":["builtin://chart",70,0,1816,72,3,1893]},
 {"name":"is-bar-chart-window",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",160,2,3918,165,93,4375]},
+"srcloc":["builtin://chart",160,2,3918,165,93,4375]},
 {"name":"posn",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",29,0,783,29,57,840]},
+"srcloc":["builtin://chart",29,0,783,29,57,840]},
 {"name":"get-bounding-box",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",78,0,1974,92,3,2352]},
+"srcloc":["builtin://chart",78,0,1974,92,3,2352]},
 {"name":"bar-chart-window",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",160,2,3918,165,93,4375]},
+"srcloc":["builtin://chart",160,2,3918,165,93,4375]},
 {"name":"bar-chart-from-list",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",191,0,5133,209,3,5793]},
+"srcloc":["builtin://chart",191,0,5133,209,3,5793]},
 {"name":"map2",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",31,0,842,33,3,942]},
+"srcloc":["builtin://chart",31,0,842,33,3,942]},
 {"name":"to-table2",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",39,0,1029,41,3,1165]},
+"srcloc":["builtin://chart",39,0,1029,41,3,1165]},
 {"name":"compute-max",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",74,0,1895,76,3,1972]},
+"srcloc":["builtin://chart",74,0,1895,76,3,1972]},
 {"name":"default-bounding-box",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",62,0,1706,68,1,1814]},
+"srcloc":["builtin://chart",62,0,1706,68,1,1814]},
 {"name":"default-bar-chart-series",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",104,0,2639,104,29,2668]},
+"srcloc":["builtin://chart",104,0,2639,104,29,2668]},
 {"name":"is-ChartWindow",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",159,0,3898,185,3,4956]},
+"srcloc":["builtin://chart",159,0,3898,185,3,4956]},
 {"name":"raw-array-from-list",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",35,0,944,37,3,1027]},
+"srcloc":["builtin://chart",35,0,944,37,3,1027]},
 {"name":"default-bar-chart-window-object",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",133,0,3167,138,1,3318]},
+"srcloc":["builtin://chart",133,0,3167,138,1,3318]},
 {"name":"render-chart",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",215,0,5966,240,3,6782]},
+"srcloc":["builtin://chart",215,0,5966,240,3,6782]},
 {"name":"is-DataSeries",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",144,0,3502,149,3,3707]},
+"srcloc":["builtin://chart",144,0,3502,149,3,3707]},
 {"name":"check-chart-window",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",151,0,3709,157,3,3896]},
+"srcloc":["builtin://chart",151,0,3709,157,3,3896]},
 {"name":"is-bar-chart-series",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",145,2,3521,147,35,3625]},
+"srcloc":["builtin://chart",145,2,3521,147,35,3625]},
 {"name":"default-chart-window-object",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",115,0,2798,120,1,2948]},
+"srcloc":["builtin://chart",115,0,2798,120,1,2948]},
 {"name":"bar-chart-series",
-"srcloc":["file:///home/michael/projects/pyret-lang/src/runtime-arr/chart.arr",145,2,3521,147,35,3625]}]};
+"srcloc":["builtin://chart",145,2,3521,147,35,3625]}]};

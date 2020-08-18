@@ -74,6 +74,7 @@ function makeReactorRaw(init, handlers, tracing, trace) {
                 throw e;
             }
         },
+        $shutdown: function () { return world.$shutdown({ cleanShutdown: true }); },
         'start-trace': function () {
             return makeReactorRaw(init, handlers, true, [init]);
         },
