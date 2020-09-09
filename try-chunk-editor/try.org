@@ -8,7 +8,7 @@
   rearranged and linted independently. The right hand side displays results from
   each chunk.
 
-  You can try it out [[https://michaelmmacleod.github.io/build/][here.]]
+  You can try it out [[https://pyret-anchor.s3.amazonaws.com/anchor/index.html][here.]]
 
   We are looking for information on the editing experience. For example, did
   error messages show up in surprising or surprisingly useful ways? Are you
