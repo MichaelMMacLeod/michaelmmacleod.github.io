@@ -45,10 +45,10 @@ body {
 .link-container {
   display: flex;
   justify-content: center;
-  position: relative;
   font-size: 2em;
-  z-index: 10;
+  z-index: 30;
   background: black;
+  width: 100%;
 }
 
 .link {
@@ -106,6 +106,7 @@ body {
 .spinner {
   animation: spinner 60s linear infinite;
   position: absolute;
+  z-index: -10;
 }
 
 .about-text {
@@ -125,6 +126,6 @@ body {
   line-height: 1.5;
   height: 100vh;
   padding-top: 1em;
-  padding-right: 10vw;
-  padding-left: 10vw;
+  margin-left: 35vw;
+  margin-right: 5vw;
 }

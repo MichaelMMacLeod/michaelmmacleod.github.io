@@ -19,13 +19,11 @@ function fancyMove() {
 
 function resize() {
     const spinner = document.getElementById("spinner-image");
-    const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-    const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-    const size = Math.min(vw, vh);
+    const size = Math.max(document.documentElement.clientWidth, window.innerWidth || 0) * (65 / 100);
 
     spinner.style.width = `${size}px`;
     spinner.style.height = `${size}px`;
-    spinner.style.left = `${vw-size/2}px`;
+    spinner.style.left = `${-size/2}px`;
     spinner.style.top = `${-size/2}px`;
 };
 
