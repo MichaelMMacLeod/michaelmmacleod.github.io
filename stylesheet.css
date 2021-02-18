@@ -132,3 +132,12 @@ body {
   margin-left: 35vw;
   margin-right: 5vw;
 }
+
+#animation-canvas {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
