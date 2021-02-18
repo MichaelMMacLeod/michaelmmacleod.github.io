@@ -44,11 +44,15 @@ body {
 
 .link-container {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   font-size: 2em;
   z-index: 30;
   background: black;
   width: 100%;
+}
+
+.first-link {
+  margin-left: 35vw;
 }
 
 .link {
