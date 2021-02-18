@@ -1,88 +1,130 @@
 @font-face{
-    font-family: 'hack';
-    src: url('fonts/Hack-Bold.ttf');
+  font-family: 'hack';
+  src: url('fonts/Hack-Bold.ttf');
 }
 
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 html {
-    height: 100%;
-    overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-    background-color: white;
-    color: black;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: white;
+  color: black;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .fancy-text {
-    position: absolute;
-    top: -10%;
-    left: 0;
-    transform: translate3d(0rem, 0rem, 0px);
-    transition: transform 6s linear;
-    font-family: hack;
+  position: absolute;
+  top: -10%;
+  left: 0;
+  transform: translate3d(0rem, 0rem, 0px);
+  transition: transform 6s linear;
+  font-family: hack;
 }
 
 .fancy-container {
-    display: flex;
-    justify-content: center;
-    transform: skew(0deg, -6deg);
-    font-size: 10vw;
-    padding-top: 1em;
-    margin-bottom: 1em;
-    background-color: black;
-    z-index: 15;
-    position: relative;
+  display: flex;
+  justify-content: center;
+  transform: skew(0deg, -6deg);
+  font-size: 2em;
+  padding-top: 1em;
+  margin-bottom: 1em;
+  background-color: black;
+  z-index: 15;
+  position: relative;
 }
 
 .link-container {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    font-size: 2em;
-    z-index: 10;
-    background: black;
-    transform: skew(0deg, 6deg);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 2em;
+  z-index: 10;
+  background: black;
 }
 
 .link {
-    padding-left: 1em;
-    padding-right: 1em;
-    color: white;
-    text-decoration: none;
-    font-size: 4vw;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: white;
+  text-decoration: underline white;
+  font-size: 1em;
+}
+
+.current-page-link {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black;
+  background: white;
+  text-decoration: underline white;
+  font-size: 1em;
 }
 
 .link:visited {
-    font-family: hack;
-    color: white;
+  font-family: hack;
+  color: white;
+}
+
+.current-page-link:visited {
+  font-family: hack;
+  color: black;
+  background: white;
+}
+
+.inline-link {
+  color: black;
+  text-decoration: underline black;
+}
+
+.inline-link:visited {
+  font-family: hack;
+  color: black;
 }
 
 .spinner-container {
-    z-index: -10;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    height: 100%;
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100%;
 }
 
 @keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .spinner {
-    animation: spinner 60s linear infinite;
-    position: absolute;
-    width: 50vw;
-    height: 50vw;
-    bottom: -25vw;
+  animation: spinner 60s linear infinite;
+  position: absolute;
+}
+
+.about-text {
+  font-size: 1em;
+  color: black;
+  margin-bottom: 2em;
+}
+
+.about-text-container {
+  margin-top: 0em;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  font-size: 1em;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.75);
+  line-height: 1.5;
+  height: 100vh;
+  padding-top: 1em;
+  padding-right: 10vw;
+  padding-left: 10vw;
 }
