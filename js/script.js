@@ -141,11 +141,10 @@ function resize(renderer) {
     const width = body.clientWidth;
     const height = body.clientHeight;
     const rendererHeight = height * (4.0 / 10.0);
-    const rendererWidth = width * 0.6;
-    canvasWidth = rendererWidth;
+    canvasWidth = width;
     canvasHeight = rendererHeight;
-    renderer.setSize(rendererWidth, rendererHeight);
-    camera.aspect = rendererWidth / rendererHeight;
+    renderer.setSize(width, rendererHeight);
+    camera.aspect = width / rendererHeight;
     camera.updateProjectionMatrix();
     main.style.height = `${height - height / 4.0}`;
     return width;

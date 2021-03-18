@@ -85,4 +85,5 @@ body {
 
 canvas {
   margin-left: 20vw;
+  align-self: flex-end;
 }

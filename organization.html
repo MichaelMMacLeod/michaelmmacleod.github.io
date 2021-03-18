@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <title>About</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="sidebar">
+        <a href="index.html" class="sidebar-link">
+          About
+        </a>
+        <a href="organization.html" class="sidebar-link active">
+          Organization
+        </a>
+        <a href="critique.html" class="sidebar-link">
+          Critique
+        </a>
+        <a href="bongard.html" class="sidebar-link">
+          Bongard Problems
+        </a>
+        <a href="kakoi.html" class="sidebar-link">
+          Kakoi
+        </a>
+        <a href="links.html" class="sidebar-link">
+          Links
+        </a>
+      </div>
+      <div class="content">
+        <div class="section-title">Organization</div>
+        <div class="section-content">
+          A major use of computers is to store and organize representations of
+          knowledge. Indeed, this very page is a textual representation of
+          knowledge concerning the topic of organization itself. In this
+          document, I will look at various forms through which we can represent
+          and organize knowledge in computers and point out their strengths and
+          weaknesses.
+
+          <h3>Language</h3>
+          Language is an incredibly useful medium for expressing ideas. Its
+          usefulness comes from its generality; one would be hard-pressed to
+          find an idea that is completely unrepresentable with words.
+          <br><br>
+          A common way of representing language in a computer is as text, though
+          it is also possible to represent language as speech in audio or video
+          snippets.
+          <br><br>
+          Language is less useful when we want to use our computer to understand
+          its meaning. We would never think to ask, for instance, "please
+          computer, explain what this passage in my textbook means in greater
+          detail". That's something only a human being with the right
+          understanding could do. A computer sees only a sequence of
+          characters---not the ideas they represent. Expecting it to understand
+          what we mean by those characters is unfair.
+          <br><br>
+          A useful distinction to draw here is between structured and <a class="inline-link" href="https://en.wikipedia.org/wiki/Unstructured_data">unstructured data</a>.
+
+          <pre>Unstructured data (or unstructured information) is information that
+either does not have a pre-defined data model or is not organized
+in a pre-defined manner. Unstructured information is typically
+text-heavy, but may contain data such as dates, numbers, and facts
+as well. This results in irregularities and ambiguities that make
+it difficult to understand using traditional programs as compared
+to data stored in fielded form in databases or annotated
+(semantically tagged) in documents.
+
+-- Wikipedia page on unstructured data</pre>
+
+          Text is very much unstructured. That lack of structure is what makes
+          it difficult for computers to understand its meaning.
+          <br><br>
+          A separate problem with language is that it is not knowledge itself,
+          but rather an indication of knowledge. The words we use are mostly
+          arbitrary. We could all agree at this moment to use the word
+          "airplane" to indicate what we mean by "green", and go about our day
+          pointing out the "airplane"-colored car, or the environmental
+          bennefits of using "airplane" energy over fossil fuels.
+
+          <br><br>
+          A silly example, though its implication is important: we can't be
+          certain that those interpreting the text we write are interpreting it
+          in the same way we meant it to be interpreted. All forms of
+          representing knowledge suffer this burden, though language especially
+          so.
+          <br><br>
+          To summarize, language is good because we can express just about
+          anything using it. It is bad because we can't be certain that people
+          will interpret our language in the way we intend them to, and because
+          it's hard for computers to understand the meaning of our language.
+
+          <h3>The file system</h3>
+
+          We depart from unstructured data to talk about a well-understood kind
+          of structured data: hierarchical directories. Every computer has one.
+          It's where your text documents, photos, program data, and programs
+          themselves are stored.
+          <br><br>
+          A system of organizing information, like a file system, is nothing
+          without anything to organize. In this case, we organize files. If a
+          file contains text, then the strengths and weakness of text that were
+          outlined in the previous section "bubble up" to affect the file system
+          itself.
+          <br><br>
+          One advantage of the file system is that we can ask it questions like
+          "explain what 'birthday-pictures' means". We'd ask this question by
+          clicking on a folder called "birthday-pictures". The computer would
+          respond with the contents of that folder which---assuming we've been
+          thoroughly organizing our files---would contain pictures relating to
+          birthdays. This stands in stark contrast from pure text, in which
+          there were essentially no questions we could ask our computer about
+          its meaning.
+          <br><br>
+          File systems are not without their limitations. Anyone who has used a
+          file system for long enough eventually runs into the problem of trying
+          to put a file into two folders at once. Let's say, for example, I've
+          got a picture of me on my birthday on the beach. I've visited and
+          taken photos at beaches before, so I've already got a file named
+          "beach-pictures". I've also taken photos on my birthday previously, so
+          I have a "birthday-pictures" folder as well. This is the first time
+          that I've had a birthday on the beach. The question is: what folder do
+          I put my new photos in?
+          <br><br>
+          The most complete answer to the problem of wanting to put a file into two
+          folders at once is to use <a class="inline-link" href="https://en.wikipedia.org/wiki/Hard_link">hard links</a> to, well, actually
+          put a file in multiple folders at once. Unfortunately, maintaining
+          such a system requires a lot of hard work. The programs we have today
+          don't expect people to be hard-linking files everywhere all the time,
+          so they aren't built with features that help you do such organization.
+
+          <h3>Tag based systems</h3>
+
+          In light of the difficulties we face when trying to organize
+          information in a file system, it's logical to opt for a system whose
+          structure is more free-flowing. In a tagging system we use categories
+          instead of folders, the main difference being that an object (file) can be in more
+          than one category (folder) at once.
+          <br><br>
+          It's possible to emulate a tag-based system in a directory based
+          system using links---that's quite cumbersome though, as I've alluded
+          to earlier. It's also possible to emulate a directory system in a tag
+          based system by tagging objects with their file paths. For example, I
+          can tag a picture of me on my birthday with the text
+          "file-path:birthday-pictures/picture12.png". People have constructed
+          tag-based systems that do this very thing.
+          <br><br>
+          A problem that we eventually run into when using tag-based systems is
+          that it's difficult to talk about the tags themselves inside of the
+          system.
+          <br><br>
+          For example, let's say that I've got the tags "orange", "purple",
+          "sunset", and "cake" placed upon one of my birthday images. In the
+          picture, we see a cake with purple frosting in front of an orange
+          sunset. Note: we lost information in our tags. The tags don't tell us
+          the color of the cake or the sunset---they only tell us that there is
+          a cake and sunset. We can remedy this situation by adding new tags
+          into the system: "orange-sunset" and "pruple-frosted-cake". But now
+          it's harder to talk about the idea of orangeness or purpleness; any
+          query for "purple" or "orange" I make must be followed up with a query
+          for "orange-sunset" or "purple-frosted-cake" respectively.
+          <br><br>
+          One way to solve this is to add a rule to the system that the tag
+          "orange-sunset" implies the tag "orange", so any queries for "orange"
+          should automatically display "orange-sunset". The issue of juggling so
+          many seemingly redundant tags still remains, however.
+
+          <h3>Hypertext</h3>
+
+          Hypertext---the medium that the web is crafted out of---enables us to
+          easily link different documents together; what was once a textual
+          citation in a paper book can become an actual link in a web document.
+          <br><br>
+          Such linkage allows us to easily connect related pieces of information
+          together in ways that are difficult in tag based and directory based
+          systems.
+          <br><br>
+          One issue is that links are one-way in the web. For example, let's say
+          that I'm reading a blog post about puppies. On the blog, I see a link
+          to a Wikipedia article about puppies, so I click it. I'm now on the
+          Wikipedia page. Since the Wikipedia page doesn't include any links
+          back to the blog post, the only way to get back is to hit the "back"
+          button in my web browser.
+          <br><Br>
+          This becomes a problem when I'm reading the Wikipedia page and wonder:
+          "what other websites talk about puppies?". It'd be nice if there was
+          some way to see a list of such pages on Wikipedia itself. Of course,
+          there is no such list. I end up having to use a search engine to
+          manually perform the query for me, with varrying results.
+          <br><br>
+          A separate issue with the web relates to change. A link is an
+          indication of the ideas represented in the document addressed by the
+          link. But that document can change, and the indicated ideas will
+          change along with it. If I link to a blog post, saying that it's a
+          "good description of how to adopt a puppy", I can't be sure that the
+          document at that link will always be such a thing. The post could, in
+          the future, morph into discussing dogs as a whole, or include kittens,
+          or change in any other imaginable way. The worst case is that the
+          document vanishes, resulting in the dreaded "404 page not found"
+          error.
+          <br><br>
+          One way to fix this is to create a local copy of the web page and link
+          to that instead. I can be relatively certain that the copy won't
+          change---I've got no motive to change it---unfortunately, I've just
+          broken the link from my website to theirs. Now I'm pointing at a local
+          copy, and the copy is not the thing itself. The link between my
+          website and theirs is now much weaker.
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
