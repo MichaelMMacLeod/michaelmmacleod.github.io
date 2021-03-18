@@ -1,0 +1,94 @@
+:root {
+  /* colors generated from https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=212121&secondary.color=6A1B9A */
+  --c-primary: #212121;
+  --c-primary-light: #484848;
+  --c-primary-dark: #000000;
+  --c-secondary: #691b99;
+  --c-secondary-light: #9b4dcb;
+  --c-secondary-dark: #37006a;
+  --c-text-on-primary: #ffffff;
+  --c-text-on-secondary: #ffffff;
+}
+
+html {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: var(--c-primary);
+  color: var(--c-text-on-primary);
+  font-family: serif;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 8em;
+  padding-right: 1em;
+}
+
+.content {
+  max-width: 60vw;
+}
+
+.top-left-picture {
+  width: 6em;
+  height: 6em;
+  margin-bottom: 1em;
+  animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-link {
+  color: var(--c-text-on-primary);
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.inline-link {
+  color: var(--c-text-on-primary);
+}
+
+.active {
+  background-color: var(--c-secondary-light);
+}
+
+.section-title {
+  font-size: 2.5em;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+canvas {
+  align-self: flex-end;
+}
+/* .canvas { */
+/*   position: absolute; */
+/*   top: 60vh; */
+/*   width: 100vw; */
+/*   left: 0; */
+/*   height: 40vh; */
+/* } */
