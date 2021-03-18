@@ -3,9 +3,16 @@
 // This boid code is adapted from beneater's (MIT license)
 // https://github.com/beneater/boids
 
-const NUM_BOIDS = 200;
-const FLOCKING_DISTANCE = 50;
-const INITIAL_VELOCITY = 8;
+const NUM_BOIDS = 100;
+const FLOCKING_DISTANCE = 0.9;
+const INITIAL_VELOCITY = 0.1;
+const speedLimit = 0.1;
+const centeringFactor = 0.3;
+const minDistance = 1.0;
+const avoidFactor = 0.08;
+const cameraZ = 15.0;
+let sizeX = 50;
+let sizeY = 50;
 
 let canvasWidth = 600;
 let canvasHeight = 600;
@@ -15,19 +22,14 @@ const boids = (() => {
     for (let i = 0; i < NUM_BOIDS; i += 1) {
         const boid = {
             center: {
-                x: Math.random() * canvasWidth,
-                y: Math.random() * canvasHeight,
+                x: Math.random() * sizeX - sizeX / 2,
+                y: Math.random() * sizeY - sizeY / 2,
             },
             velocity: {
                 x: Math.random() * INITIAL_VELOCITY - INITIAL_VELOCITY / 2,
                 y: Math.random() * INITIAL_VELOCITY - INITIAL_VELOCITY / 2,
             }
         };
-        boid.shape = new THREE.Triangle(
-            new THREE.Vector3(boid.center.x, boid.center.y + 5, 0),
-            new THREE.Vector3(boid.center.x - 5, boid.center.y, 0),
-            new THREE.Vector3(boid.center.x + 5, boid.center.y, 0),
-        );
         result.push(boid);
     }
     return result;
@@ -46,26 +48,24 @@ function nClosestBoids(boid, n) {
 }
 
 function keepWithinBounds(boid) {
-    const margin = 200;
-    const turnFactor = 1;
+    const margin = 0.1;
+    const turnFactor = 0.01;
 
-    if (boid.center.x < margin) {
+    if (boid.center.x < -sizeX / 2) {
         boid.velocity.x += turnFactor;
     }
-    if (boid.center.x > canvasWidth - margin) {
-        boid.velocity.x -= turnFactor;
-    }
-    if (boid.center.y < margin) {
+    if (boid.center.y < -sizeY / 2) {
         boid.velocity.y += turnFactor;
     }
-    if (boid.center.y > canvasWidth - margin) {
+    if (boid.center.x > sizeX / 2) {
+        boid.velocity.x -= turnFactor;
+    }
+    if (boid.center.y > sizeY / 2) {
         boid.velocity.y -= turnFactor;
     }
 }
 
 function flyTowardsCenter(boid) {
-    const centeringFactor = 0.005;
-
     const center = { x: 0, y: 0 };
     let numNeighbors = 0;
 
@@ -87,8 +87,6 @@ function flyTowardsCenter(boid) {
 }
 
 function avoidOthers(boid) {
-    const minDistance = 20;
-    const avoidFactor = 0.05;
     const move = { x: 0, y: 0 };
 
     for (let otherBoid of boids) {
@@ -105,7 +103,7 @@ function avoidOthers(boid) {
 }
 
 function matchVelocity(boid) {
-    const matchingFactor = 0.05;
+    const matchingFactor = 0.5;
 
     const averageVelocity = { x: 0, y: 0 };
     let numNeighbors = 0;
@@ -128,7 +126,6 @@ function matchVelocity(boid) {
 }
 
 function limitSpeed(boid) {
-    const speedLimit = 15;
     const velocity = Math.sqrt(
         boid.velocity.x * boid.velocity.x
             + boid.velocity.y * boid.velocity.y);
@@ -170,13 +167,15 @@ const boidGeometry = new THREE.CircleGeometry(0.2, 10);
 const boidMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
 const boidMesh = new THREE.InstancedMesh(boidGeometry, boidMaterial, NUM_BOIDS);
 const template = new THREE.Object3D();
+const templateColor = new THREE.Color();
+
 // boidMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 // boid2Mesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 // scene.add(boid2Mesh);
 boidMesh.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
 scene.add(boidMesh);
 
-camera.position.z = 5;
+camera.position.z = cameraZ;
 
 function setupBoidInstances() {
     for (let i = 0; i < NUM_BOIDS; i++) {
@@ -194,7 +193,11 @@ function setupBoidInstances() {
         template.rotation.x = 0;
         template.updateMatrix();
 
+        const velocity = Math.sqrt(boids[i].velocity.x * boids[i].velocity.x + boids[i].velocity.y * boids[i].velocity.y) / speedLimit;
+        templateColor.setRGB(velocity, velocity, velocity);
+
         boidMesh.setMatrixAt(i, template.matrix);
+        boidMesh.setColorAt(i, templateColor);
     }
 
     boidMesh.instanceMatrix.needsUpdate = true;
